@@ -1,0 +1,120 @@
+2025-06-18 19:40:20 INFO  LoginTest:31 - Test Execution Started
+2025-06-18 19:40:20 INFO  LoginTest:39 - Test Execution Started !!!
+2025-06-18 19:40:20 INFO  LoginTest:49 - OR.properties file loaded
+2025-06-18 19:40:30 INFO  LoginTest:84 - Launching Chrome Browser
+2025-06-18 19:40:38 INFO  LoginTest:116 - Browser closed
+2025-06-18 19:40:38 INFO  LoginTest:118 - Playwright closed
+2025-06-18 19:40:38 INFO  LoginTest:120 - Playwright closed
+2025-06-18 20:10:45 INFO  LoginTest:31 - Test Execution Started
+2025-06-18 20:10:45 INFO  LoginTest:39 - Test Execution Started !!!
+2025-06-18 20:10:45 INFO  LoginTest:49 - OR.properties file loaded
+2025-06-18 20:10:57 INFO  LoginTest:84 - Launching Chrome Browser
+2025-06-18 20:11:13 INFO  LoginTest:110 - Navigated to the URL: https://demo.flairdocs.com/DOTV2/Login.aspx
+2025-06-18 20:11:13 INFO  LoginTest:116 - Browser closed
+2025-06-18 20:11:13 INFO  LoginTest:118 - Playwright closed
+2025-06-18 20:11:13 INFO  LoginTest:120 - Playwright closed
+2025-06-18 21:52:34 INFO  LoginAndProjectSelectionTest:31 - Test Execution Started
+2025-06-18 21:52:34 INFO  LoginAndProjectSelectionTest:39 - Test Execution Started !!!
+2025-06-18 21:52:34 INFO  LoginAndProjectSelectionTest:49 - OR.properties file loaded
+2025-06-18 21:52:46 INFO  LoginAndProjectSelectionTest:84 - Launching Chrome Browser
+2025-06-18 21:53:00 INFO  LoginAndProjectSelectionTest:110 - Navigated to the URL: https://demo.flairdocs.com/DOTV2/Login.aspx
+2025-06-18 21:53:05 INFO  LoginAndProjectSelectionTest:116 - Browser closed
+2025-06-18 21:53:05 INFO  LoginAndProjectSelectionTest:118 - Playwright closed
+2025-06-18 21:53:05 INFO  LoginAndProjectSelectionTest:120 - Playwright closed
+2025-06-18 21:53:06 INFO  LoginAndProjectSelectionTest:84 - Launching Chrome Browser
+2025-06-18 21:53:10 INFO  LoginAndProjectSelectionTest:116 - Browser closed
+2025-06-18 21:53:10 INFO  LoginAndProjectSelectionTest:118 - Playwright closed
+2025-06-18 21:53:10 INFO  LoginAndProjectSelectionTest:120 - Playwright closed
+2025-06-18 21:58:20 INFO  CompleteLoginTest:31 - Test Execution Started
+2025-06-18 21:58:20 INFO  CompleteLoginTest:39 - Test Execution Started !!!
+2025-06-18 21:58:20 INFO  CompleteLoginTest:49 - OR.properties file loaded
+2025-06-18 21:58:31 INFO  CompleteLoginTest:84 - Launching Chrome Browser
+2025-06-18 21:58:56 INFO  CompleteLoginTest:110 - Navigated to the URL: https://demo.flairdocs.com/DOTV2/Login.aspx
+2025-06-18 21:59:12 INFO  CompleteLoginTest:116 - Browser closed
+2025-06-18 21:59:12 INFO  CompleteLoginTest:118 - Playwright closed
+2025-06-18 21:59:12 INFO  CompleteLoginTest:120 - Playwright closed
+2025-06-18 21:59:12 INFO  CompleteLoginTest:84 - Launching Chrome Browser
+2025-06-18 21:59:43 INFO  CompleteLoginTest:116 - Browser closed
+2025-06-18 21:59:43 INFO  CompleteLoginTest:118 - Playwright closed
+2025-06-18 21:59:43 INFO  CompleteLoginTest:120 - Playwright closed
+2025-06-18 22:00:49 INFO  CompleteLoginTest:31 - Test Execution Started
+2025-06-18 22:00:49 INFO  CompleteLoginTest:39 - Test Execution Started !!!
+2025-06-18 22:00:49 INFO  CompleteLoginTest:49 - OR.properties file loaded
+2025-06-18 22:01:00 INFO  CompleteLoginTest:84 - Launching Chrome Browser
+2025-06-18 22:01:15 INFO  CompleteLoginTest:110 - Navigated to the URL: https://demo.flairdocs.com/DOTV2/Login.aspx
+2025-06-18 22:01:39 INFO  CompleteLoginTest:116 - Browser closed
+2025-06-18 22:01:39 INFO  CompleteLoginTest:118 - Playwright closed
+2025-06-18 22:01:39 INFO  CompleteLoginTest:120 - Playwright closed
+2025-06-18 22:01:40 INFO  CompleteLoginTest:84 - Launching Chrome Browser
+2025-06-18 22:01:45 INFO  CompleteLoginTest:116 - Browser closed
+2025-06-18 22:01:45 INFO  CompleteLoginTest:118 - Playwright closed
+2025-06-18 22:01:45 INFO  CompleteLoginTest:120 - Playwright closed
+2025-06-18 22:04:55 INFO  CompleteLoginTest:31 - Test Execution Started
+2025-06-18 22:04:55 INFO  CompleteLoginTest:39 - Test Execution Started !!!
+2025-06-18 22:04:55 INFO  CompleteLoginTest:49 - OR.properties file loaded
+2025-06-18 22:05:05 INFO  CompleteLoginTest:84 - Launching Chrome Browser
+2025-06-18 22:05:20 INFO  CompleteLoginTest:110 - Navigated to the URL: https://demo.flairdocs.com/DOTV2/Login.aspx
+2025-06-18 22:05:38 INFO  CompleteLoginTest:116 - Browser closed
+2025-06-18 22:05:38 INFO  CompleteLoginTest:118 - Playwright closed
+2025-06-18 22:05:38 INFO  CompleteLoginTest:120 - Playwright closed
+2025-06-18 22:05:38 INFO  CompleteLoginTest:84 - Launching Chrome Browser
+2025-06-18 22:05:49 INFO  CompleteLoginTest:110 - Navigated to the URL: https://demo.flairdocs.com/DOTV2/Login.aspx
+2025-06-18 22:05:55 INFO  CompleteLoginTest:116 - Browser closed
+2025-06-18 22:05:55 INFO  CompleteLoginTest:118 - Playwright closed
+2025-06-18 22:05:55 INFO  CompleteLoginTest:120 - Playwright closed
+2025-06-18 22:22:16 INFO  CompleteLoginTest:31 - Test Execution Started
+2025-06-18 22:22:16 INFO  CompleteLoginTest:39 - Test Execution Started !!!
+2025-06-18 22:22:16 INFO  CompleteLoginTest:49 - OR.properties file loaded
+2025-06-18 22:23:26 INFO  CompleteLoginTest:31 - Test Execution Started
+2025-06-18 22:23:26 INFO  CompleteLoginTest:39 - Test Execution Started !!!
+2025-06-18 22:23:26 INFO  CompleteLoginTest:49 - OR.properties file loaded
+2025-06-18 22:25:00 INFO  CompleteLoginTest:31 - Test Execution Started
+2025-06-18 22:25:00 INFO  CompleteLoginTest:39 - Test Execution Started !!!
+2025-06-18 22:25:00 INFO  CompleteLoginTest:49 - OR.properties file loaded
+2025-06-18 22:25:10 INFO  CompleteLoginTest:84 - Launching Chrome Browser
+2025-06-18 22:25:24 INFO  CompleteLoginTest:110 - Navigated to the URL: https://demo.flairdocs.com/DOTV2/Login.aspx
+2025-06-18 22:25:32 INFO  CompleteLoginTest:116 - Browser closed
+2025-06-18 22:25:32 INFO  CompleteLoginTest:118 - Playwright closed
+2025-06-18 22:25:32 INFO  CompleteLoginTest:120 - Playwright closed
+2025-06-18 22:27:58 INFO  CompleteLoginTest:31 - Test Execution Started
+2025-06-18 22:27:58 INFO  CompleteLoginTest:39 - Test Execution Started !!!
+2025-06-18 22:27:58 INFO  CompleteLoginTest:49 - OR.properties file loaded
+2025-06-18 22:28:08 INFO  CompleteLoginTest:84 - Launching Chrome Browser
+2025-06-18 22:28:23 INFO  CompleteLoginTest:110 - Navigated to the URL: https://demo.flairdocs.com/DOTV2/Login.aspx
+2025-06-18 22:28:36 INFO  CompleteLoginTest:116 - Browser closed
+2025-06-18 22:28:36 INFO  CompleteLoginTest:118 - Playwright closed
+2025-06-18 22:28:36 INFO  CompleteLoginTest:120 - Playwright closed
+2025-06-18 22:32:07 INFO  CompleteLoginTest:31 - Test Execution Started
+2025-06-18 22:32:07 INFO  CompleteLoginTest:39 - Test Execution Started !!!
+2025-06-18 22:32:07 INFO  CompleteLoginTest:49 - OR.properties file loaded
+2025-06-18 22:32:18 INFO  CompleteLoginTest:84 - Launching Chrome Browser
+2025-06-18 22:32:46 INFO  CompleteLoginTest:110 - Navigated to the URL: https://demo.flairdocs.com/DOTV2/Login.aspx
+2025-06-18 22:33:31 INFO  CompleteLoginTest:116 - Browser closed
+2025-06-18 22:33:31 INFO  CompleteLoginTest:118 - Playwright closed
+2025-06-18 22:33:31 INFO  CompleteLoginTest:120 - Playwright closed
+2025-06-18 22:34:45 INFO  CompleteLoginTest:31 - Test Execution Started
+2025-06-18 22:34:45 INFO  CompleteLoginTest:39 - Test Execution Started !!!
+2025-06-18 22:34:45 INFO  CompleteLoginTest:49 - OR.properties file loaded
+2025-06-18 22:34:56 INFO  CompleteLoginTest:84 - Launching Chrome Browser
+2025-06-18 22:35:26 INFO  CompleteLoginTest:116 - Browser closed
+2025-06-18 22:35:26 INFO  CompleteLoginTest:118 - Playwright closed
+2025-06-18 22:35:26 INFO  CompleteLoginTest:120 - Playwright closed
+2025-06-19 12:44:58 INFO  LoginTest:31 - Test Execution Started
+2025-06-19 12:44:58 INFO  LoginTest:39 - Test Execution Started !!!
+2025-06-19 12:44:58 INFO  LoginTest:49 - OR.properties file loaded
+2025-06-19 12:45:09 INFO  LoginTest:84 - Launching Chrome Browser
+2025-06-19 12:45:39 INFO  LoginTest:116 - Browser closed
+2025-06-19 12:45:39 INFO  LoginTest:118 - Playwright closed
+2025-06-19 12:45:39 INFO  LoginTest:120 - Playwright closed
+2025-06-19 18:17:40 INFO  CompleteLoginTest:52 - Test Execution Started
+2025-06-19 18:17:40 INFO  CompleteLoginTest:60 - Test Execution Started !!!
+2025-06-19 18:17:40 INFO  CompleteLoginTest:70 - OR.properties file loaded
+2025-06-19 18:21:01 INFO  CompleteLoginTest:52 - Test Execution Started
+2025-06-19 18:21:01 INFO  CompleteLoginTest:60 - Test Execution Started !!!
+2025-06-19 18:21:01 INFO  CompleteLoginTest:70 - OR.properties file loaded
+2025-06-19 18:29:23 INFO  CompleteLoginTest:52 - Test Execution Started
+2025-06-19 18:29:23 INFO  CompleteLoginTest:60 - Test Execution Started !!!
+2025-06-19 18:29:23 INFO  CompleteLoginTest:70 - OR.properties file loaded
+2025-06-19 18:32:46 INFO  CompleteLoginTest:52 - Test Execution Started
+2025-06-19 18:32:46 INFO  CompleteLoginTest:60 - Test Execution Started !!!
+2025-06-19 18:32:46 INFO  CompleteLoginTest:70 - OR.properties file loaded

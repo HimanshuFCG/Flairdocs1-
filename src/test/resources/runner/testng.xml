@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="FLairdocsSuite">
+<listeners>
+  
+    <listener class-name="extentlisteners.ExtentListeners"/>
+
+</listeners>
+
+<test name="Login Test">
+    
+    <classes>
+
+<class name="testcases.LoginTest"/>
+</classes>
+
+
+</test>
+
+<test name="Complete Login and Project Selection">
+    
+    <classes>
+
+<class name="testcases.CompleteLoginTest"/>
+</classes>
+
+
+</test>
+
+    </suite>

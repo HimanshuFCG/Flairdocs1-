@@ -1,0 +1,6 @@
+INFO    2025-06-18 19:16:01,269 [main] testcases.LoginTest  - OR.properties file loaded
+INFO    2025-06-18 19:16:11,839 [main] testcases.LoginTest  - Launching Chrome Browser
+INFO    2025-06-18 19:16:28,176 [main] testcases.LoginTest  - Navigated to the URL: https://demo.flairdocs.com/DOTV2/Login.aspx
+INFO    2025-06-18 19:16:28,391 [main] testcases.LoginTest  - Browser closed
+INFO    2025-06-18 19:16:28,414 [main] testcases.LoginTest  - Playwright closed
+INFO    2025-06-18 19:16:28,414 [main] testcases.LoginTest  - Playwright closed
