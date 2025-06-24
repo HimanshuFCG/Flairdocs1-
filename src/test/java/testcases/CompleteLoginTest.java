@@ -21,8 +21,8 @@ public class CompleteLoginTest extends BaseTest {
     private Page page;
 
     @Test
-    public void completeLoginAndProjectSelection() {
-        ExtentTest test = extent.createTest("Complete Login And Project Selection");
+    public void completeLoginAndTabSelection() {
+        ExtentTest test = extent.createTest("Complete Login And Tab Selection");
         try {
             // Launch Playwright
             Playwright playwright = Playwright.create();
@@ -44,10 +44,10 @@ public class CompleteLoginTest extends BaseTest {
             test.info("New page created with viewport size");
 
             // Navigate to login page
-            page.navigate("https://demo.flairdocs.com/DOTV2/Login.aspx",
-                    new Page.NavigateOptions()
-                            .setWaitUntil(WaitUntilState.DOMCONTENTLOADED)
-                            .setTimeout(60000));
+            String baseUrl = ConfigReader.get("baseUrl");
+            page.navigate(baseUrl, new Page.NavigateOptions()
+                    .setWaitUntil(WaitUntilState.DOMCONTENTLOADED)
+                    .setTimeout(60000));
             test.info("Navigated to login page: " + page.title());
             test.info("Page URL: " + page.url());
 
@@ -56,11 +56,13 @@ public class CompleteLoginTest extends BaseTest {
             test.info("Login form is visible");
 
             // Enter username
-            page.fill("#LoginFlairdocs_UserName", "david");
+            String username = ConfigReader.get("username");
+            page.fill("#LoginFlairdocs_UserName", username);
             test.info("Entered username");
 
             // Enter password
-            page.fill("#LoginFlairdocs_Password", "fdrow20@0");
+            String password = ConfigReader.get("password");
+            page.fill("#LoginFlairdocs_Password", password);
             test.info("Entered password");
 
             // Wait for the login button to be visible and enabled

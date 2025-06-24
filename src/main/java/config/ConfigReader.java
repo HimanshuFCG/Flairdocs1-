@@ -7,7 +7,8 @@ public class ConfigReader {
     private static Properties props = new Properties();
 
     static {
-        try (InputStream input = ConfigReader.class.getClassLoader().getResourceAsStream("config.properties")) {
+        try (InputStream input = ConfigReader.class.getClassLoader().getResourceAsStream("config.properties"))  //config.properties is in the resources folder
+         {
             if (input != null) {
                 props.load(input);
             } else {

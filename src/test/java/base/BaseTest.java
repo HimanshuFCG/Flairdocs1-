@@ -25,7 +25,7 @@ public class BaseTest {
 
     private static Properties OR = new Properties();
     private static FileInputStream fis;
-    private Logger log = Logger.getLogger(this.getClass());
+    public Logger log = Logger.getLogger(this.getClass());
 
     public static ThreadLocal<Page> threadPage = new ThreadLocal<>();
 
