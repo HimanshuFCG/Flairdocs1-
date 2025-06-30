@@ -32,17 +32,22 @@ public class CreateNewFile extends BaseTest {
             browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false).setSlowMo(1000));
             log.info("Browser launched");
             test.info("Browser launched");
+
             int width = Integer.parseInt(ConfigReader.get("viewportWidth", "1280"));
             int height = Integer.parseInt(ConfigReader.get("viewportHeight", "800"));
+
             log.info("Viewport size set to: " + width + "x" + height);
             test.info("Viewport size set to: " + width + "x" + height);
+
             page = browser.newPage(new Browser.NewPageOptions().setViewportSize(width, height));
             log.info("New page created with viewport size");
             test.info("New page created with viewport size");
+
             String baseUrl = ConfigReader.get("baseUrl");
             page.navigate(baseUrl, new Page.NavigateOptions().setWaitUntil(WaitUntilState.DOMCONTENTLOADED).setTimeout(60000));
             log.info("Navigated to login page: " + page.title());
             test.info("Navigated to login page: " + page.title());
+
             page.waitForSelector("#LoginFlairdocs_UserName");
             log.info("Login form is visible");
             test.info("Login form is visible");
@@ -50,10 +55,12 @@ public class CreateNewFile extends BaseTest {
             page.fill("#LoginFlairdocs_UserName", username);
             log.info("Entered username");
             test.info("Entered username");
+
             String password = ConfigReader.get("password");
             page.fill("#LoginFlairdocs_Password", password);
             log.info("Entered password");
             test.info("Entered password");
+
             page.waitForSelector("#LoginFlairdocs_LoginButton", new Page.WaitForSelectorOptions().setTimeout(20000).setState(WaitForSelectorState.VISIBLE));
             log.info("Login button is visible");
             test.info("Login button is visible");
@@ -61,6 +68,7 @@ public class CreateNewFile extends BaseTest {
             log.info("Clicked login button");
             test.info("Clicked login button");
             page.waitForLoadState();
+            
             log.info("After login - Page title: " + page.title());
             test.info("After login - Page title: " + page.title());
             page.waitForTimeout(5000);
@@ -69,6 +77,19 @@ public class CreateNewFile extends BaseTest {
             test.info("Flairdocs header is visible");
             page.waitForLoadState(LoadState.NETWORKIDLE);
             page.waitForTimeout(2000);
+              // Click the 'Domain:' element to open the dropdown
+              Locator domainDropdown = page.locator("//span[@class='rtbText' and text()='Domain:']");
+              domainDropdown.waitFor(new Locator.WaitForOptions().setTimeout(15000).setState(WaitForSelectorState.VISIBLE));
+              domainDropdown.click();
+              test.info("Clicked 'Domain:' dropdown");
+              log.info("Clicked 'Domain:' dropdown");
+  
+              // Wait for the 'Acquisition' option to appear and select it
+              Locator acquisitionOption = page.locator("//span[@class='rtbText' and text()='Acquisition']");
+              acquisitionOption.waitFor(new Locator.WaitForOptions().setTimeout(15000).setState(WaitForSelectorState.VISIBLE));
+              acquisitionOption.click();
+              test.info("Selected 'Acquisition' from domain dropdown");
+              log.info("Selected 'Acquisition' from domain dropdown");
 
             // --- Project selection ---
             String dropdownArrowSelector = "#ctl00_Main_ProjectSnapShotDetails_ddlProjSnapShotSearchNum_Arrow";

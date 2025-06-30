@@ -13,10 +13,9 @@ import java.io.IOException;
 import com.microsoft.playwright.BrowserType;
 import org.testng.annotations.AfterMethod;  
 import org.testng.Assert;
-import extentlisteners.ExtentListeners;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-
+import extentlisteners.ExtentListeners;
 public class BaseTest {
 
     private Playwright playwright;
@@ -154,7 +153,3 @@ public class BaseTest {
     // }
 
 }
-
-
-
-

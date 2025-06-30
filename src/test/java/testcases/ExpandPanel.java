@@ -86,6 +86,7 @@ public class ExpandPanel extends BaseTest {
             page.waitForSelector(".header-image-container[title='Flairdocs']",
                     new Page.WaitForSelectorOptions().setTimeout(10000));
             test.info("Flairdocs header is visible");
+            
 
             // Find and click project dropdown
             String dropdownArrowSelector = "#ctl00_Main_ProjectSnapShotDetails_ddlProjSnapShotSearchNum_Arrow";

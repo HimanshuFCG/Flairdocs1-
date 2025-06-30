@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="7">FLairdocsSuite</th></tr>
+<tr><td><a href="#t0">Login Test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">40,652</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Complete Login and Project Selection</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">35,764</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">0</th><th class="num">0</th><th class="num attn">2</th><th class="num">76,416</th><th colspan="2"></th></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">FLairdocsSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Login Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testcases.LoginTest</td><td><a href="#m0">loginTest</a></td><td rowspan="1">1751285798910</td><td rowspan="1">40383</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Complete Login and Project Selection &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testcases.CompleteLoginTest</td><td><a href="#m1">completeLoginAndTabSelection</a></td><td rowspan="1">1751285839833</td><td rowspan="1">35250</td></tr></tbody>
+</table>
+<h2>Login Test</h2><h3 id="m0">testcases.LoginTest#loginTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+navigating to &quot;https://demo.flairdocs.com/DOTV2/Login.aspx&quot;, waiting until &quot;load&quot;
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+navigating to &quot;https://demo.flairdocs.com/DOTV2/Login.aspx&quot;, waiting until &quot;load&quot;
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\progress.js:96:26)
+    at Frame.goto (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\frames.js:709:23)
+    at FrameDispatcher.goto (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\dispatchers\frameDispatcher.js:87:77)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.navigateImpl(FrameImpl.java:401)
+	at com.microsoft.playwright.impl.PageImpl.lambda$navigate$32(PageImpl.java:800)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:800)
+	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:41)
+	at com.microsoft.playwright.Page.navigate(Page.java:4309)
+	at base.BaseTest.navigate(BaseTest.java:141)
+	at testcases.LoginTest.loginTest(LoginTest.java:14)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+navigating to &quot;https://demo.flairdocs.com/DOTV2/Login.aspx&quot;, waiting until &quot;load&quot;
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+navigating to &quot;https://demo.flairdocs.com/DOTV2/Login.aspx&quot;, waiting until &quot;load&quot;
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\progress.js:96:26)
+    at Frame.goto (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\frames.js:709:23)
+    at FrameDispatcher.goto (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\dispatchers\frameDispatcher.js:87:77)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	... 40 more
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Complete Login and Project Selection</h2><h3 id="m1">testcases.CompleteLoginTest#completeLoginAndTabSelection</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Test failed: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at testcases.CompleteLoginTest.completeLoginAndTabSelection(CompleteLoginTest.java:226)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

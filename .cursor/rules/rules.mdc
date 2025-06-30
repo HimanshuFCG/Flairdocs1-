@@ -1,0 +1,99 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+1️⃣ Code Structure & Design
+✅ Use Page Object Model (POM) — 1 class = 1 web page
+
+✅ Only 1 responsibility per class or method
+
+✅ Centralize locators inside pages/
+
+✅ Avoid hardcoded test data — use config, JSON, or Excel
+
+✅ Separate test logic (tests/) from action logic (pages/)
+
+2️⃣ Clean Coding Rules
+✅ Use meaningful names: loginBtn, DashboardPage
+
+✅ Keep methods short: max 30 lines
+
+✅ Avoid Thread.sleep() — use smart waits
+
+✅ No magic strings: Use constants or enums
+
+✅ Remove dead code, unused vars, and redundant imports
+
+3️⃣ Test Development Best Practices
+✅ Test only one feature per test case
+
+✅ All tests must run independently
+
+✅ Use assertions with descriptive messages
+
+✅ Use DataProvider for data-driven tests
+
+✅ Tag tests for suites: Smoke, Regression, etc.
+
+4️⃣ Automation Ethics & Stability
+✅ Do NOT automate unstable or changing UIs
+
+✅ Don’t test what unit tests already cover
+
+✅ Add retry logic only for infra flakiness
+
+✅ Track every test failure with screenshots + logs
+
+✅ Never bypass proper environment configs
+
+5️⃣ Logging, Reporting, and CI/CD
+✅ Use Extent/Allure Reports with screenshots
+
+✅ Integrate tests with Jenkins/GitHub Actions
+
+✅ Log all steps (success + failure) using Log4j/SLF4J
+
+✅ Use PWDEBUG=1 or .setHeadless(false) during debug
+
+✅ Keep console logs minimal — use files for logs
+
+6️⃣ Naming Standards
+Type	Format	Example
+Test Class	CamelCase	LoginTest, UserTest
+Page Class	Ends with Page	LoginPage, DashboardPage
+Variables	camelCase	submitBtn, loginHeader
+Constants	UPPER_SNAKE_CASE	LOGIN_BUTTON, TIMEOUT
+
+7️⃣ Folder Structure Example
+arduino
+Copy
+Edit
+src/test/java/
+├── pages/
+│   └── LoginPage.java
+├── tests/
+│   └── LoginTest.java
+├── utils/
+│   └── WaitHelper.java
+│   └── ConfigReader.java
+├── reports/
+│   └── ExtentManager.java
+└── resources/
+    └── config.properties
+✅ Commit Checklist
+
+ All code reviewed by a peer
+
+ No secrets or passwords hardcoded
+
+ Tests pass 3+ times in CI
+
+ Code is DRY (no duplication)
+
+ Reports + screenshots included for failures
+
+🏁 Final Rule:
+Code like you’re handing it off to your future self under production pressure.
+
+

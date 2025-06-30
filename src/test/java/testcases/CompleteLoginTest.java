@@ -86,6 +86,21 @@ public class CompleteLoginTest extends BaseTest {
                     new Page.WaitForSelectorOptions().setTimeout(10000));
             test.info("Flairdocs header is visible");
 
+
+              // Click the 'Domain:' element to open the dropdown
+              Locator domainDropdown = page.locator("//span[@class='rtbText' and text()='Domain:']");
+              domainDropdown.waitFor(new Locator.WaitForOptions().setTimeout(15000).setState(WaitForSelectorState.VISIBLE));
+              domainDropdown.click();
+              test.info("Clicked 'Domain:' dropdown");
+              log.info("Clicked 'Domain:' dropdown");
+  
+              // Wait for the 'Acquisition' option to appear and select it
+              Locator acquisitionOption = page.locator("//span[@class='rtbText' and text()='Acquisition']");
+              acquisitionOption.waitFor(new Locator.WaitForOptions().setTimeout(15000).setState(WaitForSelectorState.VISIBLE));
+              acquisitionOption.click();
+              test.info("Selected 'Acquisition' from domain dropdown");
+              log.info("Selected 'Acquisition' from domain dropdown");
+
             // Find and click project dropdown
             String dropdownArrowSelector = "#ctl00_Main_ProjectSnapShotDetails_ddlProjSnapShotSearchNum_Arrow";
             page.waitForSelector(dropdownArrowSelector);
