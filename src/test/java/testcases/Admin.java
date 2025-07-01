@@ -28,7 +28,7 @@ public class Admin extends BaseTest {
     private static final String Configure_Distribution_Lists = "//a[@title='Configure Distribution Lists']//span[@class='rmText' and text()='Configure Distribution Lists']";
     private static final String Estimation_Cost_Factors = "//a[@title='Estimation Cost Factors']//span[@class='rmText' and text()='Estimation Cost Factors']";
     private static final String Expected_Work_Duration = "//a[@title='Expected Work Duration']//span[@class='rmText' and text()='Expected Work Duration']";
-    private static final String Delete_Projects_and_Files = "//a[@title='Delete Projects and Files']//span[@class='rmText' and text()='Delete Projects and Files']";
+    private static final String Delete_Projects_and_Files = "//a[@title='Delete Projects and Files']//span[@class='rmText' and text()='Delete Project/File']";
     private static final String Move_File_Panel = "//a[@title='Move File Panel']//span[@class='rmText' and text()='Move File Panel']";
     private static final String Canned_Report = "//a[@title='Canned Report']//span[@class='rmText' and text()='Canned Report']";
     private static final String Bulk_Upload_Documents = "//a[@title='Bulk Upload Documents']//span[@class='rmText' and text()='Bulk Upload Documents']";
@@ -49,11 +49,6 @@ public class Admin extends BaseTest {
     private static final String Application_Configuration = "//a[@title='Application Configuration']//span[@class='rmText' and text()='Application Configuration']";
     private static final String Checklist_Configuration = "//a[@title='Checklist Configuration']//span[@class='rmText' and text()='Checklist Configuration']";
     
-
-    
-
-
-
 
     String[][] adminItems = {
         {APPLICATION_LOGS, "popup"},
@@ -167,36 +162,39 @@ public class Admin extends BaseTest {
                 page.click(ADMIN_BUTTON);
                 test.info("Clicked Admin button for item " + (i+1));
                 String itemSelector = adminItems[i][0];
-            String itemType     = adminItems[i][1];
-            page.waitForSelector(itemSelector);
-            page.click(itemSelector);
-            test.info("Clicked dropdown item: " + itemSelector);
-    
-               
-    
-                page.waitForSelector(itemSelector);
-                page.click(itemSelector);
-                test.info("Clicked dropdown item: " + itemSelector);
-                log.info("Clicked dropdown item: " + itemSelector);
-    
+                String itemType     = adminItems[i][1];
+                test.info("About to click dropdown item: " + itemSelector);
+                log.info("About to click dropdown item: " + itemSelector);
+                try {
+                    page.waitForSelector(itemSelector, new Page.WaitForSelectorOptions().setTimeout(20000).setState(WaitForSelectorState.VISIBLE));
+                    page.click(itemSelector);
+                    test.info("Clicked dropdown item: " + itemSelector);
+                    log.info("Clicked dropdown item: " + itemSelector);
+                } catch (Exception e) {
+                    test.fail("Failed to click dropdown item: " + itemSelector + ". Exception: " + e.getMessage());
+                    log.error("Failed to click dropdown item: " + itemSelector, e);
+                    continue;
+                }
+
                 if ("popup".equals(itemType)) {
                     // Wait for popup and close it
-                    page.waitForTimeout(4000);
-                    page.waitForSelector(CLOSE_ICON);
+                    page.waitForTimeout(2000);
+                    page.waitForSelector(CLOSE_ICON, new Page.WaitForSelectorOptions().setTimeout(10000).setState(WaitForSelectorState.VISIBLE));
                     page.click(CLOSE_ICON);
+                    page.waitForTimeout(1000); // Give the UI time to animate/close
+                    page.waitForSelector(CLOSE_ICON, new Page.WaitForSelectorOptions().setTimeout(10000).setState(WaitForSelectorState.HIDDEN));
                     test.info("Closed popup for item " + (i+1));
                     log.info("Closed popup for item " + (i+1));
                 } else if ("navigation".equals(itemType)) {
-                    // Wait for navigation and go back
-                    page.waitForTimeout(5000);
-                    page.goBack();
-                    test.info("Navigated back after visiting item " + (i+1));
+                    // Go back and wait for DOMContentLoaded
+                    page.waitForTimeout(3000);
+                    page.goBack();  test.info("Navigated back after visiting item " + (i+1));
                     log.info("Navigated back after visiting item " + (i+1));
                 }
             }
         }
 
-        // Special handling for the hover menu  
+        
     
     
     @AfterClass
@@ -204,6 +202,9 @@ public class Admin extends BaseTest {
         if (page != null) page.close();
         if (browser != null) browser.close();
         log.info("Browser and page closed");
+        if (extent != null) {
+            extent.flush();
+        }
     }
 
 }

@@ -14,6 +14,7 @@ import config.ConfigReader;
 import com.aventstack.extentreports.ExtentTest;
 import base.BaseTest;
 import org.testng.annotations.AfterSuite;
+import java.io.InputStream;
 
 public class CompleteLoginTest extends BaseTest {
 
@@ -232,5 +233,11 @@ public class CompleteLoginTest extends BaseTest {
         if (extent != null) {
             extent.flush();
         }
+    }
+
+    @Test
+    public void testConfigResource() {
+        InputStream input = ConfigReader.class.getClassLoader().getResourceAsStream("config.properties");
+        System.out.println("Resource found? " + (input != null));
     }
 } 
