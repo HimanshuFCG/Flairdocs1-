@@ -7,21 +7,12 @@
 
 </listeners>
 
-<test name="Login Test">
-    
-    <classes>
-
-<class name="testcases.LoginTest"/>
-</classes>
-
-
-</test>
-
-<test name="Complete Login and Project Selection">
-    
-    <classes>
-
-<class name="testcases.CompleteLoginTest"/>
+ <class name="testcases.Admin"/>
+            <class name="testcases.CompleteLoginTest"/>
+            <class name="testcases.CreateNewFile"/>
+            <class name="testcases.ExpandPanel"/>
+            <class name="testcases.ExpandAllPanelsInAllTabsTest"/>
+            <class name="testcases.CompleteLoginAndPanelTest"/>
 </classes>
 
 
