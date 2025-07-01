@@ -25,6 +25,11 @@ pipeline {
     post {
         always {
             junit '**/target/surefire-reports/*.xml'
+            publishHTML(target: [
+                reportDir: 'reports',
+                reportFiles: 'Extent_*.html',
+                reportName: 'Extent Report'
+            ])
         }
         failure {
             echo 'Build failed! Check the logs and reports for details.'
