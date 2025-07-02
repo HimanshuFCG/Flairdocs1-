@@ -20,7 +20,7 @@ pipeline {
 
         stage('Archive Reports') {
             steps {
-                // Archive entire reports folder (good practice)
+                
                 archiveArtifacts artifacts: 'reports/**', allowEmptyArchive: true
             }
         }
@@ -28,13 +28,13 @@ pipeline {
 
     post {
         always {
-            // ✅ Publish JUnit reports (for TestNG via surefire)
+            // Publish JUnit reports (for TestNG via surefire)
             junit '**/target/surefire-reports/*.xml'
 
-            // ✅ Publish Extent HTML report (match actual filename)
+            //  Publish Extent HTML report (match actual filename)
             publishHTML(target: [
                 reportDir: 'reports',
-                reportFiles: 'ExtentReport.html',   // ✅ Use actual filename
+                reportFiles: 'ExtentReport.html',   //  Use actual filename
                 reportName: 'Extent Report',
                 allowMissing: false,
                 alwaysLinkToLastBuild: true,
@@ -43,7 +43,7 @@ pipeline {
         }
 
         failure {
-            echo '❌ Build failed! Check the logs and reports for details.'
+            echo ' Build failed! Check the logs and reports for details.'
         }
     }
 }

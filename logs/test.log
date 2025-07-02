@@ -9899,3 +9899,351 @@ waiting for selector "//a[@title='Canned Report']//span[@class='rmText' and text
 2025-07-01 14:44:39 INFO  Admin:172 - Clicked dropdown item: //a[@title='Checklist Configuration']//span[@class='rmText' and text()='Checklist Configuration']
 2025-07-01 14:44:46 INFO  Admin:192 - Navigated back after visiting item 30
 2025-07-01 14:44:47 INFO  Admin:204 - Browser and page closed
+2025-07-01 21:13:02 INFO  Admin:51 - Test Execution Started
+2025-07-01 21:13:02 INFO  Admin:59 - Test Execution Started !!!
+2025-07-01 21:13:02 INFO  Admin:69 - OR.properties file loaded
+2025-07-01 21:13:16 INFO  Admin:120 - Login form is visible
+2025-07-01 21:13:18 INFO  Admin:128 - Entered username and password
+2025-07-01 21:13:18 INFO  Admin:134 - Login button is visible
+2025-07-01 21:13:24 INFO  Admin:139 - Clicked login button
+2025-07-01 21:13:32 INFO  Admin:144 - After login - Page title: Flairdocs - Details View
+2025-07-01 21:13:38 INFO  Admin:149 - Flairdocs header is visible
+2025-07-01 21:13:39 INFO  Admin:156 - Clicked Admin button
+2025-07-01 21:13:40 INFO  Admin:167 - About to click dropdown item: //a[@title='Application Logs']//span[@class='rmText' and text()='Application Logs']
+2025-07-01 21:13:41 INFO  Admin:172 - Clicked dropdown item: //a[@title='Application Logs']//span[@class='rmText' and text()='Application Logs']
+2025-07-01 21:13:45 INFO  Admin:187 - Closed popup for item 1
+2025-07-01 21:13:46 INFO  Admin:167 - About to click dropdown item: //a[@title='Application Roles and Work Group']//span[@class='rmText' and text()='Application Roles and Work Groups']
+2025-07-01 21:13:47 INFO  Admin:172 - Clicked dropdown item: //a[@title='Application Roles and Work Group']//span[@class='rmText' and text()='Application Roles and Work Groups']
+2025-07-01 21:13:55 INFO  Admin:192 - Navigated back after visiting item 2
+2025-07-01 21:13:56 INFO  Admin:167 - About to click dropdown item: //a[@title='User Management']//span[@class='rmText' and text()='User Management']
+2025-07-01 21:13:57 INFO  Admin:172 - Clicked dropdown item: //a[@title='User Management']//span[@class='rmText' and text()='User Management']
+2025-07-01 21:14:10 INFO  Admin:192 - Navigated back after visiting item 3
+2025-07-01 21:14:11 INFO  Admin:167 - About to click dropdown item: //a[@title='Work Group Office Information']//span[@class='rmText' and text()='Work Group Office Information']
+2025-07-01 21:14:18 INFO  Admin:172 - Clicked dropdown item: //a[@title='Work Group Office Information']//span[@class='rmText' and text()='Work Group Office Information']
+2025-07-01 21:14:27 INFO  Admin:192 - Navigated back after visiting item 4
+2025-07-01 21:14:28 INFO  Admin:167 - About to click dropdown item: //a[@title='Contracting Company Details']//span[@class='rmText' and text()='Contracting Company Details']
+2025-07-01 21:14:29 INFO  Admin:172 - Clicked dropdown item: //a[@title='Contracting Company Details']//span[@class='rmText' and text()='Contracting Company Details']
+2025-07-01 21:14:35 INFO  Admin:192 - Navigated back after visiting item 5
+2025-07-01 21:14:36 INFO  Admin:167 - About to click dropdown item: //a[@title='Contracting Price Agreements']//span[@class='rmText' and text()='Contracting Price Agreements']
+2025-07-01 21:14:37 INFO  Admin:172 - Clicked dropdown item: //a[@title='Contracting Price Agreements']//span[@class='rmText' and text()='Contracting Price Agreements']
+2025-07-01 21:14:43 INFO  Admin:192 - Navigated back after visiting item 6
+2025-07-01 21:14:44 INFO  Admin:167 - About to click dropdown item: //a[@title='Dropdowns']//span[@class='rmText' and text()='Dropdowns']
+2025-07-01 21:14:45 INFO  Admin:172 - Clicked dropdown item: //a[@title='Dropdowns']//span[@class='rmText' and text()='Dropdowns']
+2025-07-01 21:14:51 INFO  Admin:192 - Navigated back after visiting item 7
+2025-07-01 21:14:52 INFO  Admin:167 - About to click dropdown item: //a[@title='Configure Distribution Lists']//span[@class='rmText' and text()='Configure Distribution Lists']
+2025-07-01 21:14:54 INFO  Admin:172 - Clicked dropdown item: //a[@title='Configure Distribution Lists']//span[@class='rmText' and text()='Configure Distribution Lists']
+2025-07-01 21:14:59 INFO  Admin:192 - Navigated back after visiting item 8
+2025-07-01 21:15:00 INFO  Admin:167 - About to click dropdown item: //a[@title='Estimation Cost Factors']//span[@class='rmText' and text()='Estimation Cost Factors']
+2025-07-01 21:15:01 INFO  Admin:172 - Clicked dropdown item: //a[@title='Estimation Cost Factors']//span[@class='rmText' and text()='Estimation Cost Factors']
+2025-07-01 21:15:07 INFO  Admin:192 - Navigated back after visiting item 9
+2025-07-01 21:15:08 INFO  Admin:167 - About to click dropdown item: //a[@title='Expected Work Duration']//span[@class='rmText' and text()='Expected Work Duration']
+2025-07-01 21:15:09 INFO  Admin:172 - Clicked dropdown item: //a[@title='Expected Work Duration']//span[@class='rmText' and text()='Expected Work Duration']
+2025-07-01 21:15:22 INFO  Admin:192 - Navigated back after visiting item 10
+2025-07-01 21:15:23 INFO  Admin:167 - About to click dropdown item: //a[@title='Delete Projects and Files']//span[@class='rmText' and text()='Delete Project/File']
+2025-07-01 21:15:24 INFO  Admin:172 - Clicked dropdown item: //a[@title='Delete Projects and Files']//span[@class='rmText' and text()='Delete Project/File']
+2025-07-01 21:15:30 INFO  Admin:192 - Navigated back after visiting item 11
+2025-07-01 21:15:31 INFO  Admin:167 - About to click dropdown item: //a[@title='Move File Panel']//span[@class='rmText' and text()='Move File Panel']
+2025-07-01 21:15:32 INFO  Admin:172 - Clicked dropdown item: //a[@title='Move File Panel']//span[@class='rmText' and text()='Move File Panel']
+2025-07-01 21:15:40 INFO  Admin:192 - Navigated back after visiting item 12
+2025-07-01 21:15:41 INFO  Admin:167 - About to click dropdown item: //a[@title='Canned Report']//span[@class='rmText' and text()='Canned Report']
+2025-07-01 21:16:01 ERROR Admin:175 - Failed to click dropdown item: //a[@title='Canned Report']//span[@class='rmText' and text()='Canned Report']
+com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 20000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//a[@title='Canned Report']//span[@class='rmText' and text()='Canned Report']" to be visible
+============================================================
+  name='TimeoutError
+  stack='TimeoutError: Timeout 20000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//a[@title='Canned Report']//span[@class='rmText' and text()='Canned Report']" to be visible
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-772100436299362536\package\lib\server\progress.js:96:26)
+    at Frame.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-772100436299362536\package\lib\server\frames.js:843:23)
+    at FrameDispatcher.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-772100436299362536\package\lib\server\dispatchers\frameDispatcher.js:111:110)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-772100436299362536\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:982)
+	at com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:972)
+	at com.microsoft.playwright.impl.PageImpl.lambda$waitForSelector$78(PageImpl.java:1406)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.PageImpl.waitForSelector(PageImpl.java:1405)
+	at testcases.Admin.setUpAndLogin(Admin.java:169)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at com.microsoft.java.test.runner.testng.TestNGRunner.run(TestNGRunner.java:45)
+	at com.microsoft.java.test.runner.testng.TestNGLauncher.execute(TestNGLauncher.java:32)
+	at com.microsoft.java.test.runner.Launcher.main(Launcher.java:57)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 20000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//a[@title='Canned Report']//span[@class='rmText' and text()='Canned Report']" to be visible
+============================================================
+  name='TimeoutError
+  stack='TimeoutError: Timeout 20000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//a[@title='Canned Report']//span[@class='rmText' and text()='Canned Report']" to be visible
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-772100436299362536\package\lib\server\progress.js:96:26)
+    at Frame.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-772100436299362536\package\lib\server\frames.js:843:23)
+    at FrameDispatcher.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-772100436299362536\package\lib\server\dispatchers\frameDispatcher.js:111:110)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-772100436299362536\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	... 34 more
+2025-07-01 21:16:02 INFO  Admin:167 - About to click dropdown item: //a[@title='Bulk Upload Documents']//span[@class='rmText' and text()='Bulk Upload Documents']
+2025-07-01 21:16:03 INFO  Admin:172 - Clicked dropdown item: //a[@title='Bulk Upload Documents']//span[@class='rmText' and text()='Bulk Upload Documents']
+2025-07-01 21:16:09 INFO  Admin:192 - Navigated back after visiting item 14
+2025-07-01 21:16:10 INFO  Admin:167 - About to click dropdown item: //a[@title='Bulk Generate Documents']//span[@class='rmText' and text()='Bulk Generate Documents']
+2025-07-01 21:16:11 INFO  Admin:172 - Clicked dropdown item: //a[@title='Bulk Generate Documents']//span[@class='rmText' and text()='Bulk Generate Documents']
+2025-07-01 21:16:17 INFO  Admin:192 - Navigated back after visiting item 15
+2025-07-01 21:16:18 INFO  Admin:167 - About to click dropdown item: //a[@title='Document Metadata Attributes']//span[@class='rmText' and text()='Document Metadata Attributes']
+2025-07-01 21:16:19 INFO  Admin:172 - Clicked dropdown item: //a[@title='Document Metadata Attributes']//span[@class='rmText' and text()='Document Metadata Attributes']
+2025-07-01 21:16:24 INFO  Admin:192 - Navigated back after visiting item 16
+2025-07-01 21:16:25 INFO  Admin:167 - About to click dropdown item: //a[@title='Document Packages']//span[@class='rmText' and text()='Document Packages']
+2025-07-01 21:16:26 INFO  Admin:172 - Clicked dropdown item: //a[@title='Document Packages']//span[@class='rmText' and text()='Document Packages']
+2025-07-01 21:16:31 INFO  Admin:192 - Navigated back after visiting item 17
+2025-07-01 21:16:32 INFO  Admin:167 - About to click dropdown item: //a[@title='Document Type Configuration']//span[@class='rmText' and text()='Document Type Configuration']
+2025-07-01 21:16:33 INFO  Admin:172 - Clicked dropdown item: //a[@title='Document Type Configuration']//span[@class='rmText' and text()='Document Type Configuration']
+2025-07-01 21:17:00 INFO  Admin:192 - Navigated back after visiting item 18
+2025-07-01 21:17:01 INFO  Admin:167 - About to click dropdown item: //a[@title='Template and Clause Maintenance']//span[@class='rmText' and text()='Template and Clause Maintenance']
+2025-07-01 21:17:02 INFO  Admin:172 - Clicked dropdown item: //a[@title='Template and Clause Maintenance']//span[@class='rmText' and text()='Template and Clause Maintenance']
+2025-07-01 21:17:07 INFO  Admin:192 - Navigated back after visiting item 19
+2025-07-01 21:17:08 INFO  Admin:167 - About to click dropdown item: //a[@title='Civil Certification / Board Approval']//span[@class='rmText' and text()='Civil Certification / Board Approval']
+2025-07-01 21:17:10 INFO  Admin:172 - Clicked dropdown item: //a[@title='Civil Certification / Board Approval']//span[@class='rmText' and text()='Civil Certification / Board Approval']
+2025-07-01 21:17:15 INFO  Admin:192 - Navigated back after visiting item 20
+2025-07-01 21:17:16 INFO  Admin:167 - About to click dropdown item: //a[@title='Production Plans']//span[@class='rmText' and text()='Production Plans']
+2025-07-01 21:17:17 INFO  Admin:172 - Clicked dropdown item: //a[@title='Production Plans']//span[@class='rmText' and text()='Production Plans']
+2025-07-01 21:17:24 INFO  Admin:192 - Navigated back after visiting item 21
+2025-07-01 21:17:25 INFO  Admin:167 - About to click dropdown item: //a[@title='QA Data']//span[@class='rmText' and text()='QA Data']
+2025-07-01 21:17:26 INFO  Admin:172 - Clicked dropdown item: //a[@title='QA Data']//span[@class='rmText' and text()='QA Data']
+2025-07-01 21:17:32 INFO  Admin:192 - Navigated back after visiting item 22
+2025-07-01 21:17:34 INFO  Admin:167 - About to click dropdown item: //a[@title='Help Content']//span[@class='rmText' and text()='Help Content']
+2025-07-01 21:17:35 INFO  Admin:172 - Clicked dropdown item: //a[@title='Help Content']//span[@class='rmText' and text()='Help Content']
+2025-07-01 21:17:40 INFO  Admin:192 - Navigated back after visiting item 23
+2025-07-01 21:17:41 INFO  Admin:167 - About to click dropdown item: //a[@title='FlairBOT Library']//span[@class='rmText' and text()='FlairBOT Library']
+2025-07-01 21:17:42 INFO  Admin:172 - Clicked dropdown item: //a[@title='FlairBOT Library']//span[@class='rmText' and text()='FlairBOT Library']
+2025-07-01 21:17:47 INFO  Admin:192 - Navigated back after visiting item 24
+2025-07-01 21:17:48 INFO  Admin:167 - About to click dropdown item: //a[@title='Workflow Activity']//span[@class='rmText' and text()='Workflow Activity']
+2025-07-01 21:17:49 INFO  Admin:172 - Clicked dropdown item: //a[@title='Workflow Activity']//span[@class='rmText' and text()='Workflow Activity']
+2025-07-01 21:18:05 INFO  Admin:192 - Navigated back after visiting item 25
+2025-07-01 21:18:06 INFO  Admin:167 - About to click dropdown item: //a[@title='Notifications Configuration']//span[@class='rmText' and text()='Notifications Configuration']
+2025-07-01 21:18:07 INFO  Admin:172 - Clicked dropdown item: //a[@title='Notifications Configuration']//span[@class='rmText' and text()='Notifications Configuration']
+2025-07-01 21:18:13 INFO  Admin:192 - Navigated back after visiting item 26
+2025-07-01 21:18:14 INFO  Admin:167 - About to click dropdown item: //a[@title='Workflow Designer']//span[@class='rmText' and text()='Workflow Designer']
+2025-07-01 21:18:15 INFO  Admin:172 - Clicked dropdown item: //a[@title='Workflow Designer']//span[@class='rmText' and text()='Workflow Designer']
+2025-07-01 21:18:21 INFO  Admin:192 - Navigated back after visiting item 27
+2025-07-01 21:18:22 INFO  Admin:167 - About to click dropdown item: //a[@title='Environment Copy']//span[@class='rmText' and text()='Environment Copy']
+2025-07-01 21:18:23 INFO  Admin:172 - Clicked dropdown item: //a[@title='Environment Copy']//span[@class='rmText' and text()='Environment Copy']
+2025-07-01 21:18:36 INFO  Admin:192 - Navigated back after visiting item 28
+2025-07-01 21:18:37 INFO  Admin:167 - About to click dropdown item: //a[@title='Application Configuration']//span[@class='rmText' and text()='Application Configuration']
+2025-07-01 21:18:38 INFO  Admin:172 - Clicked dropdown item: //a[@title='Application Configuration']//span[@class='rmText' and text()='Application Configuration']
+2025-07-01 21:18:43 INFO  Admin:192 - Navigated back after visiting item 29
+2025-07-01 21:18:44 INFO  Admin:167 - About to click dropdown item: //a[@title='Checklist Configuration']//span[@class='rmText' and text()='Checklist Configuration']
+2025-07-01 21:18:45 INFO  Admin:172 - Clicked dropdown item: //a[@title='Checklist Configuration']//span[@class='rmText' and text()='Checklist Configuration']
+2025-07-01 21:18:52 INFO  Admin:192 - Navigated back after visiting item 30
+2025-07-01 21:18:52 INFO  Admin:204 - Browser and page closed
+2025-07-02 14:29:46 INFO  Admin:51 - Test Execution Started
+2025-07-02 14:29:46 INFO  Admin:59 - Test Execution Started !!!
+2025-07-02 14:29:46 INFO  Admin:69 - OR.properties file loaded
+2025-07-02 14:30:04 INFO  Admin:120 - Login form is visible
+2025-07-02 14:30:06 INFO  Admin:128 - Entered username and password
+2025-07-02 14:30:06 INFO  Admin:134 - Login button is visible
+2025-07-02 14:30:30 INFO  Admin:139 - Clicked login button
+2025-07-02 14:30:30 INFO  Admin:144 - After login - Page title: demo.flairdocs.com
+2025-07-02 14:30:45 INFO  Admin:204 - Browser and page closed
+2025-07-02 14:31:23 INFO  Admin:51 - Test Execution Started
+2025-07-02 14:31:23 INFO  Admin:59 - Test Execution Started !!!
+2025-07-02 14:31:23 INFO  Admin:69 - OR.properties file loaded
+2025-07-02 14:31:37 INFO  Admin:120 - Login form is visible
+2025-07-02 14:31:40 INFO  Admin:128 - Entered username and password
+2025-07-02 14:31:40 INFO  Admin:134 - Login button is visible
+2025-07-02 14:31:45 INFO  Admin:139 - Clicked login button
+2025-07-02 14:31:47 INFO  Admin:144 - After login - Page title: Flairdocs - Details View
+2025-07-02 14:31:52 INFO  Admin:149 - Flairdocs header is visible
+2025-07-02 14:31:53 INFO  Admin:156 - Clicked Admin button
+2025-07-02 14:31:54 INFO  Admin:167 - About to click dropdown item: //a[@title='Application Logs']//span[@class='rmText' and text()='Application Logs']
+2025-07-02 14:31:55 INFO  Admin:172 - Clicked dropdown item: //a[@title='Application Logs']//span[@class='rmText' and text()='Application Logs']
+2025-07-02 14:31:59 INFO  Admin:187 - Closed popup for item 1
+2025-07-02 14:32:00 INFO  Admin:167 - About to click dropdown item: //a[@title='Application Roles and Work Group']//span[@class='rmText' and text()='Application Roles and Work Groups']
+2025-07-02 14:32:02 INFO  Admin:172 - Clicked dropdown item: //a[@title='Application Roles and Work Group']//span[@class='rmText' and text()='Application Roles and Work Groups']
+2025-07-02 14:32:15 INFO  Admin:192 - Navigated back after visiting item 2
+2025-07-02 14:32:16 INFO  Admin:167 - About to click dropdown item: //a[@title='User Management']//span[@class='rmText' and text()='User Management']
+2025-07-02 14:32:17 INFO  Admin:172 - Clicked dropdown item: //a[@title='User Management']//span[@class='rmText' and text()='User Management']
+2025-07-02 14:32:23 INFO  Admin:192 - Navigated back after visiting item 3
+2025-07-02 14:32:24 INFO  Admin:167 - About to click dropdown item: //a[@title='Work Group Office Information']//span[@class='rmText' and text()='Work Group Office Information']
+2025-07-02 14:32:25 INFO  Admin:172 - Clicked dropdown item: //a[@title='Work Group Office Information']//span[@class='rmText' and text()='Work Group Office Information']
+2025-07-02 14:32:32 INFO  Admin:192 - Navigated back after visiting item 4
+2025-07-02 14:32:33 INFO  Admin:167 - About to click dropdown item: //a[@title='Contracting Company Details']//span[@class='rmText' and text()='Contracting Company Details']
+2025-07-02 14:32:34 INFO  Admin:172 - Clicked dropdown item: //a[@title='Contracting Company Details']//span[@class='rmText' and text()='Contracting Company Details']
+2025-07-02 14:32:40 INFO  Admin:192 - Navigated back after visiting item 5
+2025-07-02 14:32:41 INFO  Admin:167 - About to click dropdown item: //a[@title='Contracting Price Agreements']//span[@class='rmText' and text()='Contracting Price Agreements']
+2025-07-02 14:32:42 INFO  Admin:172 - Clicked dropdown item: //a[@title='Contracting Price Agreements']//span[@class='rmText' and text()='Contracting Price Agreements']
+2025-07-02 14:32:47 INFO  Admin:192 - Navigated back after visiting item 6
+2025-07-02 14:32:48 INFO  Admin:167 - About to click dropdown item: //a[@title='Dropdowns']//span[@class='rmText' and text()='Dropdowns']
+2025-07-02 14:32:49 INFO  Admin:172 - Clicked dropdown item: //a[@title='Dropdowns']//span[@class='rmText' and text()='Dropdowns']
+2025-07-02 14:32:55 INFO  Admin:192 - Navigated back after visiting item 7
+2025-07-02 14:32:56 INFO  Admin:167 - About to click dropdown item: //a[@title='Configure Distribution Lists']//span[@class='rmText' and text()='Configure Distribution Lists']
+2025-07-02 14:32:57 INFO  Admin:172 - Clicked dropdown item: //a[@title='Configure Distribution Lists']//span[@class='rmText' and text()='Configure Distribution Lists']
+2025-07-02 14:33:02 INFO  Admin:192 - Navigated back after visiting item 8
+2025-07-02 14:33:03 INFO  Admin:167 - About to click dropdown item: //a[@title='Estimation Cost Factors']//span[@class='rmText' and text()='Estimation Cost Factors']
+2025-07-02 14:33:04 INFO  Admin:172 - Clicked dropdown item: //a[@title='Estimation Cost Factors']//span[@class='rmText' and text()='Estimation Cost Factors']
+2025-07-02 14:33:11 INFO  Admin:192 - Navigated back after visiting item 9
+2025-07-02 14:33:12 INFO  Admin:167 - About to click dropdown item: //a[@title='Expected Work Duration']//span[@class='rmText' and text()='Expected Work Duration']
+2025-07-02 14:33:13 INFO  Admin:172 - Clicked dropdown item: //a[@title='Expected Work Duration']//span[@class='rmText' and text()='Expected Work Duration']
+2025-07-02 14:33:21 INFO  Admin:192 - Navigated back after visiting item 10
+2025-07-02 14:33:22 INFO  Admin:167 - About to click dropdown item: //a[@title='Delete Projects and Files']//span[@class='rmText' and text()='Delete Project/File']
+2025-07-02 14:33:24 INFO  Admin:172 - Clicked dropdown item: //a[@title='Delete Projects and Files']//span[@class='rmText' and text()='Delete Project/File']
+2025-07-02 14:33:36 INFO  Admin:192 - Navigated back after visiting item 11
+2025-07-02 14:33:37 INFO  Admin:167 - About to click dropdown item: //a[@title='Move File Panel']//span[@class='rmText' and text()='Move File Panel']
+2025-07-02 14:33:38 INFO  Admin:172 - Clicked dropdown item: //a[@title='Move File Panel']//span[@class='rmText' and text()='Move File Panel']
+2025-07-02 14:33:46 INFO  Admin:192 - Navigated back after visiting item 12
+2025-07-02 14:33:47 INFO  Admin:167 - About to click dropdown item: //a[@title='Canned Report']//span[@class='rmText' and text()='Canned Report']
+2025-07-02 14:34:07 ERROR Admin:175 - Failed to click dropdown item: //a[@title='Canned Report']//span[@class='rmText' and text()='Canned Report']
+com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 20000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//a[@title='Canned Report']//span[@class='rmText' and text()='Canned Report']" to be visible
+============================================================
+  name='TimeoutError
+  stack='TimeoutError: Timeout 20000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//a[@title='Canned Report']//span[@class='rmText' and text()='Canned Report']" to be visible
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-18353148299183139230\package\lib\server\progress.js:96:26)
+    at Frame.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-18353148299183139230\package\lib\server\frames.js:843:23)
+    at FrameDispatcher.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-18353148299183139230\package\lib\server\dispatchers\frameDispatcher.js:111:110)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-18353148299183139230\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:982)
+	at com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:972)
+	at com.microsoft.playwright.impl.PageImpl.lambda$waitForSelector$78(PageImpl.java:1406)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.PageImpl.waitForSelector(PageImpl.java:1405)
+	at testcases.Admin.setUpAndLogin(Admin.java:169)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 20000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//a[@title='Canned Report']//span[@class='rmText' and text()='Canned Report']" to be visible
+============================================================
+  name='TimeoutError
+  stack='TimeoutError: Timeout 20000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//a[@title='Canned Report']//span[@class='rmText' and text()='Canned Report']" to be visible
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-18353148299183139230\package\lib\server\progress.js:96:26)
+    at Frame.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-18353148299183139230\package\lib\server\frames.js:843:23)
+    at FrameDispatcher.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-18353148299183139230\package\lib\server\dispatchers\frameDispatcher.js:111:110)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-18353148299183139230\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	... 33 more
+2025-07-02 14:34:08 INFO  Admin:167 - About to click dropdown item: //a[@title='Bulk Upload Documents']//span[@class='rmText' and text()='Bulk Upload Documents']
+2025-07-02 14:34:09 INFO  Admin:172 - Clicked dropdown item: //a[@title='Bulk Upload Documents']//span[@class='rmText' and text()='Bulk Upload Documents']
+2025-07-02 14:34:15 INFO  Admin:192 - Navigated back after visiting item 14
+2025-07-02 14:34:16 INFO  Admin:167 - About to click dropdown item: //a[@title='Bulk Generate Documents']//span[@class='rmText' and text()='Bulk Generate Documents']
+2025-07-02 14:34:18 INFO  Admin:172 - Clicked dropdown item: //a[@title='Bulk Generate Documents']//span[@class='rmText' and text()='Bulk Generate Documents']
+2025-07-02 14:34:23 INFO  Admin:192 - Navigated back after visiting item 15
+2025-07-02 14:34:24 INFO  Admin:167 - About to click dropdown item: //a[@title='Document Metadata Attributes']//span[@class='rmText' and text()='Document Metadata Attributes']
+2025-07-02 14:34:25 INFO  Admin:172 - Clicked dropdown item: //a[@title='Document Metadata Attributes']//span[@class='rmText' and text()='Document Metadata Attributes']
+2025-07-02 14:34:32 INFO  Admin:192 - Navigated back after visiting item 16
+2025-07-02 14:34:33 INFO  Admin:167 - About to click dropdown item: //a[@title='Document Packages']//span[@class='rmText' and text()='Document Packages']
+2025-07-02 14:34:34 INFO  Admin:172 - Clicked dropdown item: //a[@title='Document Packages']//span[@class='rmText' and text()='Document Packages']
+2025-07-02 14:34:39 INFO  Admin:192 - Navigated back after visiting item 17
+2025-07-02 14:34:41 INFO  Admin:167 - About to click dropdown item: //a[@title='Document Type Configuration']//span[@class='rmText' and text()='Document Type Configuration']
+2025-07-02 14:34:42 INFO  Admin:172 - Clicked dropdown item: //a[@title='Document Type Configuration']//span[@class='rmText' and text()='Document Type Configuration']
+2025-07-02 14:34:47 INFO  Admin:192 - Navigated back after visiting item 18
+2025-07-02 14:34:48 INFO  Admin:167 - About to click dropdown item: //a[@title='Template and Clause Maintenance']//span[@class='rmText' and text()='Template and Clause Maintenance']
+2025-07-02 14:34:49 INFO  Admin:172 - Clicked dropdown item: //a[@title='Template and Clause Maintenance']//span[@class='rmText' and text()='Template and Clause Maintenance']
+2025-07-02 14:34:54 INFO  Admin:192 - Navigated back after visiting item 19
+2025-07-02 14:34:56 INFO  Admin:167 - About to click dropdown item: //a[@title='Civil Certification / Board Approval']//span[@class='rmText' and text()='Civil Certification / Board Approval']
+2025-07-02 14:34:58 INFO  Admin:172 - Clicked dropdown item: //a[@title='Civil Certification / Board Approval']//span[@class='rmText' and text()='Civil Certification / Board Approval']
+2025-07-02 14:35:03 INFO  Admin:192 - Navigated back after visiting item 20
+2025-07-02 14:35:04 INFO  Admin:167 - About to click dropdown item: //a[@title='Production Plans']//span[@class='rmText' and text()='Production Plans']
+2025-07-02 14:35:05 INFO  Admin:172 - Clicked dropdown item: //a[@title='Production Plans']//span[@class='rmText' and text()='Production Plans']
+2025-07-02 14:35:11 INFO  Admin:192 - Navigated back after visiting item 21
+2025-07-02 14:35:12 INFO  Admin:167 - About to click dropdown item: //a[@title='QA Data']//span[@class='rmText' and text()='QA Data']
+2025-07-02 14:35:14 INFO  Admin:172 - Clicked dropdown item: //a[@title='QA Data']//span[@class='rmText' and text()='QA Data']
+2025-07-02 14:35:20 INFO  Admin:192 - Navigated back after visiting item 22
+2025-07-02 14:35:21 INFO  Admin:167 - About to click dropdown item: //a[@title='Help Content']//span[@class='rmText' and text()='Help Content']
+2025-07-02 14:35:22 INFO  Admin:172 - Clicked dropdown item: //a[@title='Help Content']//span[@class='rmText' and text()='Help Content']
+2025-07-02 14:35:28 INFO  Admin:192 - Navigated back after visiting item 23
+2025-07-02 14:35:29 INFO  Admin:167 - About to click dropdown item: //a[@title='FlairBOT Library']//span[@class='rmText' and text()='FlairBOT Library']
+2025-07-02 14:35:30 INFO  Admin:172 - Clicked dropdown item: //a[@title='FlairBOT Library']//span[@class='rmText' and text()='FlairBOT Library']
+2025-07-02 14:35:35 INFO  Admin:192 - Navigated back after visiting item 24
+2025-07-02 14:35:36 INFO  Admin:167 - About to click dropdown item: //a[@title='Workflow Activity']//span[@class='rmText' and text()='Workflow Activity']
+2025-07-02 14:35:37 INFO  Admin:172 - Clicked dropdown item: //a[@title='Workflow Activity']//span[@class='rmText' and text()='Workflow Activity']
+2025-07-02 14:35:43 INFO  Admin:192 - Navigated back after visiting item 25
+2025-07-02 14:35:44 INFO  Admin:167 - About to click dropdown item: //a[@title='Notifications Configuration']//span[@class='rmText' and text()='Notifications Configuration']
+2025-07-02 14:35:49 INFO  Admin:172 - Clicked dropdown item: //a[@title='Notifications Configuration']//span[@class='rmText' and text()='Notifications Configuration']
+2025-07-02 14:35:54 INFO  Admin:192 - Navigated back after visiting item 26
+2025-07-02 14:35:55 INFO  Admin:167 - About to click dropdown item: //a[@title='Workflow Designer']//span[@class='rmText' and text()='Workflow Designer']
+2025-07-02 14:35:57 INFO  Admin:172 - Clicked dropdown item: //a[@title='Workflow Designer']//span[@class='rmText' and text()='Workflow Designer']
+2025-07-02 14:36:02 INFO  Admin:192 - Navigated back after visiting item 27
+2025-07-02 14:36:03 INFO  Admin:167 - About to click dropdown item: //a[@title='Environment Copy']//span[@class='rmText' and text()='Environment Copy']
+2025-07-02 14:36:04 INFO  Admin:172 - Clicked dropdown item: //a[@title='Environment Copy']//span[@class='rmText' and text()='Environment Copy']
+2025-07-02 14:36:09 INFO  Admin:192 - Navigated back after visiting item 28
+2025-07-02 14:36:10 INFO  Admin:167 - About to click dropdown item: //a[@title='Application Configuration']//span[@class='rmText' and text()='Application Configuration']
+2025-07-02 14:36:11 INFO  Admin:172 - Clicked dropdown item: //a[@title='Application Configuration']//span[@class='rmText' and text()='Application Configuration']
+2025-07-02 14:36:16 INFO  Admin:192 - Navigated back after visiting item 29
+2025-07-02 14:36:17 INFO  Admin:167 - About to click dropdown item: //a[@title='Checklist Configuration']//span[@class='rmText' and text()='Checklist Configuration']
+2025-07-02 14:36:18 INFO  Admin:172 - Clicked dropdown item: //a[@title='Checklist Configuration']//span[@class='rmText' and text()='Checklist Configuration']
+2025-07-02 14:36:23 INFO  Admin:192 - Navigated back after visiting item 30
+2025-07-02 14:36:23 INFO  Admin:204 - Browser and page closed
