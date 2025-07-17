@@ -31,7 +31,7 @@
             <configuration>
                 <testFailureIgnore>false</testFailureIgnore>
                 <suiteXmlFiles>
-                    <suiteXmlFile>src\test\resources\runner\testng.xml</suiteXmlFile>
+                    <suiteXmlFile>C:\code\Flairdocs1\testng.xml</suiteXmlFile>
                 </suiteXmlFiles>
             </configuration>
         </plugin>

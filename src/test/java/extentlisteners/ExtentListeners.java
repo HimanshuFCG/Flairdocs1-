@@ -45,10 +45,9 @@ public class ExtentListeners implements ITestListener, ISuiteListener {
 	}
 
 	public void onTestStart(ITestResult result) {
-
-		test = extent
-				.createTest(result.getTestClass().getName() + "     @TestCase : " + result.getMethod().getMethodName());
-		
+		test = extent.createTest(
+			result.getTestClass().getName() + "     @TestCase : " + result.getMethod().getMethodName()
+		);
 		testReport.set(test);
 	}
 
