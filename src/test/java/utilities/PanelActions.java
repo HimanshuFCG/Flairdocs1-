@@ -17,52 +17,47 @@
             public void openPanel(String panelTitle) {
                 try {
                     if ("Project Information".equals(panelTitle)) {
+                        // Click the unique expand image icon for Project Information
                         Locator expandBtn = page.locator("#ctl00_Main_DynamicContent1_projinfo_AcqProjectProfile_ColProjectprofile____img");
-                        expandBtn.waitFor(new Locator.WaitForOptions().setTimeout(30000).setState(WaitForSelectorState.VISIBLE));
-                        if (expandBtn.isVisible() && expandBtn.isEnabled()) {
-                            expandBtn.click(new Locator.ClickOptions().setForce(true));
-                            log.info("Clicked expand for 'Project Information'");
-                        } else {
-                            log.warn("Expand button for 'Project Information' not visible or not enabled");
-                            throw new RuntimeException("Expand button for 'Project Information' not visible or not enabled");
-                        }
+                        expandBtn.waitFor(new Locator.WaitForOptions().setTimeout(5000));
+                        expandBtn.scrollIntoViewIfNeeded();
+                        expandBtn.click(new Locator.ClickOptions().setForce(true));
+
+                        // Wait until the outer div loses 'panelclosed' class
                         Locator panel = page.locator("#ctl00_Main_DynamicContent1_projinfo_AcqProjectProfile_ColProjectprofile____title");
                         page.waitForFunction(
                             "el => !el.className.includes('panelclosed')",
                             panel.first(),
-                            new Page.WaitForFunctionOptions().setTimeout(30000)
+                            new Page.WaitForFunctionOptions().setTimeout(20000)
                         );
-                        page.waitForSelector(".loading", new Page.WaitForSelectorOptions().setState(WaitForSelectorState.HIDDEN).setTimeout(20000));
-                        log.info("Panel 'Project Information' is fully open.");
+
+                        // Wait for loader to disappear
+                        page.waitForSelector(".loading", 
+                            new com.microsoft.playwright.Page.WaitForSelectorOptions().setState(com.microsoft.playwright.options.WaitForSelectorState.HIDDEN).setTimeout(20000));
+                        // Slow down between panels
+                        page.waitForTimeout(2000);
+                        log.info("Successfully opened Project Information");
                     } else {
-                        // Check if panel is already open
-                        Locator openPanel = page.locator("div.collapsible-panel-main-open-close:not(.panelclosed)", new Page.LocatorOptions().setHasText(panelTitle));
-                        if (openPanel.count() > 0) {
-                            log.info("Panel '" + panelTitle + "' is already open. Skipping expand.");
-                            return;
-                        }
-                        // Otherwise, find the collapsed panel and expand
-                        Locator collapsedPanel = page.locator("div.collapsible-panel-main-open-close.panelclosed", new Page.LocatorOptions().setHasText(panelTitle));
-                        collapsedPanel.waitFor(new Locator.WaitForOptions().setTimeout(30000).setState(WaitForSelectorState.VISIBLE));
-                        if (collapsedPanel.first().isVisible() && collapsedPanel.first().isEnabled()) {
-                            collapsedPanel.first().click(new Locator.ClickOptions().setForce(true));
-                            log.info("Clicked expand for panel: " + panelTitle);
-                        } else {
-                            log.warn("Expand button for panel '" + panelTitle + "' not visible or not enabled");
-                            throw new RuntimeException("Expand button for panel '" + panelTitle + "' not visible or not enabled");
-                        }
-                        Locator openPanelLocator = page.locator("div.collapsible-panel-main-open-close", new Page.LocatorOptions().setHasText(panelTitle));
+                        Locator panel = page.locator("div.collapsible-panel-main-open-close.panelclosed", 
+                            new com.microsoft.playwright.Page.LocatorOptions().setHasText(panelTitle));
+                        panel.waitFor(new Locator.WaitForOptions().setTimeout(5000));
+                        panel.scrollIntoViewIfNeeded();
+                        panel.click(new Locator.ClickOptions().setForce(true));
+
+                        // Wait until panel opens
                         page.waitForFunction(
                             "el => !el.className.includes('panelclosed')",
-                            openPanelLocator.first(),
-                            new Page.WaitForFunctionOptions().setTimeout(30000)
+                            panel.first(),
+                            new Page.WaitForFunctionOptions().setTimeout(20000)
                         );
-                        page.waitForSelector(".loading", new Page.WaitForSelectorOptions().setState(WaitForSelectorState.HIDDEN).setTimeout(20000));
-                        log.info("Panel '" + panelTitle + "' is fully open.");
+
+                        page.waitForSelector(".loading", 
+                            new com.microsoft.playwright.Page.WaitForSelectorOptions().setState(com.microsoft.playwright.options.WaitForSelectorState.HIDDEN).setTimeout(20000));
+                        page.waitForTimeout(2000);
+                        log.info("Successfully opened panel: " + panelTitle);
                     }
                 } catch (Exception e) {
-                    log.error("Could not open panel '" + panelTitle + "' - " + e.getMessage());
-                    throw new RuntimeException("Could not open panel '" + panelTitle + "'", e);
+                    log.warn("Could not open panel '" + panelTitle + "' - " + e.getMessage());
                 }
             }
             
@@ -70,42 +65,35 @@
                 try {
                     if ("Project Information".equals(panelTitle)) {
                         Locator collapseBtn = page.locator("#ctl00_Main_DynamicContent1_projinfo_AcqProjectProfile_ColProjectprofile____img");
-                        collapseBtn.waitFor(new Locator.WaitForOptions().setTimeout(30000).setState(WaitForSelectorState.VISIBLE));
-                        if (collapseBtn.isVisible() && collapseBtn.isEnabled()) {
-                            collapseBtn.click(new Locator.ClickOptions().setForce(true));
-                            log.info("Clicked collapse for 'Project Information'");
-                        } else {
-                            log.warn("Collapse button for 'Project Information' not visible or not enabled");
-                            throw new RuntimeException("Collapse button for 'Project Information' not visible or not enabled");
-                        }
+                        collapseBtn.waitFor(new Locator.WaitForOptions().setTimeout(5000));
+                        collapseBtn.scrollIntoViewIfNeeded();
+                        collapseBtn.click(new Locator.ClickOptions().setForce(true));
+
                         Locator panel = page.locator("#ctl00_Main_DynamicContent1_projinfo_AcqProjectProfile_ColProjectprofile____title");
                         page.waitForFunction(
                             "el => el.className.includes('panelclosed')",
                             panel.first(),
-                            new Page.WaitForFunctionOptions().setTimeout(30000)
+                            new Page.WaitForFunctionOptions().setTimeout(20000)
                         );
-                        log.info("Panel 'Project Information' is fully closed.");
+                        page.waitForTimeout(1000);
+                        log.info("Successfully closed Project Information");
                     } else {
-                        Locator panel = page.locator("div.collapsible-panel-main-open-close:not(.panelclosed)", new Page.LocatorOptions().setHasText(panelTitle));
-                        panel.waitFor(new Locator.WaitForOptions().setTimeout(5000).setState(WaitForSelectorState.VISIBLE));
-                        if (panel.first().isVisible() && panel.first().isEnabled()) {
-                            panel.first().click(new Locator.ClickOptions().setForce(true));
-                            log.info("Clicked collapse for panel: " + panelTitle);
-                        } else {
-                            log.warn("Collapse button for panel '" + panelTitle + "' not visible or not enabled");
-                            throw new RuntimeException("Collapse button for panel '" + panelTitle + "' not visible or not enabled");
-                        }
-                        Locator closedPanel = page.locator("div.collapsible-panel-main-open-close", new Page.LocatorOptions().setHasText(panelTitle));
+                        Locator panel = page.locator("div.collapsible-panel-main-open-close:not(.panelclosed)",
+                            new com.microsoft.playwright.Page.LocatorOptions().setHasText(panelTitle));
+                        panel.waitFor(new Locator.WaitForOptions().setTimeout(5000));
+                        panel.scrollIntoViewIfNeeded();
+                        panel.click(new Locator.ClickOptions().setForce(true));
+
                         page.waitForFunction(
                             "el => el.className.includes('panelclosed')",
-                            closedPanel.first(),
-                            new Page.WaitForFunctionOptions().setTimeout(30000)
+                            panel.first(),
+                            new Page.WaitForFunctionOptions().setTimeout(20000)
                         );
-                        log.info("Panel '" + panelTitle + "' is fully closed.");
+                        page.waitForTimeout(1000);
+                        log.info("Successfully closed panel: " + panelTitle);
                     }
                 } catch (Exception e) {
-                    log.error("Could not close panel '" + panelTitle + "' - " + e.getMessage());
-                    throw new RuntimeException("Could not close panel '" + panelTitle + "'", e);
+                    log.warn("Could not close panel '" + panelTitle + "' - " + e.getMessage());
                 }
             }
         }

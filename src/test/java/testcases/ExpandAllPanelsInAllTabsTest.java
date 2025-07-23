@@ -12,7 +12,7 @@ public class ExpandAllPanelsInAllTabsTest extends BaseTest {
 
     @Test
     public void expandAndCollapseAllPanelsInAllTabs() {
-        ExtentTest test = extent.createTest("Expand and Collapse All Panels in All Tabs");
+     ExtentTest test = extent.createTest("Expand and Collapse All Panels in All Tabs");
         try {
             login(); // Use login from BaseTest
             test.info("Logged in");

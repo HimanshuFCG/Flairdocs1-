@@ -13,7 +13,7 @@ public class TopMenuNavigationTest extends BaseTest {
 
     @Test
     public void clickTopMenuItems() {
-        ExtentTest test = extent.createTest("Top Menu Navigation Test");
+       
         try {
             login();
             test.info("Logged in using BaseTest.login()");

@@ -40,7 +40,7 @@ public class BaseTest {
 
     protected static ExtentReports extent;
     protected static ExtentSparkReporter spark;
-    protected ExtentTest test;
+    public ExtentTest test; // Made public for ExtentListeners access
 
     static {
         extent = new ExtentReports();
@@ -60,34 +60,33 @@ public class BaseTest {
     public void setup() {
         PropertyConfigurator.configure("log4j.properties");
         log.info("Test Execution Started");
-    
-        // Load config and OR properties
+
+        // Load OR.properties (Object Repository) for selectors
         try {
-            fis = new FileInputStream(System.getProperty("user.dir") + "\\src\\main\\java\\config\\config.properties");
+            fis = new FileInputStream("./src/test/resources/properties/OR.properties");
             OR.load(fis);
+            log.info("OR.properties file loaded");
         } catch (IOException e) {
             e.printStackTrace();
         }
-    
+
         try {
             fis = new FileInputStream("./src/test/resources/properties/log4j.properties");
             PropertyConfigurator.configure(fis);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-    
-        try {
-            OR.load(fis);
-            log.info("OR.properties file loaded");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    
-        // Get the screen size
+
+        // Get the screen size (from your old BaseTest)
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int width = (int) screenSize.getWidth();
         int height = (int) screenSize.getHeight();
         log.info("Screen size detected: " + width + " x " + height);
+
+        // COMMENTED OUT: Docker detection logic
+        // String envDocker = System.getenv("DOCKER");
+        // java.io.File dockerEnv = new java.io.File("/.dockerenv");
+        // boolean headless = (envDocker != null || dockerEnv.exists());
 
         playwright = Playwright.create();
         String browserName = ConfigReader.get("browser", "chrome");
@@ -95,15 +94,15 @@ public class BaseTest {
         if (browserName.equalsIgnoreCase("chrome") || browserName.equalsIgnoreCase("edge")) {
             browser = playwright.chromium().launch(
                 new BrowserType.LaunchOptions()
-                    .setHeadless(false)
+                    .setHeadless(false) // Always headed for now
                     .setArgs(Arrays.asList("--start-maximized"))
             );
             context = browser.newContext(
                 new Browser.NewContextOptions()
-                    .setViewportSize(null)
+                    .setViewportSize(null) // Use your old approach
                     .setRecordVideoDir(java.nio.file.Paths.get("videos"))
             );
-            log.info("Launched " + browserName + " maximized with viewportSize=null");
+            log.info("Launched " + browserName + " maximized");
         } else if (browserName.equalsIgnoreCase("firefox")) {
             browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(false));
             context = browser.newContext(
@@ -127,21 +126,31 @@ public class BaseTest {
             ;
         }
         page = context.newPage();
+        setPage(page); // Set the ThreadLocal for listener access
+        // Perform login ONCE for the suite
+        login();
     }
     
 
     @BeforeMethod
     public void setUp(Method method) {
+        // Create ExtentTest for this method - this ensures test field is never null
         test = extent.createTest(method.getName());
+        log.info("ExtentTest created for method: " + method.getName());
     }
 
-    @AfterMethod
-    public void tearDown() {
+    // Removed browser/page/context closing from @AfterMethod
+
+    @AfterSuite
+    public void tearDownSuite() {
         if (page != null) page.close();
         if (browser != null) browser.close();
         if (playwright != null) playwright.close();
-        test.info("Browser closed");
-        log.info("Browser closed");
+        if (extent != null) {
+            extent.flush();
+            log.info("Extent report flushed");
+        }
+        log.info("Browser and Playwright closed after suite");
     }
 
     public void click(String locatorKey){
@@ -151,7 +160,7 @@ public class BaseTest {
             ExtentListeners.test.info("Clicking on an element: " + locatorKey);
         } catch (Throwable t) {
             log.error("Error while clicking on an element: " + t.getMessage());
-            ExtentListeners.test.fail("Clicking on an element: " + locatorKey);
+            ExtentListeners.test.fail("Error while clicking on an element: " + t.getMessage());
             Assert.fail(t.getMessage());
         }
     }
@@ -160,7 +169,7 @@ public class BaseTest {
         try {
             page.locator(OR.getProperty(locatorKey)).fill(value);
             log.info("Typing in an Element: " + locatorKey+ " and entered the value as :" + value);
-            ExtentListeners.test.info("Clicking on an Element :" +locatorKey);
+            ExtentListeners.test.info("Typing in an Element :" +locatorKey);
         } catch (Throwable t) {
             log.error("Error while Typing in an Element: " + t.getMessage());
             ExtentListeners.test.fail("Error while Typing in an Element: " + t.getMessage());
@@ -230,27 +239,19 @@ public class BaseTest {
         }
     }
 
-    @AfterSuite
-    public void flushExtent() {
-        if (extent != null) {
-            extent.flush();
-            log.info("Extent report flushed");
-        }
-    }
-
     public void login() {
         String baseUrl = ConfigReader.get("baseUrl");
         page.navigate(baseUrl, new Page.NavigateOptions()
                 .setWaitUntil(com.microsoft.playwright.options.WaitUntilState.DOMCONTENTLOADED)
                 .setTimeout(60000));
-        page.waitForSelector("#LoginFlairdocs_UserName");
-        page.fill("#LoginFlairdocs_UserName", ConfigReader.get("username"));
-        page.fill("#LoginFlairdocs_Password", ConfigReader.get("password"));
-        page.waitForSelector("#LoginFlairdocs_LoginButton", new Page.WaitForSelectorOptions().setTimeout(60000).setState(com.microsoft.playwright.options.WaitForSelectorState.VISIBLE));
-        page.click("#LoginFlairdocs_LoginButton", new Page.ClickOptions().setForce(true));
+        page.waitForSelector(OR.getProperty("login.username"));
+        page.fill(OR.getProperty("login.username"), ConfigReader.get("username"));
+        page.fill(OR.getProperty("login.password"), ConfigReader.get("password"));
+        page.waitForSelector(OR.getProperty("login.button"), new Page.WaitForSelectorOptions().setTimeout(60000).setState(com.microsoft.playwright.options.WaitForSelectorState.VISIBLE));
+        page.click(OR.getProperty("login.button"), new Page.ClickOptions().setForce(true));
         page.waitForLoadState();
         page.waitForTimeout(5000);
-        page.waitForSelector(".header-image-container[title='Flairdocs']", new Page.WaitForSelectorOptions().setTimeout(10000));
+        page.waitForSelector(OR.getProperty("login.success.selector"), new Page.WaitForSelectorOptions().setTimeout(10000));
         page.waitForTimeout(2000);
         log.info("Login successful");
     }

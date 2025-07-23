@@ -5,13 +5,8 @@
     </listeners>
     <test name="All Tests">
         <classes>
-            <class name="testcases.Admin"/>
-            <class name="testcases.CompleteLoginTest"/>
-            <class name="testcases.CreateNewFile"/>
-            <class name="testcases.ExpandPanel"/>
-            <class name="testcases.ExpandAllPanelsInAllTabsTest"/>
-            <class name="testcases.CompleteLoginAndPanelTest"/>
-            
+            <class name="testcases.FullUserJourneyTest"/>
+       
         </classes>
     </test>
 </suite>

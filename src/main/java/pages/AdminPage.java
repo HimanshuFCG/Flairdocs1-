@@ -35,10 +35,11 @@ public class AdminPage {
         test.info("Closed popup");
     }
 
-    public void goBack(ExtentTest test) {
-        page.waitForTimeout(3000);
-        page.goBack();
-        test.info("Navigated back after visiting admin item");
+    public void clickAdminAgain(ExtentTest test) {
+        page.waitForTimeout(2000);
+        page.waitForSelector(ADMIN_BUTTON, new Page.WaitForSelectorOptions().setTimeout(10000).setState(WaitForSelectorState.VISIBLE));
+        page.click(ADMIN_BUTTON);
+        test.info("Clicked Admin button again to return to menu");
     }
 
     public void handleAdminItem(String itemSelector, String itemType, ExtentTest test) {
@@ -47,7 +48,7 @@ public class AdminPage {
         if ("popup".equals(itemType)) {
             closePopup(test);
         } else if ("navigation".equals(itemType)) {
-            goBack(test);
+            clickAdminAgain(test);
         }
     }
 } 

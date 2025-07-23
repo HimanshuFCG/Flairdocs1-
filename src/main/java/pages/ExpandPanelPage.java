@@ -16,6 +16,7 @@ public class ExpandPanelPage {
 
     // Centralized locators
     private static final String DOMAIN_DROPDOWN_XPATH = "//span[@class='rtbText' and text()='Domain:']";
+    private static final String PROJECT_DROPDOWN_INPUT = "#ctl00_Main_ProjectSnapShotDetails_ddlProjSnapShotSearchNum_Input";
     private static final String PROJECT_DROPDOWN_ARROW = "#ctl00_Main_ProjectSnapShotDetails_ddlProjSnapShotSearchNum_Arrow";
     private static final String PROJECT_LIST_ITEM = "#ctl00_Main_ProjectSnapShotDetails_ddlProjSnapShotSearchNum_listbox li.rcbItem";
     private static final String GO_TO_PROJECT_DETAILS_XPATH = "//input[@id='ctl00_Main_ProjectSnapShotDetails_btnProjeSnapShotOpen']";
@@ -34,19 +35,33 @@ public class ExpandPanelPage {
     }
 
     public void selectProject(String project, ExtentTest test) {
-        Locator dropdownArrow = page.locator(PROJECT_DROPDOWN_ARROW);
-        dropdownArrow.waitFor(new Locator.WaitForOptions().setTimeout(10000).setState(WaitForSelectorState.ATTACHED));
-        dropdownArrow.click();
-        test.info("Clicked project dropdown");
-
-        retry(() -> {
-            Locator item = page.locator(PROJECT_LIST_ITEM, new Page.LocatorOptions().setHasText(project));
-            item.first().waitFor(new Locator.WaitForOptions().setTimeout(10000).setState(WaitForSelectorState.VISIBLE));
-            item.first().click();
-            test.info("Selected project: " + project);
-        }, 3, test, "Selecting project: " + project);
+        // Try clicking the input first, fallback to arrow if needed
+        try {
+            page.click(PROJECT_DROPDOWN_INPUT);
+            page.click(PROJECT_DROPDOWN_INPUT);
+            test.info("Clicked project dropdown input");
+        } catch (Exception e) {
+            test.warning("Failed to click input, trying arrow: " + e.getMessage());
+            page.click(PROJECT_DROPDOWN_INPUT);
+            test.info("Clicked project dropdown arrow");
+        }
+        
+        // Wait for the dropdown items to be visible
+        page.waitForSelector(PROJECT_LIST_ITEM, new Page.WaitForSelectorOptions().setTimeout(60000).setState(WaitForSelectorState.VISIBLE));
+        Locator item = page.locator(PROJECT_LIST_ITEM, new Page.LocatorOptions().setHasText(project));
+        int count = item.count();
+        if (count == 0) {
+            test.fail("No project found with name: " + project);
+            throw new RuntimeException("No project found with name: " + project);
+        } else if (count > 1) {
+            test.warning("Multiple projects found with name: " + project + ". Clicking the first one.");
+        }
+        item.waitFor(new Locator.WaitForOptions().setTimeout(5000).setState(WaitForSelectorState.VISIBLE));
+        page.waitForTimeout(500);
+        item.first().click();
+        test.info("Selected project: " + project);
+        page.waitForTimeout(5000);
     }
-
     public void goToProjectDetails(ExtentTest test) {
         Locator goToDetails = page.locator(GO_TO_PROJECT_DETAILS_XPATH);
         goToDetails.waitFor(new Locator.WaitForOptions().setTimeout(10000).setState(WaitForSelectorState.VISIBLE));
@@ -82,22 +97,5 @@ public class ExpandPanelPage {
 
     }
 
-    // Generic retry utility
-    private void retry(Runnable action, int attempts, ExtentTest test, String actionDescription) {
-        for (int i = 0; i < attempts; i++) {
-            try {
-                action.run();
-                return;
-            } catch (Exception e) {
-                if (i == attempts - 1) {
-                    test.fail("Failed after retries: " + actionDescription);
-                    throw e;
-                }
-                test.warning("Retrying (" + (i + 1) + "/" + attempts + ") for: " + actionDescription);
-                try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException ignored) {}
-            }
-        }
-    }
+   
 }

@@ -1,6 +1,4 @@
-rough\LoginTest.class
 base\BaseTest.class
-testcases\LoginTest.class
 utilities\TestConfig.class
 extentlisteners\ExtentListeners.class
 utilities\MonitoringMail.class
@@ -10,7 +8,6 @@ testcases\CompleteLoginAndPanelTest.class
 testcases\ExpandAllPanelsInAllTabsTest.class
 utilities\screenshotUtils\ScreenshotUtils.class
 testcases\CompleteLoginTest.class
-utilities\ConfigReader.class
 testcases\ExpandPanel.class
 utilities\VideoUtils.class
 extentlisteners\ExtentManager.class

@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jul 17, 2025 12:28:52 PM</span></a>
+<a href="#"><span class="badge badge-primary">Jul 23, 2025 10:15:48 PM</span></a>
 </li>
 </ul>
 </div>
@@ -75,25 +75,25 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="1"
+        <li class="test-item"  status="fail" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">clickTopMenuItems</p>
+            <p class="name">adminMenuNavigation</p>
             <p class="text-sm">
-              <span>12:29:02 PM</span> / <span>00:02:08:548</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>10:16:11 PM</span> / <span>00:02:16:255</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">clickTopMenuItems</h5>
-<span class='badge badge-success'>07.17.2025 12:29:02 PM</span>
-<span class='badge badge-danger'>07.17.2025 12:31:10 PM</span>
-<span class='badge badge-default'>00:02:08:548</span>
+<h5 class="test-status text-fail">adminMenuNavigation</h5>
+<span class='badge badge-success'>07.23.2025 10:16:11 PM</span>
+<span class='badge badge-danger'>07.23.2025 10:18:27 PM</span>
+<span class='badge badge-default'>00:02:16:255</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -105,9 +105,863 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>12:31:10 PM</td>
+        <td>10:16:11 PM</td>
         <td>
-          Browser closed
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:12 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='Application Logs']//span[@class='rmText' and text()='Application Logs']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:15 PM</td>
+        <td>
+          Closed popup
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:15 PM</td>
+        <td>
+          Handled admin item: //a[@title='Application Logs']//span[@class='rmText' and text()='Application Logs']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:15 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:16 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='Application Roles and Work Group']//span[@class='rmText' and text()='Application Roles and Work Groups']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:18 PM</td>
+        <td>
+          Clicked Admin button again to return to menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:18 PM</td>
+        <td>
+          Handled admin item: //a[@title='Application Roles and Work Group']//span[@class='rmText' and text()='Application Roles and Work Groups']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:18 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:20 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='User Management']//span[@class='rmText' and text()='User Management']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:16:32 PM</td>
+        <td>
+          Failed to handle admin item: //a[@title='User Management']//span[@class='rmText' and text()='User Management']. Exception: Error {
+  message='Timeout 10000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//span[@class='rmText rmExpandDown' and text()='Admin']" to be visible
+============================================================
+  name='TimeoutError
+  stack='TimeoutError: Timeout 10000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//span[@class='rmText rmExpandDown' and text()='Admin']" to be visible
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7341591320892925327\package\lib\server\progress.js:96:26)
+    at Frame.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-7341591320892925327\package\lib\server\frames.js:843:23)
+    at FrameDispatcher.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-7341591320892925327\package\lib\server\dispatchers\frameDispatcher.js:111:110)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7341591320892925327\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:33 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:35 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='Work Group Office Information']//span[@class='rmText' and text()='Work Group Office Information']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:42 PM</td>
+        <td>
+          Clicked Admin button again to return to menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:42 PM</td>
+        <td>
+          Handled admin item: //a[@title='Work Group Office Information']//span[@class='rmText' and text()='Work Group Office Information']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:43 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:43 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='Contracting Company Details']//span[@class='rmText' and text()='Contracting Company Details']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:46 PM</td>
+        <td>
+          Clicked Admin button again to return to menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:46 PM</td>
+        <td>
+          Handled admin item: //a[@title='Contracting Company Details']//span[@class='rmText' and text()='Contracting Company Details']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:46 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:47 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='Contracting Price Agreements']//span[@class='rmText' and text()='Contracting Price Agreements']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:50 PM</td>
+        <td>
+          Clicked Admin button again to return to menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:50 PM</td>
+        <td>
+          Handled admin item: //a[@title='Contracting Price Agreements']//span[@class='rmText' and text()='Contracting Price Agreements']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:50 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:51 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='Dropdowns']//span[@class='rmText' and text()='Dropdowns']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:53 PM</td>
+        <td>
+          Clicked Admin button again to return to menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:53 PM</td>
+        <td>
+          Handled admin item: //a[@title='Dropdowns']//span[@class='rmText' and text()='Dropdowns']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:53 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:54 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='Configure Distribution Lists']//span[@class='rmText' and text()='Configure Distribution Lists']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:57 PM</td>
+        <td>
+          Clicked Admin button again to return to menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:57 PM</td>
+        <td>
+          Handled admin item: //a[@title='Configure Distribution Lists']//span[@class='rmText' and text()='Configure Distribution Lists']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:57 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:16:58 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='Estimation Cost Factors']//span[@class='rmText' and text()='Estimation Cost Factors']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:00 PM</td>
+        <td>
+          Clicked Admin button again to return to menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:00 PM</td>
+        <td>
+          Handled admin item: //a[@title='Estimation Cost Factors']//span[@class='rmText' and text()='Estimation Cost Factors']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:00 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:01 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='Expected Work Duration']//span[@class='rmText' and text()='Expected Work Duration']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:03 PM</td>
+        <td>
+          Clicked Admin button again to return to menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:03 PM</td>
+        <td>
+          Handled admin item: //a[@title='Expected Work Duration']//span[@class='rmText' and text()='Expected Work Duration']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:03 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:04 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='Delete Projects and Files']//span[@class='rmText' and text()='Delete Project/File']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:07 PM</td>
+        <td>
+          Clicked Admin button again to return to menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:07 PM</td>
+        <td>
+          Handled admin item: //a[@title='Delete Projects and Files']//span[@class='rmText' and text()='Delete Project/File']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:07 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:08 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='Move File Panel']//span[@class='rmText' and text()='Move File Panel']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:10 PM</td>
+        <td>
+          Clicked Admin button again to return to menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:10 PM</td>
+        <td>
+          Handled admin item: //a[@title='Move File Panel']//span[@class='rmText' and text()='Move File Panel']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:10 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:11 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='Cannned Report']//span[@class='rmText' and text()='Canned Report']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:14 PM</td>
+        <td>
+          Clicked Admin button again to return to menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:14 PM</td>
+        <td>
+          Handled admin item: //a[@title='Cannned Report']//span[@class='rmText' and text()='Canned Report']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:14 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:15 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='Bulk Upload Documents']//span[@class='rmText' and text()='Bulk Upload Documents']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:17 PM</td>
+        <td>
+          Clicked Admin button again to return to menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:17 PM</td>
+        <td>
+          Handled admin item: //a[@title='Bulk Upload Documents']//span[@class='rmText' and text()='Bulk Upload Documents']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:17 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:18 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='Bulk Generate Documents']//span[@class='rmText' and text()='Bulk Generate Documents']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:20 PM</td>
+        <td>
+          Clicked Admin button again to return to menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:20 PM</td>
+        <td>
+          Handled admin item: //a[@title='Bulk Generate Documents']//span[@class='rmText' and text()='Bulk Generate Documents']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:20 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:21 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='Document Metadata Attributes']//span[@class='rmText' and text()='Document Metadata Attributes']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:23 PM</td>
+        <td>
+          Clicked Admin button again to return to menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:23 PM</td>
+        <td>
+          Handled admin item: //a[@title='Document Metadata Attributes']//span[@class='rmText' and text()='Document Metadata Attributes']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:23 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:24 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='Document Packages']//span[@class='rmText' and text()='Document Packages']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:26 PM</td>
+        <td>
+          Clicked Admin button again to return to menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:26 PM</td>
+        <td>
+          Handled admin item: //a[@title='Document Packages']//span[@class='rmText' and text()='Document Packages']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:26 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:27 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='Document Type Configuration']//span[@class='rmText' and text()='Document Type Configuration']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:29 PM</td>
+        <td>
+          Clicked Admin button again to return to menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:29 PM</td>
+        <td>
+          Handled admin item: //a[@title='Document Type Configuration']//span[@class='rmText' and text()='Document Type Configuration']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:29 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:30 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='Template and Clause Maintenance']//span[@class='rmText' and text()='Template and Clause Maintenance']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:32 PM</td>
+        <td>
+          Clicked Admin button again to return to menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:32 PM</td>
+        <td>
+          Handled admin item: //a[@title='Template and Clause Maintenance']//span[@class='rmText' and text()='Template and Clause Maintenance']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:32 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:33 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='Civil Certification / Board Approval']//span[@class='rmText' and text()='Civil Certification / Board Approval']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:35 PM</td>
+        <td>
+          Clicked Admin button again to return to menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:35 PM</td>
+        <td>
+          Handled admin item: //a[@title='Civil Certification / Board Approval']//span[@class='rmText' and text()='Civil Certification / Board Approval']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:35 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:36 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='Production Plans']//span[@class='rmText' and text()='Production Plans']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:39 PM</td>
+        <td>
+          Clicked Admin button again to return to menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:39 PM</td>
+        <td>
+          Handled admin item: //a[@title='Production Plans']//span[@class='rmText' and text()='Production Plans']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:39 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:40 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='QA Data']//span[@class='rmText' and text()='QA Data']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:42 PM</td>
+        <td>
+          Clicked Admin button again to return to menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:42 PM</td>
+        <td>
+          Handled admin item: //a[@title='QA Data']//span[@class='rmText' and text()='QA Data']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:42 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:43 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='Help Content']//span[@class='rmText' and text()='Help Content']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:45 PM</td>
+        <td>
+          Clicked Admin button again to return to menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:45 PM</td>
+        <td>
+          Handled admin item: //a[@title='Help Content']//span[@class='rmText' and text()='Help Content']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:45 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:47 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='FlairBOT Library']//span[@class='rmText' and text()='FlairBOT Library']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:49 PM</td>
+        <td>
+          Clicked Admin button again to return to menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:49 PM</td>
+        <td>
+          Handled admin item: //a[@title='FlairBOT Library']//span[@class='rmText' and text()='FlairBOT Library']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:49 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:50 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='Workflow Activity']//span[@class='rmText' and text()='Workflow Activity']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:52 PM</td>
+        <td>
+          Clicked Admin button again to return to menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:52 PM</td>
+        <td>
+          Handled admin item: //a[@title='Workflow Activity']//span[@class='rmText' and text()='Workflow Activity']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:52 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:53 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='Notifications Configuration']//span[@class='rmText' and text()='Notifications Configuration']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:56 PM</td>
+        <td>
+          Clicked Admin button again to return to menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:56 PM</td>
+        <td>
+          Handled admin item: //a[@title='Notifications Configuration']//span[@class='rmText' and text()='Notifications Configuration']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:56 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:17:57 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='Workflow Designer']//span[@class='rmText' and text()='Workflow Designer']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:18:03 PM</td>
+        <td>
+          Clicked Admin button again to return to menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:18:03 PM</td>
+        <td>
+          Handled admin item: //a[@title='Workflow Designer']//span[@class='rmText' and text()='Workflow Designer']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:18:03 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:18:04 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='Environment Copy']//span[@class='rmText' and text()='Environment Copy']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:18:06 PM</td>
+        <td>
+          Clicked Admin button again to return to menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:18:06 PM</td>
+        <td>
+          Handled admin item: //a[@title='Environment Copy']//span[@class='rmText' and text()='Environment Copy']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:18:06 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:18:07 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='Application Configuration']//span[@class='rmText' and text()='Application Configuration']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:18:19 PM</td>
+        <td>
+          Failed to handle admin item: //a[@title='Application Configuration']//span[@class='rmText' and text()='Application Configuration']. Exception: Error {
+  message='Timeout 10000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//span[@class='rmText rmExpandDown' and text()='Admin']" to be visible
+============================================================
+  name='TimeoutError
+  stack='TimeoutError: Timeout 10000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//span[@class='rmText rmExpandDown' and text()='Admin']" to be visible
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7341591320892925327\package\lib\server\progress.js:96:26)
+    at Frame.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-7341591320892925327\package\lib\server\frames.js:843:23)
+    at FrameDispatcher.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-7341591320892925327\package\lib\server\dispatchers\frameDispatcher.js:111:110)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7341591320892925327\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:18:24 PM</td>
+        <td>
+          Clicked Admin button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:18:25 PM</td>
+        <td>
+          Clicked admin menu item: //a[@title='Checklist Configuration']//span[@class='rmText' and text()='Checklist Configuration']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:18:27 PM</td>
+        <td>
+          Clicked Admin button again to return to menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:18:27 PM</td>
+        <td>
+          Handled admin item: //a[@title='Checklist Configuration']//span[@class='rmText' and text()='Checklist Configuration']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:18:27 PM</td>
+        <td>
+          Successfully navigated all admin menu items.
         </td>
       </tr>
   </tbody>
@@ -115,25 +969,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="2"
+        <li class="test-item"  status="pass" test-id="2"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Top Menu Navigation Test</p>
+            <p class="name">panelExpansion</p>
             <p class="text-sm">
-              <span>12:29:02 PM</span> / <span>00:02:08:031</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>10:18:27 PM</span> / <span>00:00:17:441</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Top Menu Navigation Test</h5>
-<span class='badge badge-success'>07.17.2025 12:29:02 PM</span>
-<span class='badge badge-danger'>07.17.2025 12:31:10 PM</span>
-<span class='badge badge-default'>00:02:08:031</span>
+<h5 class="test-status text-pass">panelExpansion</h5>
+<span class='badge badge-success'>07.23.2025 10:18:27 PM</span>
+<span class='badge badge-danger'>07.23.2025 10:18:45 PM</span>
+<span class='badge badge-default'>00:00:17:441</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -145,44 +999,1208 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>12:29:44 PM</td>
+        <td>10:18:28 PM</td>
         <td>
-          Logged in using BaseTest.login()
+          Clicked 'Domain:' dropdown
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>12:29:58 PM</td>
+        <td>10:18:29 PM</td>
+        <td>
+          Selected 'Acquisition' from domain dropdown
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:18:30 PM</td>
+        <td>
+          Clicked project dropdown input
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:18:32 PM</td>
+        <td>
+          Selected project: 59650/Barrel Spring   
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:18:37 PM</td>
+        <td>
+          Clicked 'Go to Project Details' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:18:39 PM</td>
+        <td>
+          Clicked 'Expand' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:18:43 PM</td>
+        <td>
+          Scrolled to bottom after expanding
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:18:44 PM</td>
+        <td>
+          Clicked 'Collapse' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:18:45 PM</td>
+        <td>
+          Scrolled to bottom after collapsing
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">createNewFileAndCheckRow</p>
+            <p class="text-sm">
+              <span>10:18:45 PM</span> / <span>00:00:33:106</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">createNewFileAndCheckRow</h5>
+<span class='badge badge-success'>07.23.2025 10:18:45 PM</span>
+<span class='badge badge-danger'>07.23.2025 10:19:18 PM</span>
+<span class='badge badge-default'>00:00:33:106</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:18:45 PM</td>
+        <td>
+          Clicked 'Domain:' dropdown
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:18:54 PM</td>
+        <td>
+          Selected 'Acquisition' from domain dropdown
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:18:57 PM</td>
+        <td>
+          Selected project: 59650/Barrel Spring   
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:19:02 PM</td>
+        <td>
+          Clicked Create New File button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:19:05 PM</td>
+        <td>
+          Iframe found and accessed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:19:06 PM</td>
+        <td>
+          Filled ROW ID: "TEST_ROWID";
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:19:06 PM</td>
+        <td>
+          Filled EROW ID: "TEST_EROWID";
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:19:06 PM</td>
+        <td>
+          Clicked 'Save & Close' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:19:18 PM</td>
+        <td>
+          Row 0 ROW ID: "TEST_ROWID";
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:19:18 PM</td>
+        <td>
+          Found row with ROW ID: "TEST_ROWID";
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">completeLoginAndTabSelection</p>
+            <p class="text-sm">
+              <span>10:19:18 PM</span> / <span>00:01:13:521</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">completeLoginAndTabSelection</h5>
+<span class='badge badge-success'>07.23.2025 10:19:18 PM</span>
+<span class='badge badge-danger'>07.23.2025 10:20:31 PM</span>
+<span class='badge badge-default'>00:01:13:521</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:19:18 PM</td>
+        <td>
+          Clicked 'Domain:' dropdown
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:19:20 PM</td>
+        <td>
+          Selected 'Acquisition' from domain dropdown
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:19:21 PM</td>
+        <td>
+          Clicked project dropdown input
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:19:22 PM</td>
+        <td>
+          Selected project: 59650/Barrel Spring   
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:19:27 PM</td>
+        <td>
+          Clicked 'Go to Project Details' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:19:29 PM</td>
+        <td>
+          Clicked 'Assignments' tab
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:19:34 PM</td>
+        <td>
+          Clicked 'Liaison Files' tab
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:19:39 PM</td>
+        <td>
+          Clicked 'Estimates' tab
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:19:44 PM</td>
+        <td>
+          Clicked 'Contracting' tab
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:19:49 PM</td>
+        <td>
+          Clicked 'Authorization Management' tab
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:19:54 PM</td>
+        <td>
+          Clicked 'Issue Management' tab
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:20:06 PM</td>
+        <td>
+          Clicked 'Financials' tab
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:20:11 PM</td>
+        <td>
+          Clicked 'Expropriation' tab
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:20:16 PM</td>
+        <td>
+          Clicked 'Checklist' tab
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:20:21 PM</td>
+        <td>
+          Clicked 'Utility Coordination' tab
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:20:26 PM</td>
+        <td>
+          Clicked 'Railroad Coordination' tab
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:20:31 PM</td>
+        <td>
+          Successfully completed login and tab selection flow.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">clickTopMenuItems</p>
+            <p class="text-sm">
+              <span>10:20:31 PM</span> / <span>00:01:51:801</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">clickTopMenuItems</h5>
+<span class='badge badge-success'>07.23.2025 10:20:31 PM</span>
+<span class='badge badge-danger'>07.23.2025 10:22:23 PM</span>
+<span class='badge badge-default'>00:01:51:801</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:20:41 PM</td>
         <td>
           Clicked 'Search' menu item
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>12:30:22 PM</td>
+        <td>10:20:58 PM</td>
         <td>
           Clicked 'My Work Queue' menu item
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>12:31:04 PM</td>
+        <td>10:21:14 PM</td>
         <td>
           Clicked 'My Profile' menu item
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>12:31:10 PM</td>
+        <td>10:21:20 PM</td>
         <td>
           Clicked 'PM Inquiry' menu item and new window opened
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>12:31:10 PM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:21:41 PM</td>
         <td>
-          Test failed: For input string: ""
+          Clicked 'Notifications' menu item
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:21:47 PM</td>
+        <td>
+          Clicked 'Doc Mgmt' menu item and new window opened
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:21:55 PM</td>
+        <td>
+          Clicked 'GIS' menu item and new window opened
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:22:21 PM</td>
+        <td>
+          Clicked 'Dashboard' menu item
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:22:23 PM</td>
+        <td>
+          Successfully clicked all top menu items.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">expandAndCollapseAllPanelsInAllTabs</p>
+            <p class="text-sm">
+              <span>10:22:23 PM</span> / <span>00:02:26:047</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">expandAndCollapseAllPanelsInAllTabs</h5>
+<span class='badge badge-success'>07.23.2025 10:22:23 PM</span>
+<span class='badge badge-danger'>07.23.2025 10:24:49 PM</span>
+<span class='badge badge-default'>00:02:26:047</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:22:23 PM</td>
+        <td>
+          Page object created
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:22:23 PM</td>
+        <td>
+          Clicked 'Domain:' dropdown
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:22:29 PM</td>
+        <td>
+          Selected 'Acquisition' from domain dropdown
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:22:29 PM</td>
+        <td>
+          Domain selected
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:22:31 PM</td>
+        <td>
+          Clicked project dropdown input
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:22:32 PM</td>
+        <td>
+          Selected project: 59650/Barrel Spring   
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:22:37 PM</td>
+        <td>
+          Project selected
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:22:37 PM</td>
+        <td>
+          Clicked 'Go to Project Details' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:22:37 PM</td>
+        <td>
+          Navigated to project details
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:22:40 PM</td>
+        <td>
+          Clicked tab: Project Information
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:22:43 PM</td>
+        <td>
+          Expand button count in tab Project Information: 0
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:22:47 PM</td>
+        <td>
+          Clicked tab: Assignments
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:22:50 PM</td>
+        <td>
+          Expand button count in tab Assignments: 0
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:22:54 PM</td>
+        <td>
+          Clicked tab: Liaison Files
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:22:57 PM</td>
+        <td>
+          Expand button count in tab Liaison Files: 0
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:22:59 PM</td>
+        <td>
+          Collapsed panel 1 in tab: Liaison Files
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:23:02 PM</td>
+        <td>
+          Clicked tab: Estimates
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:23:05 PM</td>
+        <td>
+          Expand button count in tab Estimates: 1
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:23:05 PM</td>
+        <td>
+          Expanded panel 1 in tab: Estimates
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:23:12 PM</td>
+        <td>
+          Collapsed panel 1 in tab: Estimates
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:23:15 PM</td>
+        <td>
+          Clicked tab: Contracting
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:23:18 PM</td>
+        <td>
+          Expand button count in tab Contracting: 1
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:23:18 PM</td>
+        <td>
+          Expanded panel 1 in tab: Contracting
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:23:26 PM</td>
+        <td>
+          Collapsed panel 1 in tab: Contracting
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:23:29 PM</td>
+        <td>
+          Clicked tab: Authorization Management
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:23:32 PM</td>
+        <td>
+          Expand button count in tab Authorization Management: 1
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:23:32 PM</td>
+        <td>
+          Expanded panel 1 in tab: Authorization Management
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:23:39 PM</td>
+        <td>
+          Collapsed panel 1 in tab: Authorization Management
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:23:42 PM</td>
+        <td>
+          Clicked tab: Issue Management
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:23:45 PM</td>
+        <td>
+          Expand button count in tab Issue Management: 1
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:23:45 PM</td>
+        <td>
+          Expanded panel 1 in tab: Issue Management
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:23:52 PM</td>
+        <td>
+          Collapsed panel 1 in tab: Issue Management
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:23:55 PM</td>
+        <td>
+          Clicked tab: Financials
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:23:58 PM</td>
+        <td>
+          Expand button count in tab Financials: 1
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:23:58 PM</td>
+        <td>
+          Expanded panel 1 in tab: Financials
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:24:06 PM</td>
+        <td>
+          Collapsed panel 1 in tab: Financials
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:24:09 PM</td>
+        <td>
+          Clicked tab: Checklist
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:24:12 PM</td>
+        <td>
+          Expand button count in tab Checklist: 1
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:24:12 PM</td>
+        <td>
+          Expanded panel 1 in tab: Checklist
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:24:19 PM</td>
+        <td>
+          Collapsed panel 1 in tab: Checklist
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:24:22 PM</td>
+        <td>
+          Clicked tab: Utility Coordination
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:24:25 PM</td>
+        <td>
+          Expand button count in tab Utility Coordination: 1
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:24:25 PM</td>
+        <td>
+          Expanded panel 1 in tab: Utility Coordination
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:24:32 PM</td>
+        <td>
+          Collapsed panel 1 in tab: Utility Coordination
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:24:36 PM</td>
+        <td>
+          Clicked tab: Railroad Coordination
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:24:39 PM</td>
+        <td>
+          Expand button count in tab Railroad Coordination: 1
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:24:39 PM</td>
+        <td>
+          Expanded panel 1 in tab: Railroad Coordination
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:24:46 PM</td>
+        <td>
+          Collapsed panel 1 in tab: Railroad Coordination
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:24:49 PM</td>
+        <td>
+          Successfully expanded and collapsed all panels in all tabs.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:24:49 PM</td>
+        <td>
+          Successfully expanded and collapsed all panels in all tabs.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">switchToDomain2AndSelectFirstFile</p>
+            <p class="text-sm">
+              <span>10:24:49 PM</span> / <span>00:00:37:860</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">switchToDomain2AndSelectFirstFile</h5>
+<span class='badge badge-success'>07.23.2025 10:24:49 PM</span>
+<span class='badge badge-danger'>07.23.2025 10:25:27 PM</span>
+<span class='badge badge-default'>00:00:37:860</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:24:49 PM</td>
+        <td>
+          Clicked 'Domain:' dropdown
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:24:53 PM</td>
+        <td>
+          Selected 'Property Management' from domain dropdown
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:24:53 PM</td>
+        <td>
+          Clicked project dropdown input
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:24:54 PM</td>
+        <td>
+          Selected project: 76019/US 175 Widening - Surplus
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:24:59 PM</td>
+        <td>
+          Clicked the first file in the file table.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:25:03 PM</td>
+        <td>
+          Clicked tab: File Information
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:25:04 PM</td>
+        <td>
+          Clicked tab: Assignments
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:25:06 PM</td>
+        <td>
+          Clicked tab: Lease/Rental/Permit
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:25:07 PM</td>
+        <td>
+          Clicked tab: Legal Description
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:25:09 PM</td>
+        <td>
+          Clicked tab: Appraisal
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:25:11 PM</td>
+        <td>
+          Clicked tab: Surplus
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:25:12 PM</td>
+        <td>
+          Clicked tab: Marketing
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:25:13 PM</td>
+        <td>
+          Clicked tab: Sale/Closing
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:25:15 PM</td>
+        <td>
+          Clicked tab: Property Diary
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:25:16 PM</td>
+        <td>
+          Clicked tab: Financials
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:25:17 PM</td>
+        <td>
+          Clicked tab: Checklist
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:25:19 PM</td>
+        <td>
+          Clicked 'Go to Project Details' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:25:25 PM</td>
+        <td>
+          Project details page loaded and tabs are visible
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:25:25 PM</td>
+        <td>
+          Clicked tab: Project Information
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:25:27 PM</td>
+        <td>
+          Clicked tab: Checklist
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:25:27 PM</td>
+        <td>
+          Successfully switched to domain2/project2, clicked the first file, navigated all file tabs, went to project details, and navigated required project tabs.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="8"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">expandAndCollapsePanelsInAllTabsAfterFileSelection</p>
+            <p class="text-sm">
+              <span>10:25:27 PM</span> / <span>00:00:16:711</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">expandAndCollapsePanelsInAllTabsAfterFileSelection</h5>
+<span class='badge badge-success'>07.23.2025 10:25:27 PM</span>
+<span class='badge badge-danger'>07.23.2025 10:25:44 PM</span>
+<span class='badge badge-default'>00:00:16:711</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:25:29 PM</td>
+        <td>
+          Clicked 'Domain:' dropdown for domain2
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:25:44 PM</td>
+        <td>
+          Failed to select domain2: Error {
+  message='Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//span[@class='rtbText' and text()='Property Management']" to be visible
+  selector resolved to hidden <span class="rtbText">Property Management</span>
+============================================================
+  name='TimeoutError
+  stack='TimeoutError: Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//span[@class='rtbText' and text()='Property Management']" to be visible
+  selector resolved to hidden <span class="rtbText">Property Management</span>
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7341591320892925327\package\lib\server\progress.js:96:26)
+    at Frame.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-7341591320892925327\package\lib\server\frames.js:843:23)
+    at FrameDispatcher.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-7341591320892925327\package\lib\server\dispatchers\frameDispatcher.js:111:110)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7341591320892925327\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:25:44 PM</td>
+        <td>
+          Failed to expand/collapse panels in all tabs: Error {
+  message='Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//span[@class='rtbText' and text()='Property Management']" to be visible
+  selector resolved to hidden <span class="rtbText">Property Management</span>
+============================================================
+  name='TimeoutError
+  stack='TimeoutError: Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//span[@class='rtbText' and text()='Property Management']" to be visible
+  selector resolved to hidden <span class="rtbText">Property Management</span>
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7341591320892925327\package\lib\server\progress.js:96:26)
+    at Frame.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-7341591320892925327\package\lib\server\frames.js:843:23)
+    at FrameDispatcher.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-7341591320892925327\package\lib\server\dispatchers\frameDispatcher.js:111:110)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7341591320892925327\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="9"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">openAndCloseCreateNewFilePopup</p>
+            <p class="text-sm">
+              <span>10:25:44 PM</span> / <span>00:00:12:961</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">openAndCloseCreateNewFilePopup</h5>
+<span class='badge badge-success'>07.23.2025 10:25:44 PM</span>
+<span class='badge badge-danger'>07.23.2025 10:25:57 PM</span>
+<span class='badge badge-default'>00:00:12:961</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:25:44 PM</td>
+        <td>
+          Clicked 'Domain:' dropdown
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:25:46 PM</td>
+        <td>
+          Selected 'Property Management' from domain dropdown
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:25:48 PM</td>
+        <td>
+          Selected project: 76019/US 175 Widening - Surplus
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:25:53 PM</td>
+        <td>
+          Clicked Create New File button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:25:54 PM</td>
+        <td>
+          Create New File popup appeared
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:25:57 PM</td>
+        <td>
+          Successfully opened and closed the Create New File popup.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="10"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">openAndCloseCreateNewProjectPopup</p>
+            <p class="text-sm">
+              <span>10:25:57 PM</span> / <span>00:00:06:830</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">openAndCloseCreateNewProjectPopup</h5>
+<span class='badge badge-success'>07.23.2025 10:25:57 PM</span>
+<span class='badge badge-danger'>07.23.2025 10:26:04 PM</span>
+<span class='badge badge-default'>00:00:06:830</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:25:57 PM</td>
+        <td>
+          Clicked 'Domain:' dropdown
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:25:59 PM</td>
+        <td>
+          Selected 'Property Management' from domain dropdown
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:25:59 PM</td>
+        <td>
+          Clicked Create New Project button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:01 PM</td>
+        <td>
+          Create New Project popup appeared
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:04 PM</td>
+        <td>
+          Successfully opened and closed the Create New Project popup by clicking Save & Close.
         </td>
       </tr>
   </tbody>
@@ -204,25 +2222,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jul 17, 2025 12:28:52 PM</h3>
+<h3>Jul 23, 2025 10:15:48 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jul 17, 2025 12:31:10 PM</h3>
+<h3>Jul 23, 2025 10:26:05 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>1</h3>
+<h3>8</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>1</h3>
+<h3>2</h3>
 </div></div>
 </div>
 </div>
@@ -238,12 +2256,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='50%'>
-<b>1</b> tests passed
+<div><small data-tooltip='80%'>
+<b>8</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='50%'><b>1</b> tests failed,
+<small data-tooltip='20%'><b>2</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -261,10 +2279,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='0%'><b>0</b> events passed</small></div>
+<div><small data-tooltip='2%'><b>7</b> events passed</small></div>
 <div>
-<small data-tooltip='14%'><b>1</b> events failed,
-<b data-tooltip='%'>6</b> others
+<small data-tooltip='1%'><b>4</b> events failed,
+<b data-tooltip='%'>238</b> others
 </small>
 </div>
 </div>
@@ -280,7 +2298,7 @@
 </div></div>
 <script>
 var timeline = {
-"clickTopMenuItems":128.548,"Top Menu Navigation Test":128.031
+"adminMenuNavigation":136.255,"panelExpansion":17.441,"createNewFileAndCheckRow":33.106,"completeLoginAndTabSelection":73.521,"clickTopMenuItems":111.801,"expandAndCollapseAllPanelsInAllTabs":146.047,"switchToDomain2AndSelectFirstFile":37.86,"expandAndCollapsePanelsInAllTabsAfterFileSelection":16.711,"openAndCloseCreateNewFilePopup":12.961,"openAndCloseCreateNewProjectPopup":6.83
 };
 </script>
 <div class="row">
@@ -289,8 +2307,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 1,
-failParent: 1,
+passParent: 8,
+failParent: 2,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -306,11 +2324,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 0,
-failEvents: 1,
+passEvents: 7,
+failEvents: 4,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 6
+infoEvents: 238
 };
 </script>        </div>
       </div>
