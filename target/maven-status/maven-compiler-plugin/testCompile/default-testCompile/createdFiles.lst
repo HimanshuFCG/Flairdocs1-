@@ -1,6 +1,9 @@
+testcases\FullUserJourneyTest.class
 base\BaseTest.class
+testcases\Admin.class
 utilities\TestConfig.class
 extentlisteners\ExtentListeners.class
+testcases\TopMenuNavigationTest.class
 utilities\MonitoringMail.class
 utilities\PanelActions.class
 testcases\CreateNewFile.class

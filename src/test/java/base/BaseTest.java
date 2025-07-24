@@ -38,15 +38,9 @@ public class BaseTest {
 
     public static ThreadLocal<Page> threadPage = new ThreadLocal<>();
 
-    protected static ExtentReports extent;
-    protected static ExtentSparkReporter spark;
+
     public ExtentTest test; // Made public for ExtentListeners access
 
-    static {
-        extent = new ExtentReports();
-        spark = new ExtentSparkReporter("reports/ExtentReport.html");
-        extent.attachReporter(spark);
-    }
 
     public static void setPage(Page p) {
         threadPage.set(p);
@@ -130,37 +124,25 @@ public class BaseTest {
         // Perform login ONCE for the suite
         login();
     }
-    
 
-    @BeforeMethod
-    public void setUp(Method method) {
-        // Create ExtentTest for this method - this ensures test field is never null
-        test = extent.createTest(method.getName());
-        log.info("ExtentTest created for method: " + method.getName());
-    }
-
-    // Removed browser/page/context closing from @AfterMethod
-
+  
     @AfterSuite
     public void tearDownSuite() {
         if (page != null) page.close();
         if (browser != null) browser.close();
         if (playwright != null) playwright.close();
-        if (extent != null) {
-            extent.flush();
-            log.info("Extent report flushed");
-        }
+    
         log.info("Browser and Playwright closed after suite");
     }
-
+    
     public void click(String locatorKey){
         try {
             page.locator(OR.getProperty(locatorKey)).click();
             log.info("Clicking on an element: " + locatorKey);
-            ExtentListeners.test.info("Clicking on an element: " + locatorKey);
+            safeExtentLog("Clicking on an element: " + locatorKey);
         } catch (Throwable t) {
             log.error("Error while clicking on an element: " + t.getMessage());
-            ExtentListeners.test.fail("Error while clicking on an element: " + t.getMessage());
+            safeExtentFail("Error while clicking on an element: " + t.getMessage());
             Assert.fail(t.getMessage());
         }
     }
@@ -169,10 +151,10 @@ public class BaseTest {
         try {
             page.locator(OR.getProperty(locatorKey)).fill(value);
             log.info("Typing in an Element: " + locatorKey+ " and entered the value as :" + value);
-            ExtentListeners.test.info("Typing in an Element :" +locatorKey);
+            safeExtentLog("Typing in an Element :" +locatorKey);
         } catch (Throwable t) {
             log.error("Error while Typing in an Element: " + t.getMessage());
-            ExtentListeners.test.fail("Error while Typing in an Element: " + t.getMessage());
+            safeExtentFail("Error while Typing in an Element: " + t.getMessage());
             Assert.fail(t.getMessage());
         }
     }
@@ -234,9 +216,7 @@ public class BaseTest {
 
     protected void logStep(String message) {
         log.info(message);
-        if (test != null) {
-            test.info(message);
-        }
+        safeExtentLog(message);
     }
 
     public void login() {
@@ -256,4 +236,76 @@ public class BaseTest {
         log.info("Login successful");
     }
 
+    /**
+     * Safely get the ExtentTest instance, with fallback to ExtentListeners
+     */
+    /**
+     * Gets the ExtentTest instance, initializing it if necessary
+     */
+    public ExtentTest getExtentTest() {
+        // First check if we already have a test instance
+        if (test != null) {
+            return test;
+        }
+        
+        // Try to get from ThreadLocal in ExtentListeners
+        test = extentlisteners.ExtentListeners.getExtent();
+        
+        // If still null, create a new ExtentTest directly
+        if (test == null) {
+            log.warn("ExtentTest is null in both BaseTest and ExtentListeners - creating new instance");
+            ExtentReports extent = extentlisteners.ExtentManager.getInstance();
+            if (extent != null) {
+                String testName = this.getClass().getSimpleName() + "_" + Thread.currentThread().getId();
+                test = extent.createTest(testName);
+                extentlisteners.ExtentListeners.testReport.set(test);
+                log.info("Created new ExtentTest instance: " + testName);
+            } else {
+                log.error("Cannot create ExtentTest - ExtentReports is not initialized");
+            }
+        } else {
+            log.info("Retrieved ExtentTest from ExtentListeners ThreadLocal");
+        }
+        
+        return test;
+    }
+
+    /**
+     * Safe logging method that handles null ExtentTest
+     */
+    public void safeExtentLog(String message) {
+        ExtentTest extentTest = getExtentTest();
+        if (extentTest != null) {
+            extentTest.info(message);
+            log.debug("Successfully logged to ExtentTest: " + message);
+        } else {
+            log.warn("Cannot log to ExtentTest (null): " + message);
+        }
+    }
+
+    /**
+     * Safe extent pass method
+     */
+    public void safeExtentPass(String message) {
+        ExtentTest extentTest = getExtentTest();
+        if (extentTest != null) {
+            extentTest.pass(message);
+            log.debug("Successfully logged PASS to ExtentTest: " + message);
+        } else {
+            log.warn("Cannot log pass to ExtentTest (null): " + message);
+        }
+    }
+
+    /**
+     * Safe extent fail method
+     */
+    public void safeExtentFail(String message) {
+        ExtentTest extentTest = getExtentTest();
+        if (extentTest != null) {
+            extentTest.fail(message);
+            log.debug("Successfully logged FAIL to ExtentTest: " + message);
+        } else {
+            log.error("Cannot log fail to ExtentTest (null): " + message);
+        }
+    }
 }
