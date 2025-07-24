@@ -1,7 +1,10 @@
 package testcases;
 
 import base.BaseTest;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import java.nio.file.Paths;
+import com.microsoft.playwright.Page;
 import org.apache.log4j.Logger;
 import pages.AdminPage;
 import pages.ExpandPanelPage;
@@ -14,7 +17,7 @@ import pages.CompleteLoginAndPanelPage;
 import pages.CompleteLoginPage;
 import pages.TopMenuPage;
 import pages.ExpandAllPanelsInAllTabsPage;
-import com.microsoft.playwright.Page;
+import com.microsoft.playwright.Page;   
 import pages.FileSelectionPage;
 import pages.PanelExpandCollapsePage;
 
@@ -24,8 +27,21 @@ public class FullUserJourneyTest extends BaseTest {
     // --- Admin menu navigation ---
     @Test(priority = 1)
     public void adminMenuNavigation() {
+        // Initialize ExtentTest for this test method
+        ExtentTest extentTest = getExtentTest();
+        if (extentTest == null) {
+            log.error("Failed to initialize ExtentTest for adminMenuNavigation");
+            Assert.fail("ExtentTest initialization failed");
+        }
+        
         try {
+            log.info("Starting admin menu navigation test");
+            safeExtentLog("Starting admin menu navigation test");
+            
             AdminPage adminPage = new AdminPage(page);
+            log.info("AdminPage initialized");
+            
+            // Navigate through all admin menu items
             String[][] adminItems = {
                 {"//a[@title='Application Logs']//span[@class='rmText' and text()='Application Logs']", "popup"},
                 {"//a[@title='Application Roles and Work Group']//span[@class='rmText' and text()='Application Roles and Work Groups']", "navigation"},
@@ -58,24 +74,66 @@ public class FullUserJourneyTest extends BaseTest {
                 {"//a[@title='Application Configuration']//span[@class='rmText' and text()='Application Configuration']", "navigation"},
                 {"//a[@title='Checklist Configuration']//span[@class='rmText' and text()='Checklist Configuration']", "navigation"}
             };
+            // Get ExtentTest once to avoid multiple lookups
+            ExtentTest testInstance = getExtentTest();
+            
             for (int i = 0; i < adminItems.length; i++) {
                 String itemSelector = adminItems[i][0];
                 String itemType = adminItems[i][1];
+                String itemName = itemSelector.substring("//a[@title='".length(), itemSelector.indexOf("']"));
+                
                 try {
-                    adminPage.handleAdminItem(itemSelector, itemType, test);
-                    test.info("Handled admin item: " + itemSelector);
-                    log.info("Handled admin item: " + itemSelector);
+                    log.info("Processing admin item: " + itemName);
+                    
+                    // Log the start of processing this item
+                    safeExtentLog("Processing admin item: " + itemName);
+                    
+                    // Execute the admin item action
+                    adminPage.handleAdminItem(itemSelector, itemType, testInstance);
+                    
+                    // Log successful processing
+                    safeExtentLog("✓ Successfully processed: " + itemName);
+                    log.info("Successfully processed: " + itemName);
+                    
+                    // Small delay between items to avoid overwhelming the UI
+                    page.waitForTimeout(500);
+                    
                 } catch (Exception e) {
-                    test.fail("Failed to handle admin item: " + itemSelector + ". Exception: " + e.getMessage());
-                    log.error("Failed to handle admin item: " + itemSelector, e);
+                    String errorMsg = "❌ Failed to process admin item: " + itemName + ". Error: " + e.getMessage();
+                    log.error(errorMsg, e);
+                    safeExtentFail(errorMsg);
+                    
+                    // Take a screenshot on failure
+                    try {
+                        String screenshotPath = "screenshots/error_" + itemName.replace(" ", "_") + "_" + System.currentTimeMillis() + ".png";
+                        page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get(screenshotPath)));
+                        safeExtentLog("Screenshot saved: " + screenshotPath);
+                    } catch (Exception screenshotEx) {
+                        log.error("Failed to take screenshot: " + screenshotEx.getMessage());
+                    }
                 }
             }
-            test.pass("Successfully navigated all admin menu items.");
+            
+            // Final test status
+            test.info("✅ Successfully completed admin menu navigation test");
+            log.info("Successfully completed admin menu navigation test");
+            
         } catch (Exception e) {
-            log.error("Test failed: " + e.getMessage());
-            test.fail("Test failed: " + e.getMessage());
-            System.out.println("Test failed: " + e.getMessage());
-            e.printStackTrace();
+            String errorMsg = "❌ Test failed with exception: " + e.getMessage();
+            log.error(errorMsg, e);
+            safeExtentFail(errorMsg);
+            
+            // Take a screenshot on failure
+            try {
+                String screenshotPath = "screenshots/test_failure_" + System.currentTimeMillis() + ".png";
+                page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get(screenshotPath)));
+                log.info("Screenshot saved: " + screenshotPath);
+            } catch (Exception screenshotEx) {
+                log.error("Failed to take screenshot: " + screenshotEx.getMessage());
+            }
+            
+            // Rethrow to fail the test
+            throw e;
         }
     }
 
@@ -87,16 +145,22 @@ public class FullUserJourneyTest extends BaseTest {
             String project = ConfigReader.get("project");
             ExpandPanelPage expandPanelPage = new ExpandPanelPage(page);
             log.info("ExpandPanelPage initialized");
+            test.info("ExpandPanelPage initialized");
             expandPanelPage.selectDomain(domain, test);
             log.info("Domain selected: " + domain);
+            test.info("Domain selected: " + domain);
             expandPanelPage.selectProject(project, test);
             log.info("Project selected: " + project);
+            test.info("Project selected: " + project);
             expandPanelPage.goToProjectDetails(test);
             log.info("Navigated to project details");
+            test.info("Navigated to project details");
             expandPanelPage.expandPanel(test);
             log.info("Panel expanded");
+            test.info("Panel expanded");
             expandPanelPage.collapsePanel(test);
             log.info("Panel collapsed");
+            test.info("Panel collapsed");
         } catch (Exception e) {
             log.error("Test failed: " + e.getMessage(), e);
             test.fail("Test failed: " + e.getMessage());
@@ -127,7 +191,6 @@ public class FullUserJourneyTest extends BaseTest {
         } catch (Exception e) {
             log.error("Test failed: " + e.getMessage());
             test.fail("Test failed: " + e.getMessage());
-            System.out.println("Test failed: " + e.getMessage());
             e.printStackTrace();
         }
     }
@@ -162,7 +225,6 @@ public class FullUserJourneyTest extends BaseTest {
         } catch (Exception e) {
             log.error("Test failed: " + e.getMessage());
             test.fail("Test failed: " + e.getMessage());
-            System.out.println("Test failed: " + e.getMessage());
             e.printStackTrace();
         }
     }
@@ -302,8 +364,6 @@ public class FullUserJourneyTest extends BaseTest {
             test.pass("Successfully expanded and collapsed all panels in all tabs.");
             log.info("Successfully expanded and collapsed all panels in all tabs.");
         } catch (Exception e) {
-            if (extent != null) test.fail("Test failed: " + e.getMessage());
-            System.out.println("Test failed: " + e.getMessage());
             test.fail("Test failed: " + e.getMessage());
             log.error("Test failed: " + e.getMessage());
             e.printStackTrace();
@@ -496,4 +556,4 @@ public class FullUserJourneyTest extends BaseTest {
             e.printStackTrace();
         }
     }
-} 
+}

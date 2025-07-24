@@ -13,56 +13,49 @@ import java.util.Date;
 
 public class ExtentManager {
 
-	private static ExtentReports extent;
-	public static String fileName;
+    private static ExtentReports extent;
+    private static String fileName;
 
-	// Singleton getter for ExtentReports
-	public static ExtentReports getInstance() {
-		if (extent == null) {
-			// Default file name if not set
-			if (fileName == null) {
-				Date d = new Date();
-				fileName = "Extent_" + d.toString().replace(":", "_").replace(" ", "_") + ".html";
-			}
-			createInstance(fileName);
-		}
-		return extent;
-	}
+    // Singleton access
+    public static ExtentReports getInstance() {
+        if (extent == null) {
+            String defaultFileName = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(new Date()) + "_ExtentReport.html";
+            createInstance(defaultFileName);
+        }
+        return extent;
+    }
 
-	public static ExtentReports createInstance(String fileNameParam) {
-		fileName = fileNameParam;
-		// Ensure the reports directory exists in the project root
-		Path reportsDir = Paths.get(System.getProperty("user.dir"), "reports");
-		try {
-			if (!Files.exists(reportsDir)) {
-				Files.createDirectories(reportsDir);
-			}
-		} catch (IOException e) {
-			// Use logger if available, else print stack trace
-			e.printStackTrace();
-		}
+    public static ExtentReports createInstance(String fileNameParam) {
+        fileName = fileNameParam;
+        Path reportsDir = Paths.get(System.getProperty("user.dir"), "reports");
 
-		String reportFilePath = Paths.get(System.getProperty("user.dir"), "reports", fileName).toString();
-		ExtentSparkReporter htmlReporter = new ExtentSparkReporter(reportFilePath);
+        try {
+            if (!Files.exists(reportsDir)) {
+                Files.createDirectories(reportsDir);
+            }
+        } catch (IOException e) {
+            e.printStackTrace(); // Replace with logger if available
+        }
 
-		htmlReporter.config().setTheme(Theme.STANDARD);
-		htmlReporter.config().setDocumentTitle(fileName);
-		htmlReporter.config().setEncoding("utf-8");
-		htmlReporter.config().setReportName(fileName);
+        String reportPath = reportsDir.resolve(fileName).toString();
+        ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
 
-		extent = new ExtentReports();
-		extent.attachReporter(htmlReporter);
-		extent.setSystemInfo("Automation Tester", "Himanshu Batham");
-		extent.setSystemInfo("FCG", "FlairdocsAutomation");
-		extent.setSystemInfo("DemoProject", "DOTV2");
+        sparkReporter.config().setTheme(Theme.STANDARD);
+        sparkReporter.config().setDocumentTitle("Automation Report");
+        sparkReporter.config().setEncoding("utf-8");
+        sparkReporter.config().setReportName("Automation Results");
 
-		return extent;
-	}
+        extent = new ExtentReports();
+        extent.attachReporter(sparkReporter);
+        extent.setSystemInfo("Automation Tester", "Himanshu Batham");
+        extent.setSystemInfo("Project", "CADOTV2");
 
-	public static void captureScreenshot() throws IOException {
-		Date d = new Date();
-		fileName = d.toString().replace(":", "_").replace(" ", "_") + ".jpg";
-		BaseTest.getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get("./reports/" + fileName)));
-	}
+        return extent;
+    }
 
+    public static void captureScreenshot() throws IOException {
+        String screenshotName = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(new Date()) + ".png";
+        Path screenshotPath = Paths.get("reports", screenshotName);
+        BaseTest.getPage().screenshot(new Page.ScreenshotOptions().setPath(screenshotPath));
+    }
 }

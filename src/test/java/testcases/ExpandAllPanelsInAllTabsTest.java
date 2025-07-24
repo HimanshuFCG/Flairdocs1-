@@ -1,7 +1,6 @@
 package testcases;
 
 import base.BaseTest;
-import com.aventstack.extentreports.ExtentTest;
 import org.testng.annotations.Test;
 import org.apache.log4j.Logger;
 import pages.ExpandAllPanelsInAllTabsPage;
@@ -12,10 +11,9 @@ public class ExpandAllPanelsInAllTabsTest extends BaseTest {
 
     @Test
     public void expandAndCollapseAllPanelsInAllTabs() {
-     ExtentTest test = extent.createTest("Expand and Collapse All Panels in All Tabs");
         try {
             login(); // Use login from BaseTest
-            test.info("Logged in");
+            test.info("Logged in"); 
             log.info("Logged in");
 
             String domain = config.ConfigReader.get("domain");
@@ -38,8 +36,6 @@ public class ExpandAllPanelsInAllTabsTest extends BaseTest {
             test.pass("Successfully expanded and collapsed all panels in all tabs.");
             log.info("Successfully expanded and collapsed all panels in all tabs.");
         } catch (Exception e) {
-            if (extent != null) test.fail("Test failed: " + e.getMessage());
-            System.out.println("Test failed: " + e.getMessage());
             test.fail("Test failed: " + e.getMessage());
             log.error("Test failed: " + e.getMessage());
             e.printStackTrace();

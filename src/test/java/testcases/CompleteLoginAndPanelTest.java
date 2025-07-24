@@ -14,7 +14,6 @@ public class CompleteLoginAndPanelTest extends BaseTest {
 
     @Test
     public void loginAndOpenClosePanels() {
-        ExtentTest test = extent.createTest("Complete Login And Panel Test");
         try {
             login();
             test.info("Logged in using BaseTest.login()");

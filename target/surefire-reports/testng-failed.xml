@@ -9,9 +9,17 @@
       <class name="testcases.FullUserJourneyTest">
         <methods>
           <include name="setup"/>
-          <include name="setUp"/>
+          <include name="clickTopMenuItems"/>
+          <include name="completeLoginAndTabSelection"/>
+          <include name="openAndCloseCreateNewFilePopup"/>
+          <include name="expandAndCollapsePanelsInAllTabsAfterFileSelection"/>
+          <include name="switchToDomain2AndSelectFirstFile"/>
           <include name="tearDownSuite"/>
           <include name="panelExpansion"/>
+          <include name="expandAndCollapseAllPanelsInAllTabs"/>
+          <include name="createNewFileAndCheckRow"/>
+          <include name="openAndCloseCreateNewProjectPopup"/>
+          <include name="adminMenuNavigation"/>
         </methods>
       </class> <!-- testcases.FullUserJourneyTest -->
     </classes>

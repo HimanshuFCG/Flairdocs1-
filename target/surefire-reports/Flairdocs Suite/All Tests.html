@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>All Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>9/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/10</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jul 22 22:51:23 IST 2025</td>
+<td>Started on:</td><td>Thu Jul 24 16:07:30 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>969 seconds (969355 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (41 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,143 +68,219 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testcases.FullUserJourneyTest.panelExpansion()'><b>panelExpansion</b><br>Test class: testcases.FullUserJourneyTest</td>
-<td><div><pre>java.lang.RuntimeException: Test failed due to exception: 
-	at testcases.FullUserJourneyTest.panelExpansion(FullUserJourneyTest.java:103)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: com.microsoft.playwright.TimeoutError: Error {
-  message=&apos;Timeout 15000ms exceeded.
+<td title='testcases.FullUserJourneyTest.setup()'><b>setup</b><br>Test class: testcases.FullUserJourneyTest</td>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
 =========================== logs ===========================
-waiting for selector &quot;//span[@class=&apos;rtbText&apos; and text()=&apos;Acquisition&apos;]&quot; to be visible
-  selector resolved to hidden &lt;span class=&quot;rtbText&quot;&gt;Acquisition&lt;/span&gt;
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
 ============================================================
   name=&apos;TimeoutError
-  stack=&apos;TimeoutError: Timeout 15000ms exceeded.
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
 =========================== logs ===========================
-waiting for selector &quot;//span[@class=&apos;rtbText&apos; and text()=&apos;Acquisition&apos;]&quot; to be visible
-  selector resolved to hidden &lt;span class=&quot;rtbText&quot;&gt;Acquisition&lt;/span&gt;
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
 ============================================================
-    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\progress.js:96:26)
-    at Frame.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\frames.js:843:23)
-    at FrameDispatcher.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\dispatchers\frameDispatcher.js:111:110)
-    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\dispatchers\dispatcher.js:397:46)
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
 }
 	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
 	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
 	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
 	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
-	at com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:982)
-	at com.microsoft.playwright.impl.LocatorImpl.lambda$waitForImpl$6(LocatorImpl.java:500)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.PageImpl.lambda$click$17(PageImpl.java:626)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
 	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
 	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
-	at com.microsoft.playwright.impl.LocatorImpl.waitForImpl(LocatorImpl.java:500)
-	at com.microsoft.playwright.impl.LocatorImpl.waitFor(LocatorImpl.java:496)
-	at pages.ExpandPanelPage.selectDomain(ExpandPanelPage.java:31)
-	at testcases.FullUserJourneyTest.panelExpansion(FullUserJourneyTest.java:90)
-	... 13 more
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:625)
+	at base.BaseTest.login(BaseTest.java:231)
+	at base.BaseTest.setup(BaseTest.java:125)
 Caused by: com.microsoft.playwright.TimeoutError: Error {
-  message=&apos;Timeout 15000ms exceeded.
+  message=&apos;Timeout 30000ms exceeded.
 =========================== logs ===========================
-waiting for selector &quot;//span[@class=&apos;rtbText&apos; and text()=&apos;Acquisition&apos;]&quot; to be visible
-  selector resolved to hidden &lt;span class=&quot;rtbText&quot;&gt;Acquisition&lt;/span&gt;
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
 ============================================================
   name=&apos;TimeoutError
-  stack=&apos;TimeoutError: Timeout 15000ms exceeded.
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
 =========================== logs ===========================
-waiting for selector &quot;//span[@class=&apos;rtbText&apos; and text()=&apos;Acquisition&apos;]&quot; to be visible
-  selector resolved to hidden &lt;span class=&quot;rtbText&quot;&gt;Acquisition&lt;/span&gt;
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
 ============================================================
-    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\progress.js:96:26)
-    at Frame.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\frames.js:843:23)
-    at FrameDispatcher.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\dispatchers\frameDispatcher.js:111:110)
-    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\dispatchers\dispatcher.js:397:46)
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
 }
 	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
 	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
 	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
-	... 23 more
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace935566382", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace935566382'><pre>java.lang.RuntimeException: Test failed due to exception: 
-	at testcases.FullUserJourneyTest.panelExpansion(FullUserJourneyTest.java:103)
+	... 35 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace23076423", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace23076423'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.PageImpl.lambda$click$17(PageImpl.java:626)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:625)
+	at base.BaseTest.login(BaseTest.java:231)
+	at base.BaseTest.setup(BaseTest.java:125)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 Caused by: com.microsoft.playwright.TimeoutError: Error {
-  message=&apos;Timeout 15000ms exceeded.
+  message=&apos;Timeout 30000ms exceeded.
 =========================== logs ===========================
-waiting for selector &quot;//span[@class=&apos;rtbText&apos; and text()=&apos;Acquisition&apos;]&quot; to be visible
-  selector resolved to hidden &lt;span class=&quot;rtbText&quot;&gt;Acquisition&lt;/span&gt;
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
 ============================================================
   name=&apos;TimeoutError
-  stack=&apos;TimeoutError: Timeout 15000ms exceeded.
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
 =========================== logs ===========================
-waiting for selector &quot;//span[@class=&apos;rtbText&apos; and text()=&apos;Acquisition&apos;]&quot; to be visible
-  selector resolved to hidden &lt;span class=&quot;rtbText&quot;&gt;Acquisition&lt;/span&gt;
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
 ============================================================
-    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\progress.js:96:26)
-    at Frame.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\frames.js:843:23)
-    at FrameDispatcher.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\dispatchers\frameDispatcher.js:111:110)
-    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\dispatchers\dispatcher.js:397:46)
-}
-	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
-	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
-	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
-	at com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:982)
-	at com.microsoft.playwright.impl.LocatorImpl.lambda$waitForImpl$6(LocatorImpl.java:500)
-	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
-	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
-	at com.microsoft.playwright.impl.LocatorImpl.waitForImpl(LocatorImpl.java:500)
-	at com.microsoft.playwright.impl.LocatorImpl.waitFor(LocatorImpl.java:496)
-	at pages.ExpandPanelPage.selectDomain(ExpandPanelPage.java:31)
-	at testcases.FullUserJourneyTest.panelExpansion(FullUserJourneyTest.java:90)
-	... 13 more
-Caused by: com.microsoft.playwright.TimeoutError: Error {
-  message=&apos;Timeout 15000ms exceeded.
-=========================== logs ===========================
-waiting for selector &quot;//span[@class=&apos;rtbText&apos; and text()=&apos;Acquisition&apos;]&quot; to be visible
-  selector resolved to hidden &lt;span class=&quot;rtbText&quot;&gt;Acquisition&lt;/span&gt;
-============================================================
-  name=&apos;TimeoutError
-  stack=&apos;TimeoutError: Timeout 15000ms exceeded.
-=========================== logs ===========================
-waiting for selector &quot;//span[@class=&apos;rtbText&apos; and text()=&apos;Acquisition&apos;]&quot; to be visible
-  selector resolved to hidden &lt;span class=&quot;rtbText&quot;&gt;Acquisition&lt;/span&gt;
-============================================================
-    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\progress.js:96:26)
-    at Frame.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\frames.js:843:23)
-    at FrameDispatcher.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\dispatchers\frameDispatcher.js:111:110)
-    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\dispatchers\dispatcher.js:397:46)
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
 }
 	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
 	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
 	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
-	... 23 more
+	... 35 more
 </pre></div></td>
-<td>20</td>
-<td>testcases.FullUserJourneyTest@19b93fa8</td></tr>
+<td>39</td>
+<td>testcases.FullUserJourneyTest@73eb439a</td></tr>
 </table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
@@ -212,49 +288,2044 @@ waiting for selector &quot;//span[@class=&apos;rtbText&apos; and text()=&apos;Ac
 </tr>
 <tr>
 <td title='testcases.FullUserJourneyTest.adminMenuNavigation()'><b>adminMenuNavigation</b><br>Test class: testcases.FullUserJourneyTest</td>
-<td></td>
-<td>296</td>
-<td>testcases.FullUserJourneyTest@19b93fa8</td></tr>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.PageImpl.lambda$click$17(PageImpl.java:626)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:625)
+	at base.BaseTest.login(BaseTest.java:231)
+	at base.BaseTest.setup(BaseTest.java:125)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	... 35 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1753675949", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1753675949'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.PageImpl.lambda$click$17(PageImpl.java:626)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:625)
+	at base.BaseTest.login(BaseTest.java:231)
+	at base.BaseTest.setup(BaseTest.java:125)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	... 35 more
+</pre></div></td>
+<td>0</td>
+<td>testcases.FullUserJourneyTest@73eb439a</td></tr>
 <tr>
 <td title='testcases.FullUserJourneyTest.clickTopMenuItems()'><b>clickTopMenuItems</b><br>Test class: testcases.FullUserJourneyTest</td>
-<td></td>
-<td>113</td>
-<td>testcases.FullUserJourneyTest@19b93fa8</td></tr>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.PageImpl.lambda$click$17(PageImpl.java:626)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:625)
+	at base.BaseTest.login(BaseTest.java:231)
+	at base.BaseTest.setup(BaseTest.java:125)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	... 35 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace121782482", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace121782482'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.PageImpl.lambda$click$17(PageImpl.java:626)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:625)
+	at base.BaseTest.login(BaseTest.java:231)
+	at base.BaseTest.setup(BaseTest.java:125)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	... 35 more
+</pre></div></td>
+<td>0</td>
+<td>testcases.FullUserJourneyTest@73eb439a</td></tr>
 <tr>
 <td title='testcases.FullUserJourneyTest.completeLoginAndTabSelection()'><b>completeLoginAndTabSelection</b><br>Test class: testcases.FullUserJourneyTest</td>
-<td></td>
-<td>101</td>
-<td>testcases.FullUserJourneyTest@19b93fa8</td></tr>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.PageImpl.lambda$click$17(PageImpl.java:626)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:625)
+	at base.BaseTest.login(BaseTest.java:231)
+	at base.BaseTest.setup(BaseTest.java:125)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	... 35 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1482590436", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1482590436'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.PageImpl.lambda$click$17(PageImpl.java:626)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:625)
+	at base.BaseTest.login(BaseTest.java:231)
+	at base.BaseTest.setup(BaseTest.java:125)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	... 35 more
+</pre></div></td>
+<td>0</td>
+<td>testcases.FullUserJourneyTest@73eb439a</td></tr>
 <tr>
 <td title='testcases.FullUserJourneyTest.createNewFileAndCheckRow()'><b>createNewFileAndCheckRow</b><br>Test class: testcases.FullUserJourneyTest</td>
-<td></td>
-<td>83</td>
-<td>testcases.FullUserJourneyTest@19b93fa8</td></tr>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.PageImpl.lambda$click$17(PageImpl.java:626)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:625)
+	at base.BaseTest.login(BaseTest.java:231)
+	at base.BaseTest.setup(BaseTest.java:125)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	... 35 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace934385686", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace934385686'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.PageImpl.lambda$click$17(PageImpl.java:626)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:625)
+	at base.BaseTest.login(BaseTest.java:231)
+	at base.BaseTest.setup(BaseTest.java:125)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	... 35 more
+</pre></div></td>
+<td>0</td>
+<td>testcases.FullUserJourneyTest@73eb439a</td></tr>
 <tr>
 <td title='testcases.FullUserJourneyTest.expandAndCollapseAllPanelsInAllTabs()'><b>expandAndCollapseAllPanelsInAllTabs</b><br>Test class: testcases.FullUserJourneyTest</td>
-<td></td>
-<td>133</td>
-<td>testcases.FullUserJourneyTest@19b93fa8</td></tr>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.PageImpl.lambda$click$17(PageImpl.java:626)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:625)
+	at base.BaseTest.login(BaseTest.java:231)
+	at base.BaseTest.setup(BaseTest.java:125)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	... 35 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1369853762", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1369853762'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.PageImpl.lambda$click$17(PageImpl.java:626)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:625)
+	at base.BaseTest.login(BaseTest.java:231)
+	at base.BaseTest.setup(BaseTest.java:125)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	... 35 more
+</pre></div></td>
+<td>0</td>
+<td>testcases.FullUserJourneyTest@73eb439a</td></tr>
 <tr>
 <td title='testcases.FullUserJourneyTest.expandAndCollapsePanelsInAllTabsAfterFileSelection()'><b>expandAndCollapsePanelsInAllTabsAfterFileSelection</b><br>Test class: testcases.FullUserJourneyTest</td>
-<td></td>
-<td>65</td>
-<td>testcases.FullUserJourneyTest@19b93fa8</td></tr>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.PageImpl.lambda$click$17(PageImpl.java:626)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:625)
+	at base.BaseTest.login(BaseTest.java:231)
+	at base.BaseTest.setup(BaseTest.java:125)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	... 35 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1180282953", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1180282953'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.PageImpl.lambda$click$17(PageImpl.java:626)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:625)
+	at base.BaseTest.login(BaseTest.java:231)
+	at base.BaseTest.setup(BaseTest.java:125)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	... 35 more
+</pre></div></td>
+<td>0</td>
+<td>testcases.FullUserJourneyTest@73eb439a</td></tr>
 <tr>
 <td title='testcases.FullUserJourneyTest.openAndCloseCreateNewFilePopup()'><b>openAndCloseCreateNewFilePopup</b><br>Test class: testcases.FullUserJourneyTest</td>
-<td></td>
-<td>17</td>
-<td>testcases.FullUserJourneyTest@19b93fa8</td></tr>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.PageImpl.lambda$click$17(PageImpl.java:626)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:625)
+	at base.BaseTest.login(BaseTest.java:231)
+	at base.BaseTest.setup(BaseTest.java:125)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	... 35 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1401433216", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1401433216'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.PageImpl.lambda$click$17(PageImpl.java:626)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:625)
+	at base.BaseTest.login(BaseTest.java:231)
+	at base.BaseTest.setup(BaseTest.java:125)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	... 35 more
+</pre></div></td>
+<td>0</td>
+<td>testcases.FullUserJourneyTest@73eb439a</td></tr>
 <tr>
 <td title='testcases.FullUserJourneyTest.openAndCloseCreateNewProjectPopup()'><b>openAndCloseCreateNewProjectPopup</b><br>Test class: testcases.FullUserJourneyTest</td>
-<td></td>
-<td>16</td>
-<td>testcases.FullUserJourneyTest@19b93fa8</td></tr>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.PageImpl.lambda$click$17(PageImpl.java:626)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:625)
+	at base.BaseTest.login(BaseTest.java:231)
+	at base.BaseTest.setup(BaseTest.java:125)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	... 35 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace817346028", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace817346028'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.PageImpl.lambda$click$17(PageImpl.java:626)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:625)
+	at base.BaseTest.login(BaseTest.java:231)
+	at base.BaseTest.setup(BaseTest.java:125)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	... 35 more
+</pre></div></td>
+<td>0</td>
+<td>testcases.FullUserJourneyTest@73eb439a</td></tr>
+<tr>
+<td title='testcases.FullUserJourneyTest.panelExpansion()'><b>panelExpansion</b><br>Test class: testcases.FullUserJourneyTest</td>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.PageImpl.lambda$click$17(PageImpl.java:626)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:625)
+	at base.BaseTest.login(BaseTest.java:231)
+	at base.BaseTest.setup(BaseTest.java:125)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	... 35 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace916194773", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace916194773'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.PageImpl.lambda$click$17(PageImpl.java:626)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:625)
+	at base.BaseTest.login(BaseTest.java:231)
+	at base.BaseTest.setup(BaseTest.java:125)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	... 35 more
+</pre></div></td>
+<td>0</td>
+<td>testcases.FullUserJourneyTest@73eb439a</td></tr>
 <tr>
 <td title='testcases.FullUserJourneyTest.switchToDomain2AndSelectFirstFile()'><b>switchToDomain2AndSelectFirstFile</b><br>Test class: testcases.FullUserJourneyTest</td>
-<td></td>
-<td>120</td>
-<td>testcases.FullUserJourneyTest@19b93fa8</td></tr>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.PageImpl.lambda$click$17(PageImpl.java:626)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:625)
+	at base.BaseTest.login(BaseTest.java:231)
+	at base.BaseTest.setup(BaseTest.java:125)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	... 35 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1785465928", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1785465928'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.PageImpl.lambda$click$17(PageImpl.java:626)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:625)
+	at base.BaseTest.login(BaseTest.java:231)
+	at base.BaseTest.setup(BaseTest.java:125)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;#LoginFlairdocs_LoginButton&quot;
+  selector resolved to visible &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;_btn_04&quot; id=&quot;…/&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    forcing action
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-7915038927546018183\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	... 35 more
+</pre></div></td>
+<td>0</td>
+<td>testcases.FullUserJourneyTest@73eb439a</td></tr>
 </table><p>
 </body>
 </html>

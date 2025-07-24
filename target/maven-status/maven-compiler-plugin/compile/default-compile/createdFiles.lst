@@ -1,2 +1,13 @@
+pages\CreateNewProjectPage.class
+pages\CompleteLoginAndPanelPage.class
+pages\CreateNewFilePage.class
+pages\CompleteLoginPage.class
+pages\ExpandPanelPage.class
 base\BasePage.class
 config\ConfigReader.class
+pages\FileTabsExpand_Collapse.class
+pages\PanelExpandCollapsePage.class
+pages\ExpandAllPanelsInAllTabsPage.class
+pages\FileSelectionPage.class
+pages\AdminPage.class
+pages\TopMenuPage.class
