@@ -31,8 +31,11 @@
             <configuration>
                 <testFailureIgnore>false</testFailureIgnore>
                 <suiteXmlFiles>
-                    <suiteXmlFile>src\test\resources\runner\testng.xml</suiteXmlFile>
+                    <suiteXmlFile>testng.xml</suiteXmlFile>
                 </suiteXmlFiles>
+                <includes>
+                    <include>none</include>
+                </includes>
             </configuration>
         </plugin>
     </plugins>

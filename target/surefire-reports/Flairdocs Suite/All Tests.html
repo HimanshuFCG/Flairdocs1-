@@ -1,0 +1,260 @@
+<html>
+<head>
+<title>TestNG:  All Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>All Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>9/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Jul 22 22:51:23 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>969 seconds (969355 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.FullUserJourneyTest.panelExpansion()'><b>panelExpansion</b><br>Test class: testcases.FullUserJourneyTest</td>
+<td><div><pre>java.lang.RuntimeException: Test failed due to exception: 
+	at testcases.FullUserJourneyTest.panelExpansion(FullUserJourneyTest.java:103)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;//span[@class=&apos;rtbText&apos; and text()=&apos;Acquisition&apos;]&quot; to be visible
+  selector resolved to hidden &lt;span class=&quot;rtbText&quot;&gt;Acquisition&lt;/span&gt;
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;//span[@class=&apos;rtbText&apos; and text()=&apos;Acquisition&apos;]&quot; to be visible
+  selector resolved to hidden &lt;span class=&quot;rtbText&quot;&gt;Acquisition&lt;/span&gt;
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\progress.js:96:26)
+    at Frame.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\frames.js:843:23)
+    at FrameDispatcher.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\dispatchers\frameDispatcher.js:111:110)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:982)
+	at com.microsoft.playwright.impl.LocatorImpl.lambda$waitForImpl$6(LocatorImpl.java:500)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LocatorImpl.waitForImpl(LocatorImpl.java:500)
+	at com.microsoft.playwright.impl.LocatorImpl.waitFor(LocatorImpl.java:496)
+	at pages.ExpandPanelPage.selectDomain(ExpandPanelPage.java:31)
+	at testcases.FullUserJourneyTest.panelExpansion(FullUserJourneyTest.java:90)
+	... 13 more
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;//span[@class=&apos;rtbText&apos; and text()=&apos;Acquisition&apos;]&quot; to be visible
+  selector resolved to hidden &lt;span class=&quot;rtbText&quot;&gt;Acquisition&lt;/span&gt;
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;//span[@class=&apos;rtbText&apos; and text()=&apos;Acquisition&apos;]&quot; to be visible
+  selector resolved to hidden &lt;span class=&quot;rtbText&quot;&gt;Acquisition&lt;/span&gt;
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\progress.js:96:26)
+    at Frame.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\frames.js:843:23)
+    at FrameDispatcher.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\dispatchers\frameDispatcher.js:111:110)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	... 23 more
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace935566382", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace935566382'><pre>java.lang.RuntimeException: Test failed due to exception: 
+	at testcases.FullUserJourneyTest.panelExpansion(FullUserJourneyTest.java:103)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;//span[@class=&apos;rtbText&apos; and text()=&apos;Acquisition&apos;]&quot; to be visible
+  selector resolved to hidden &lt;span class=&quot;rtbText&quot;&gt;Acquisition&lt;/span&gt;
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;//span[@class=&apos;rtbText&apos; and text()=&apos;Acquisition&apos;]&quot; to be visible
+  selector resolved to hidden &lt;span class=&quot;rtbText&quot;&gt;Acquisition&lt;/span&gt;
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\progress.js:96:26)
+    at Frame.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\frames.js:843:23)
+    at FrameDispatcher.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\dispatchers\frameDispatcher.js:111:110)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:982)
+	at com.microsoft.playwright.impl.LocatorImpl.lambda$waitForImpl$6(LocatorImpl.java:500)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LocatorImpl.waitForImpl(LocatorImpl.java:500)
+	at com.microsoft.playwright.impl.LocatorImpl.waitFor(LocatorImpl.java:496)
+	at pages.ExpandPanelPage.selectDomain(ExpandPanelPage.java:31)
+	at testcases.FullUserJourneyTest.panelExpansion(FullUserJourneyTest.java:90)
+	... 13 more
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;//span[@class=&apos;rtbText&apos; and text()=&apos;Acquisition&apos;]&quot; to be visible
+  selector resolved to hidden &lt;span class=&quot;rtbText&quot;&gt;Acquisition&lt;/span&gt;
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;//span[@class=&apos;rtbText&apos; and text()=&apos;Acquisition&apos;]&quot; to be visible
+  selector resolved to hidden &lt;span class=&quot;rtbText&quot;&gt;Acquisition&lt;/span&gt;
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\progress.js:96:26)
+    at Frame.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\frames.js:843:23)
+    at FrameDispatcher.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\dispatchers\frameDispatcher.js:111:110)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	... 23 more
+</pre></div></td>
+<td>20</td>
+<td>testcases.FullUserJourneyTest@19b93fa8</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.FullUserJourneyTest.adminMenuNavigation()'><b>adminMenuNavigation</b><br>Test class: testcases.FullUserJourneyTest</td>
+<td></td>
+<td>296</td>
+<td>testcases.FullUserJourneyTest@19b93fa8</td></tr>
+<tr>
+<td title='testcases.FullUserJourneyTest.clickTopMenuItems()'><b>clickTopMenuItems</b><br>Test class: testcases.FullUserJourneyTest</td>
+<td></td>
+<td>113</td>
+<td>testcases.FullUserJourneyTest@19b93fa8</td></tr>
+<tr>
+<td title='testcases.FullUserJourneyTest.completeLoginAndTabSelection()'><b>completeLoginAndTabSelection</b><br>Test class: testcases.FullUserJourneyTest</td>
+<td></td>
+<td>101</td>
+<td>testcases.FullUserJourneyTest@19b93fa8</td></tr>
+<tr>
+<td title='testcases.FullUserJourneyTest.createNewFileAndCheckRow()'><b>createNewFileAndCheckRow</b><br>Test class: testcases.FullUserJourneyTest</td>
+<td></td>
+<td>83</td>
+<td>testcases.FullUserJourneyTest@19b93fa8</td></tr>
+<tr>
+<td title='testcases.FullUserJourneyTest.expandAndCollapseAllPanelsInAllTabs()'><b>expandAndCollapseAllPanelsInAllTabs</b><br>Test class: testcases.FullUserJourneyTest</td>
+<td></td>
+<td>133</td>
+<td>testcases.FullUserJourneyTest@19b93fa8</td></tr>
+<tr>
+<td title='testcases.FullUserJourneyTest.expandAndCollapsePanelsInAllTabsAfterFileSelection()'><b>expandAndCollapsePanelsInAllTabsAfterFileSelection</b><br>Test class: testcases.FullUserJourneyTest</td>
+<td></td>
+<td>65</td>
+<td>testcases.FullUserJourneyTest@19b93fa8</td></tr>
+<tr>
+<td title='testcases.FullUserJourneyTest.openAndCloseCreateNewFilePopup()'><b>openAndCloseCreateNewFilePopup</b><br>Test class: testcases.FullUserJourneyTest</td>
+<td></td>
+<td>17</td>
+<td>testcases.FullUserJourneyTest@19b93fa8</td></tr>
+<tr>
+<td title='testcases.FullUserJourneyTest.openAndCloseCreateNewProjectPopup()'><b>openAndCloseCreateNewProjectPopup</b><br>Test class: testcases.FullUserJourneyTest</td>
+<td></td>
+<td>16</td>
+<td>testcases.FullUserJourneyTest@19b93fa8</td></tr>
+<tr>
+<td title='testcases.FullUserJourneyTest.switchToDomain2AndSelectFirstFile()'><b>switchToDomain2AndSelectFirstFile</b><br>Test class: testcases.FullUserJourneyTest</td>
+<td></td>
+<td>120</td>
+<td>testcases.FullUserJourneyTest@19b93fa8</td></tr>
+</table><p>
+</body>
+</html>

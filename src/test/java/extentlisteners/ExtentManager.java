@@ -1,26 +1,36 @@
 package extentlisteners;
-
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Date;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.microsoft.playwright.Page;
+
 import base.BaseTest;
 
-//import base.BaseTest;
+import java.io.IOException;
+import java.nio.file.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class ExtentManager {
 
 	private static ExtentReports extent;
 	public static String fileName;
 
-	public static ExtentReports createInstance(String fileName) {
+	// Singleton getter for ExtentReports
+	public static ExtentReports getInstance() {
+		if (extent == null) {
+			// Default file name if not set
+			if (fileName == null) {
+				Date d = new Date();
+				fileName = "Extent_" + d.toString().replace(":", "_").replace(" ", "_") + ".html";
+			}
+			createInstance(fileName);
+		}
+		return extent;
+	}
+
+	public static ExtentReports createInstance(String fileNameParam) {
+		fileName = fileNameParam;
 		// Ensure the reports directory exists in the project root
 		Path reportsDir = Paths.get(System.getProperty("user.dir"), "reports");
 		try {
@@ -28,6 +38,7 @@ public class ExtentManager {
 				Files.createDirectories(reportsDir);
 			}
 		} catch (IOException e) {
+			// Use logger if available, else print stack trace
 			e.printStackTrace();
 		}
 
@@ -49,40 +60,9 @@ public class ExtentManager {
 	}
 
 	public static void captureScreenshot() throws IOException {
-
 		Date d = new Date();
 		fileName = d.toString().replace(":", "_").replace(" ", "_") + ".jpg";
-
-	  BaseTest.getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get("./reports/"+fileName)));
+		BaseTest.getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get("./reports/" + fileName)));
 	}
-
-	/*
-	 * 
-	 * public static void captureScreenshot() throws IOException {
-	 * 
-	 * Date d = new Date(); fileName = d.toString().replace(":", "_").replace(" ",
-	 * "_")+".jpg";
-	 * 
-	 * 
-	 * 
-	 * File screeshot = ((TakesScreenshot)
-	 * BaseTest.driver).getScreenshotAs(OutputType.FILE);
-	 * FileUtils.copyFile(screeshot, new File(".//reports//"+fileName)); }
-	 * 
-	 * 
-	 * 
-	 * public static void captureElementScreenshot(WebElement element) throws
-	 * IOException {
-	 * 
-	 * Date d = new Date(); String fileName = d.toString().replace(":",
-	 * "_").replace(" ", "_")+".jpg";
-	 * 
-	 * 
-	 * 
-	 * File screeshot = ((TakesScreenshot)
-	 * element).getScreenshotAs(OutputType.FILE); FileUtils.copyFile(screeshot, new
-	 * File(".//screenshot//"+"Element_"+fileName)); }
-	 * 
-	 */
 
 }

@@ -1,11 +1,2 @@
 base\BasePage.class
-pages\Search.class
 config\ConfigReader.class
-pages\PMInquiry.class
-pages\DocMgmt.class
-pages\Acuisition.class
-pages\MyProfile.class
-pages\LoginPage.class
-pages\Dashboard.class
-pages\MyWorkQueue.class
-pages\Notifications.class

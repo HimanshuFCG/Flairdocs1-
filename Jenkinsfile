@@ -36,7 +36,7 @@ pipeline {
                 reportDir: 'reports',
                 reportFiles: 'ExtentReport.html',   //  Use actual filename
                 reportName: 'Extent Report',
-                allowMissing: false,
+                allowMissing: true,
                 alwaysLinkToLastBuild: true,
                 keepAll: true
             ])

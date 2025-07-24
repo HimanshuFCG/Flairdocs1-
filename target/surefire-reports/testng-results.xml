@@ -1,239 +1,245 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
+<testng-results ignored="1" total="11" passed="9" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-30T12:16:38Z" name="FLairdocsSuite" finished-at="2025-06-30T12:17:55Z" duration-ms="76689">
+  <suite started-at="2025-07-22T17:21:23Z" name="Flairdocs Suite" finished-at="2025-07-22T17:37:32Z" duration-ms="969355">
     <groups>
     </groups>
-    <test started-at="2025-06-30T12:16:38Z" name="Login Test" finished-at="2025-06-30T12:17:19Z" duration-ms="40652">
-      <class name="testcases.LoginTest">
-        <test-method signature="loginTest()[pri:0, instance:testcases.LoginTest@5d7148e2]" started-at="2025-06-30T12:16:38Z" name="loginTest" finished-at="2025-06-30T12:17:19Z" duration-ms="40383" status="FAIL">
-          <exception class="com.microsoft.playwright.TimeoutError">
+    <test started-at="2025-07-22T17:21:23Z" name="All Tests" finished-at="2025-07-22T17:37:32Z" duration-ms="969355">
+      <class name="testcases.FullUserJourneyTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.FullUserJourneyTest@19b93fa8]" started-at="2025-07-22T17:20:48Z" name="setup" finished-at="2025-07-22T17:21:23Z" duration-ms="34669" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testcases.FullUserJourneyTest@19b93fa8]" started-at="2025-07-22T17:21:23Z" name="setUp" finished-at="2025-07-22T17:21:23Z" duration-ms="19" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.FullUserJourneyTest.completeLoginAndTabSelection()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="completeLoginAndTabSelection()[pri:1, instance:testcases.FullUserJourneyTest@19b93fa8]" started-at="2025-07-22T17:21:23Z" name="completeLoginAndTabSelection" finished-at="2025-07-22T17:23:05Z" duration-ms="101875" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- completeLoginAndTabSelection -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testcases.FullUserJourneyTest@19b93fa8]" started-at="2025-07-22T17:23:05Z" name="setUp" finished-at="2025-07-22T17:23:05Z" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.FullUserJourneyTest.panelExpansion()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="panelExpansion()[pri:2, instance:testcases.FullUserJourneyTest@19b93fa8]" started-at="2025-07-22T17:23:05Z" name="panelExpansion" finished-at="2025-07-22T17:23:26Z" duration-ms="20655" status="FAIL">
+          <exception class="java.lang.RuntimeException">
             <message>
-              <![CDATA[Error {
-  message='Timeout 30000ms exceeded.
-=========================== logs ===========================
-navigating to "https://demo.flairdocs.com/DOTV2/Login.aspx", waiting until "load"
-============================================================
-  name='TimeoutError
-  stack='TimeoutError: Timeout 30000ms exceeded.
-=========================== logs ===========================
-navigating to "https://demo.flairdocs.com/DOTV2/Login.aspx", waiting until "load"
-============================================================
-    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\progress.js:96:26)
-    at Frame.goto (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\frames.js:709:23)
-    at FrameDispatcher.goto (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\dispatchers\frameDispatcher.js:87:77)
-    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\dispatchers\dispatcher.js:397:46)
-}]]>
+              <![CDATA[Test failed due to exception: ]]>
             </message>
             <full-stacktrace>
-              <![CDATA[com.microsoft.playwright.TimeoutError: Error {
-  message='Timeout 30000ms exceeded.
+              <![CDATA[java.lang.RuntimeException: Test failed due to exception: 
+at testcases.FullUserJourneyTest.panelExpansion(FullUserJourneyTest.java:103)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 15000ms exceeded.
 =========================== logs ===========================
-navigating to "https://demo.flairdocs.com/DOTV2/Login.aspx", waiting until "load"
+waiting for selector "//span[@class='rtbText' and text()='Acquisition']" to be visible
+  selector resolved to hidden <span class="rtbText">Acquisition</span>
 ============================================================
   name='TimeoutError
-  stack='TimeoutError: Timeout 30000ms exceeded.
+  stack='TimeoutError: Timeout 15000ms exceeded.
 =========================== logs ===========================
-navigating to "https://demo.flairdocs.com/DOTV2/Login.aspx", waiting until "load"
+waiting for selector "//span[@class='rtbText' and text()='Acquisition']" to be visible
+  selector resolved to hidden <span class="rtbText">Acquisition</span>
 ============================================================
-    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\progress.js:96:26)
-    at Frame.goto (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\frames.js:709:23)
-    at FrameDispatcher.goto (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\dispatchers\frameDispatcher.js:87:77)
-    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\dispatchers\dispatcher.js:397:46)
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\progress.js:96:26)
+    at Frame.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\frames.js:843:23)
+    at FrameDispatcher.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\dispatchers\frameDispatcher.js:111:110)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\dispatchers\dispatcher.js:397:46)
 }
 at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
 at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
 at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
 at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
-at com.microsoft.playwright.impl.FrameImpl.navigateImpl(FrameImpl.java:401)
-at com.microsoft.playwright.impl.PageImpl.lambda$navigate$32(PageImpl.java:800)
+at com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:982)
+at com.microsoft.playwright.impl.LocatorImpl.lambda$waitForImpl$6(LocatorImpl.java:500)
 at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
 at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
-at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:800)
-at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:41)
-at com.microsoft.playwright.Page.navigate(Page.java:4309)
-at base.BaseTest.navigate(BaseTest.java:141)
-at testcases.LoginTest.loginTest(LoginTest.java:14)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+at com.microsoft.playwright.impl.LocatorImpl.waitForImpl(LocatorImpl.java:500)
+at com.microsoft.playwright.impl.LocatorImpl.waitFor(LocatorImpl.java:496)
+at pages.ExpandPanelPage.selectDomain(ExpandPanelPage.java:31)
+at testcases.FullUserJourneyTest.panelExpansion(FullUserJourneyTest.java:90)
+... 13 more
 Caused by: com.microsoft.playwright.TimeoutError: Error {
-  message='Timeout 30000ms exceeded.
+  message='Timeout 15000ms exceeded.
 =========================== logs ===========================
-navigating to "https://demo.flairdocs.com/DOTV2/Login.aspx", waiting until "load"
+waiting for selector "//span[@class='rtbText' and text()='Acquisition']" to be visible
+  selector resolved to hidden <span class="rtbText">Acquisition</span>
 ============================================================
   name='TimeoutError
-  stack='TimeoutError: Timeout 30000ms exceeded.
+  stack='TimeoutError: Timeout 15000ms exceeded.
 =========================== logs ===========================
-navigating to "https://demo.flairdocs.com/DOTV2/Login.aspx", waiting until "load"
+waiting for selector "//span[@class='rtbText' and text()='Acquisition']" to be visible
+  selector resolved to hidden <span class="rtbText">Acquisition</span>
 ============================================================
-    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\progress.js:96:26)
-    at Frame.goto (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\frames.js:709:23)
-    at FrameDispatcher.goto (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\dispatchers\frameDispatcher.js:87:77)
-    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\dispatchers\dispatcher.js:397:46)
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\progress.js:96:26)
+    at Frame.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\frames.js:843:23)
+    at FrameDispatcher.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\dispatchers\frameDispatcher.js:111:110)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-18335691241620246686\package\lib\server\dispatchers\dispatcher.js:397:46)
 }
 at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
 at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
 at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
-... 40 more
+... 23 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- com.microsoft.playwright.TimeoutError -->
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTest -->
-      </class> <!-- testcases.LoginTest -->
-    </test> <!-- Login Test -->
-    <test started-at="2025-06-30T12:17:19Z" name="Complete Login and Project Selection" finished-at="2025-06-30T12:17:55Z" duration-ms="35764">
-      <class name="testcases.CompleteLoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.CompleteLoginTest@6404f418]" started-at="2025-06-30T12:16:38Z" name="setup" finished-at="2025-06-30T12:16:38Z" duration-ms="32" status="PASS">
+        </test-method> <!-- panelExpansion -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testcases.FullUserJourneyTest@19b93fa8]" started-at="2025-07-22T17:23:26Z" name="setUp" finished-at="2025-07-22T17:23:26Z" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.FullUserJourneyTest.createNewFileAndCheckRow()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="completeLoginAndTabSelection()[pri:0, instance:testcases.CompleteLoginTest@6404f418]" started-at="2025-06-30T12:17:19Z" name="completeLoginAndTabSelection" finished-at="2025-06-30T12:17:55Z" duration-ms="35250" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Test failed: Error {
-  message='Timeout 30000ms exceeded.
-=========================== logs ===========================
-waiting for selector "#LoginFlairdocs_LoginButton"
-  selector resolved to visible <input type="submit" value="Login" class="_btn_04" id="…/>
-attempting click action
-  waiting for element to be visible, enabled and stable
-    forcing action
-  element is visible, enabled and stable
-  scrolling into view if needed
-  done scrolling
-  performing click action
-  click action done
-  waiting for scheduled navigations to finish
-============================================================
-  name='TimeoutError
-  stack='TimeoutError: Timeout 30000ms exceeded.
-=========================== logs ===========================
-waiting for selector "#LoginFlairdocs_LoginButton"
-  selector resolved to visible <input type="submit" value="Login" class="_btn_04" id="…/>
-attempting click action
-  waiting for element to be visible, enabled and stable
-    forcing action
-  element is visible, enabled and stable
-  scrolling into view if needed
-  done scrolling
-  performing click action
-  click action done
-  waiting for scheduled navigations to finish
-============================================================
-    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\progress.js:96:26)
-    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\frames.js:1197:23)
-    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\dispatchers\frameDispatcher.js:173:30)
-    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\dispatchers\dispatcher.js:397:46)
-}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Test failed: Error {
-  message='Timeout 30000ms exceeded.
-=========================== logs ===========================
-waiting for selector "#LoginFlairdocs_LoginButton"
-  selector resolved to visible <input type="submit" value="Login" class="_btn_04" id="…/>
-attempting click action
-  waiting for element to be visible, enabled and stable
-    forcing action
-  element is visible, enabled and stable
-  scrolling into view if needed
-  done scrolling
-  performing click action
-  click action done
-  waiting for scheduled navigations to finish
-============================================================
-  name='TimeoutError
-  stack='TimeoutError: Timeout 30000ms exceeded.
-=========================== logs ===========================
-waiting for selector "#LoginFlairdocs_LoginButton"
-  selector resolved to visible <input type="submit" value="Login" class="_btn_04" id="…/>
-attempting click action
-  waiting for element to be visible, enabled and stable
-    forcing action
-  element is visible, enabled and stable
-  scrolling into view if needed
-  done scrolling
-  performing click action
-  click action done
-  waiting for scheduled navigations to finish
-============================================================
-    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\progress.js:96:26)
-    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\frames.js:1197:23)
-    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\dispatchers\frameDispatcher.js:173:30)
-    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-6076186281018772819\package\lib\server\dispatchers\dispatcher.js:397:46)
-}
-at org.testng.Assert.fail(Assert.java:96)
-at testcases.CompleteLoginTest.completeLoginAndTabSelection(CompleteLoginTest.java:226)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- setUp -->
+        <test-method signature="createNewFileAndCheckRow()[pri:3, instance:testcases.FullUserJourneyTest@19b93fa8]" started-at="2025-07-22T17:23:26Z" name="createNewFileAndCheckRow" finished-at="2025-07-22T17:24:49Z" duration-ms="83080" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- completeLoginAndTabSelection -->
-        <test-method is-config="true" signature="tearDownSuite()[pri:0, instance:testcases.CompleteLoginTest@6404f418]" started-at="2025-06-30T12:17:55Z" name="tearDownSuite" finished-at="2025-06-30T12:17:55Z" duration-ms="43" status="PASS">
+        </test-method> <!-- createNewFileAndCheckRow -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testcases.FullUserJourneyTest@19b93fa8]" started-at="2025-07-22T17:24:49Z" name="setUp" finished-at="2025-07-22T17:24:49Z" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.FullUserJourneyTest.clickTopMenuItems()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="clickTopMenuItems()[pri:4, instance:testcases.FullUserJourneyTest@19b93fa8]" started-at="2025-07-22T17:24:49Z" name="clickTopMenuItems" finished-at="2025-07-22T17:26:43Z" duration-ms="113853" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickTopMenuItems -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testcases.FullUserJourneyTest@19b93fa8]" started-at="2025-07-22T17:26:43Z" name="setUp" finished-at="2025-07-22T17:26:43Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.FullUserJourneyTest.expandAndCollapseAllPanelsInAllTabs()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="expandAndCollapseAllPanelsInAllTabs()[pri:6, instance:testcases.FullUserJourneyTest@19b93fa8]" started-at="2025-07-22T17:26:43Z" name="expandAndCollapseAllPanelsInAllTabs" finished-at="2025-07-22T17:28:56Z" duration-ms="133510" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expandAndCollapseAllPanelsInAllTabs -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testcases.FullUserJourneyTest@19b93fa8]" started-at="2025-07-22T17:28:56Z" name="setUp" finished-at="2025-07-22T17:28:56Z" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.FullUserJourneyTest.adminMenuNavigation()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="adminMenuNavigation()[pri:7, instance:testcases.FullUserJourneyTest@19b93fa8]" started-at="2025-07-22T17:28:56Z" name="adminMenuNavigation" finished-at="2025-07-22T17:33:53Z" duration-ms="296427" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- adminMenuNavigation -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testcases.FullUserJourneyTest@19b93fa8]" started-at="2025-07-22T17:33:53Z" name="setUp" finished-at="2025-07-22T17:33:53Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.FullUserJourneyTest.switchToDomain2AndSelectFirstFile()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="switchToDomain2AndSelectFirstFile()[pri:8, instance:testcases.FullUserJourneyTest@19b93fa8]" started-at="2025-07-22T17:33:53Z" name="switchToDomain2AndSelectFirstFile" finished-at="2025-07-22T17:35:53Z" duration-ms="120434" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- switchToDomain2AndSelectFirstFile -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testcases.FullUserJourneyTest@19b93fa8]" started-at="2025-07-22T17:35:53Z" name="setUp" finished-at="2025-07-22T17:35:53Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.FullUserJourneyTest.expandAndCollapsePanelsInAllTabsAfterFileSelection()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="expandAndCollapsePanelsInAllTabsAfterFileSelection()[pri:9, instance:testcases.FullUserJourneyTest@19b93fa8]" started-at="2025-07-22T17:35:53Z" name="expandAndCollapsePanelsInAllTabsAfterFileSelection" finished-at="2025-07-22T17:36:58Z" duration-ms="65291" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expandAndCollapsePanelsInAllTabsAfterFileSelection -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testcases.FullUserJourneyTest@19b93fa8]" started-at="2025-07-22T17:36:58Z" name="setUp" finished-at="2025-07-22T17:36:58Z" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.FullUserJourneyTest.openAndCloseCreateNewFilePopup()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="openAndCloseCreateNewFilePopup()[pri:10, instance:testcases.FullUserJourneyTest@19b93fa8]" started-at="2025-07-22T17:36:58Z" name="openAndCloseCreateNewFilePopup" finished-at="2025-07-22T17:37:16Z" duration-ms="17438" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openAndCloseCreateNewFilePopup -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testcases.FullUserJourneyTest@19b93fa8]" started-at="2025-07-22T17:37:16Z" name="setUp" finished-at="2025-07-22T17:37:16Z" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.FullUserJourneyTest.openAndCloseCreateNewProjectPopup()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="openAndCloseCreateNewProjectPopup()[pri:11, instance:testcases.FullUserJourneyTest@19b93fa8]" started-at="2025-07-22T17:37:16Z" name="openAndCloseCreateNewProjectPopup" finished-at="2025-07-22T17:37:32Z" duration-ms="16646" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openAndCloseCreateNewProjectPopup -->
+        <test-method is-config="true" signature="tearDownSuite()[pri:0, instance:testcases.FullUserJourneyTest@19b93fa8]" started-at="2025-07-22T17:37:32Z" name="tearDownSuite" finished-at="2025-07-22T17:37:35Z" duration-ms="2287" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownSuite -->
-      </class> <!-- testcases.CompleteLoginTest -->
-    </test> <!-- Complete Login and Project Selection -->
-  </suite> <!-- FLairdocsSuite -->
+      </class> <!-- testcases.FullUserJourneyTest -->
+    </test> <!-- All Tests -->
+  </suite> <!-- Flairdocs Suite -->
 </testng-results>
