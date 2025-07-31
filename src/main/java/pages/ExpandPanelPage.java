@@ -10,6 +10,23 @@ import com.microsoft.playwright.options.WaitUntilState;
 public class ExpandPanelPage {
     private final Page page;
 
+    // Panel section locators (adjust as per your UI)
+    private static final String EXPAND_BUTTON  ="#ctl00_Main_DynamicContent1_ibPlus";
+    private static final String COLLAPSE_BUTTON  = "#ctl00_Main_DynamicContent1_ibMinus";
+
+    /**
+     * Returns true if the main panel section is visible.
+     */
+    public boolean isPanelCollapsed() {
+        return page.isVisible(COLLAPSE_BUTTON );
+    }
+
+    /**
+     * Returns the title text of the main panel section.
+     */
+    public boolean isPanelExpanded() {
+        return page.isVisible(COLLAPSE_BUTTON);
+    }
     public ExpandPanelPage(Page page) {
         this.page = page;
     }
@@ -86,7 +103,7 @@ public class ExpandPanelPage {
         String collapseButtonXpath = "//*[@id='ctl00_Main_DynamicContent1_ibMinus']";
         Locator collapseButton = page.locator(collapseButtonXpath);
         collapseButton.waitFor(new Locator.WaitForOptions().setTimeout(10000).setState(WaitForSelectorState.VISIBLE));
-        page.waitForTimeout(800); 
+        page.waitForTimeout(1000); 
         collapseButton.click();
         test.info("Clicked 'Collapse' button");
 

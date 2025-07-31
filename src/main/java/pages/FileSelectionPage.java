@@ -31,6 +31,7 @@ public class FileSelectionPage {
         domainDropdown.waitFor(new Locator.WaitForOptions().setTimeout(15000).setState(WaitForSelectorState.VISIBLE));
         domainDropdown.click();
         test.info("Clicked 'Domain:' dropdown");
+        log.info("Clicked 'Domain:' dropdown");
 
         String domainOptionXpath = "//span[@class='rtbText' and text()='" + domain2 + "']";
         Locator domainOption = page.locator(domainOptionXpath);

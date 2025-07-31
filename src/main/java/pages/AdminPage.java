@@ -14,6 +14,23 @@ public class AdminPage {
     public AdminPage(Page page) {
          this.page = page; }
 
+    /**
+     * Returns true if the Admin menu button is visible on the page.
+     */
+    public boolean isAdminMenuVisible() {
+        return page.isVisible(ADMIN_BUTTON);
+    }
+
+    /**
+     * Returns the text of the Admin menu button (should be 'Admin').
+     */
+    public String getAdminMenuTitle() {
+        if (page.isVisible(ADMIN_BUTTON)) {
+            return page.textContent(ADMIN_BUTTON).trim();
+        }
+        return null;
+    }
+
     public void clickAdminMenu(ExtentTest test) {
         page.waitForSelector(ADMIN_BUTTON);
         page.click(ADMIN_BUTTON);

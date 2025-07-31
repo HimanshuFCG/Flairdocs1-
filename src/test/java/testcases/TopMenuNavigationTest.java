@@ -7,35 +7,38 @@ import org.apache.log4j.Logger;
 import pages.TopMenuPage;
 import config.ConfigReader;
 import com.microsoft.playwright.Page;
+import com.aventstack.extentreports.ExtentTest;
 
 public class TopMenuNavigationTest extends BaseTest {
     private static final Logger log = Logger.getLogger(TopMenuNavigationTest.class);
+
 
     @Test
     public void clickTopMenuItems() {
        
         try {
             login();
-            test.info("Logged in using BaseTest.login()");
+            ExtentTest extentTest = getExtentTest();
+            extentTest.info("Logged in using BaseTest.login()");
             log.info("Logged in using BaseTest.login()");
 
             TopMenuPage topMenu = new TopMenuPage(page);
 
             // Click 'Search'
             topMenu.clickSearch();
-            test.info("Clicked 'Search' menu item");
+            extentTest.info("Clicked 'Search' menu item");
             log.info("Clicked 'Search' menu item");
             page.waitForTimeout(5000);
 
             // Click 'My Work Queue'
             topMenu.clickMyWorkQueue();
-            test.info("Clicked 'My Work Queue' menu item");
+            extentTest.info("Clicked 'My Work Queue' menu item");
             log.info("Clicked 'My Work Queue' menu item");
             page.waitForTimeout(5000);
 
             // Click 'My Profile'
             topMenu.clickMyProfile();
-            test.info("Clicked 'My Profile' menu item");
+            extentTest.info("Clicked 'My Profile' menu item");
             log.info("Clicked 'My Profile' menu item");
             page.waitForTimeout(5000);
 
@@ -43,7 +46,7 @@ public class TopMenuNavigationTest extends BaseTest {
             Page pmInquiryPage = page.context().waitForPage(() -> {
                 topMenu.clickPMInquiry();
             });
-            test.info("Clicked 'PM Inquiry' menu item and new window opened");
+            extentTest.info("Clicked 'PM Inquiry' menu item and new window opened");
             log.info("Clicked 'PM Inquiry' menu item and new window opened");
             int width = Integer.parseInt(ConfigReader.get("viewportWidth", "1581"));
             int height = Integer.parseInt(ConfigReader.get("viewportHeight", "864"));
@@ -53,7 +56,7 @@ public class TopMenuNavigationTest extends BaseTest {
 
             // Now just continue with the original page (main tab)
             topMenu.clickNotifications();
-            test.info("Clicked 'Notifications' menu item");
+            extentTest.info("Clicked 'Notifications' menu item");
             log.info("Clicked 'Notifications' menu item");
             page.waitForTimeout(5000);
 
@@ -61,7 +64,7 @@ public class TopMenuNavigationTest extends BaseTest {
             Page docMgmtPage = page.context().waitForPage(() -> {
                 topMenu.clickDocMgmt();
             });
-            test.info("Clicked 'Doc Mgmt' menu item and new window opened");
+            extentTest.info("Clicked 'Doc Mgmt' menu item and new window opened");
             log.info("Clicked 'Doc Mgmt' menu item and new window opened");
             docMgmtPage.setViewportSize(width, height);
             docMgmtPage.waitForTimeout(2000);
@@ -72,7 +75,7 @@ public class TopMenuNavigationTest extends BaseTest {
             Page gisPage = page.context().waitForPage(() -> {
                 topMenu.clickGIS();
             });
-            test.info("Clicked 'GIS' menu item and new window opened");
+            extentTest.info("Clicked 'GIS' menu item and new window opened");
             log.info("Clicked 'GIS' menu item and new window opened");
             gisPage.setViewportSize(width, height);
             gisPage.waitForTimeout(2000);
@@ -81,15 +84,15 @@ public class TopMenuNavigationTest extends BaseTest {
 
             // Click 'Dashboard' (same window)
             topMenu.clickDashboard();
-            test.info("Clicked 'Dashboard' menu item");
+            extentTest.info("Clicked 'Dashboard' menu item");
             log.info("Clicked 'Dashboard' menu item");
             page.setViewportSize(width, height);
             page.waitForTimeout(2000);
 
-            test.pass("Successfully clicked all top menu items.");
+            extentTest.pass("Successfully clicked all top menu items.");
             log.info("Successfully clicked all top menu items.");
         } catch (Exception e) {
-            test.fail("Test failed: " + e.getMessage());
+            safeExtentLog("Test failed: " + e.getMessage());
             log.error("Test failed: " + e.getMessage());
             e.printStackTrace();
         }

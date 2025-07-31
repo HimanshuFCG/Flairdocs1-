@@ -99,7 +99,8 @@ public class ExtentListeners implements ITestListener, IReporter {
                 log.info("Test instance type: " + testInstance.getClass().getName());
                 
                 if (testInstance instanceof base.BaseTest) {
-                    ((base.BaseTest) testInstance).test = test;
+                    // Use the static setter method instead of direct field access
+                    base.BaseTest.setExtentTest(test);
                     log.info("ExtentTest assigned to BaseTest.test field: SUCCESS");
                 } else {
                     log.warn("Test instance is NOT an instance of BaseTest! Type: " + testInstance.getClass().getName());

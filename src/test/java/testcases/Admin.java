@@ -2,6 +2,9 @@ package testcases;
 
 import base.BaseTest;
 import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.ExtentTest;
+
 import org.apache.log4j.Logger;
 import pages.AdminPage;
 
@@ -47,22 +50,23 @@ public class Admin extends BaseTest {
         try {
             login();
             AdminPage adminPage = new AdminPage(page);
+            ExtentTest extentTest = getExtentTest();  // Get the ExtentTest instance
             for (int i = 0; i < adminItems.length; i++) {
                 String itemSelector = adminItems[i][0];
                 String itemType = adminItems[i][1];
                 try {
-                    adminPage.handleAdminItem(itemSelector, itemType, test);
-                    test.info("Handled admin item: " + itemSelector);
+                    adminPage.handleAdminItem(itemSelector, itemType, extentTest);
+                    safeExtentPass("Handled admin item: " + itemSelector);
                     log.info("Handled admin item: " + itemSelector);
                 } catch (Exception e) {
-                    test.fail("Failed to handle admin item: " + itemSelector + ". Exception: " + e.getMessage());
+                    safeExtentFail("Failed to handle admin item: " + itemSelector + ". Exception: " + e.getMessage());
                     log.error("Failed to handle admin item: " + itemSelector, e);
                 }
             }
-            test.pass("Successfully navigated all admin menu items.");
+            safeExtentPass("Successfully navigated all admin menu items.");
         } catch (Exception e) {
             log.error("Test failed: " + e.getMessage());
-            test.fail("Test failed: " + e.getMessage());
+            safeExtentFail("Test failed: " + e.getMessage());
             System.out.println("Test failed: " + e.getMessage());
             e.printStackTrace();
         }

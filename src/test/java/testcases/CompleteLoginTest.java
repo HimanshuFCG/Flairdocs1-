@@ -3,6 +3,9 @@ package testcases;
 import base.BaseTest;
 import config.ConfigReader;
 import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.ExtentTest;
+
 import pages.CompleteLoginPage;
 
 public class CompleteLoginTest extends BaseTest {
@@ -11,13 +14,14 @@ public class CompleteLoginTest extends BaseTest {
         try {
             // Login and ExtentTest setup are handled by BaseTest
             login();
+            ExtentTest extentTest = getExtentTest();
             String domain = ConfigReader.get("domain");
             String project = ConfigReader.get("project");
 
             CompleteLoginPage completeLoginPage = new CompleteLoginPage(page);
-            completeLoginPage.selectDomain(domain, test);
-            completeLoginPage.selectProject(project, test);
-            completeLoginPage.goToProjectDetails(test);
+            completeLoginPage.selectDomain(domain, extentTest);
+            completeLoginPage.selectProject(project, extentTest);
+            completeLoginPage.goToProjectDetails(extentTest);
 
             // Click through the required tabs
             String[] tabNames = {
@@ -35,12 +39,12 @@ public class CompleteLoginTest extends BaseTest {
 
             };
             for (String tab : tabNames) {
-                completeLoginPage.clickTab(tab, test);
+                completeLoginPage.clickTab(tab, extentTest);
             }
-            test.pass("Successfully completed login and tab selection flow.");
+            extentTest.pass("Successfully completed login and tab selection flow.");
         } catch (Exception e) {
-            log.error("Test failed: " + e.getMessage());
-            test.fail("Test failed: " + e.getMessage());
+            safeExtentLog("Test failed: " + e.getMessage());
+            safeExtentFail("Test failed: " + e.getMessage());
             System.out.println("Test failed: " + e.getMessage());
             e.printStackTrace();
         }

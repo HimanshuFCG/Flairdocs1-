@@ -5,7 +5,6 @@ import com.microsoft.playwright.BrowserContext;
 import com.microsoft.playwright.Page;
 import java.util.Properties;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.testng.annotations.BeforeSuite;
@@ -13,78 +12,84 @@ import java.io.IOException;
 import com.microsoft.playwright.BrowserType;
 import org.testng.annotations.AfterMethod;  
 import org.testng.Assert;
+import org.testng.ITestResult;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import extentlisteners.ExtentListeners;
+import extentlisteners.ExtentManager;
+
 import org.testng.annotations.BeforeMethod;
 import java.lang.reflect.Method;
+import java.nio.file.Paths;
+
 import com.aventstack.extentreports.ExtentTest;
 import org.testng.annotations.AfterSuite;
 import config.ConfigReader;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.util.Arrays;
+import com.microsoft.playwright.*;
+import org.testng.annotations.*;
+import org.testng.annotations.Listeners;
+
+
+
+
+
 
 public class BaseTest {
 
+    // Playwright components
     protected Playwright playwright;
     protected Browser browser;
     protected BrowserContext context;
     protected Page page;
+    
 
-    private static Properties OR = new Properties();
+    // Thread-safe variables
+    protected static ThreadLocal<Page> threadPage = new ThreadLocal<>();
+    protected static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
+    // Logging
+    private static final Logger log = Logger.getLogger(BaseTest.class);
+    public   static Properties OR = new Properties();
     private static FileInputStream fis;
-    public Logger log = Logger.getLogger(this.getClass());
-
-    public static ThreadLocal<Page> threadPage = new ThreadLocal<>();
-
-
-    public ExtentTest test; // Made public for ExtentListeners access
-
-
-    public static void setPage(Page p) {
-        threadPage.set(p);
-    }
-
-    public static Page getPage() {
-        return threadPage.get();
+    protected ExtentTest extentTest;
+    
+    // Add this method to your BaseTest class
+    public void setPage(Page page) {
+        this.page = page;
+        threadPage.set(page);
     }
 
     @BeforeSuite
     public void setup() {
+        // Initialize ExtentReports
+        ExtentManager.getInstance();
         PropertyConfigurator.configure("log4j.properties");
         log.info("Test Execution Started");
 
-        // Load OR.properties (Object Repository) for selectors
+        // Load OR.properties (Object Repository)
         try {
             fis = new FileInputStream("./src/test/resources/properties/OR.properties");
             OR.load(fis);
             log.info("OR.properties file loaded");
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error("Error loading OR.properties", e);
         }
 
-        try {
-            fis = new FileInputStream("./src/test/resources/properties/log4j.properties");
-            PropertyConfigurator.configure(fis);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-
-        // Get the screen size (from your old BaseTest)
+        // Get screen size
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int width = (int) screenSize.getWidth();
         int height = (int) screenSize.getHeight();
         log.info("Screen size detected: " + width + " x " + height);
 
-        // COMMENTED OUT: Docker detection logic
-        // String envDocker = System.getenv("DOCKER");
-        // java.io.File dockerEnv = new java.io.File("/.dockerenv");
-        // boolean headless = (envDocker != null || dockerEnv.exists());
-
+        // Initialize Playwright
         playwright = Playwright.create();
         String browserName = ConfigReader.get("browser", "chrome");
 
+        // Browser launch configuration
+       
         if (browserName.equalsIgnoreCase("chrome") || browserName.equalsIgnoreCase("edge")) {
             browser = playwright.chromium().launch(
                 new BrowserType.LaunchOptions()
@@ -123,17 +128,101 @@ public class BaseTest {
         setPage(page); // Set the ThreadLocal for listener access
         // Perform login ONCE for the suite
         login();
+        safeExtentPass("Login successful");
     }
 
-  
+    @BeforeMethod
+    public void beforeMethod(Method method) {
+        // Initialize ExtentTest for the test method
+        String testName = method.getDeclaringClass().getSimpleName() + "." + method.getName();
+        extentTest = ExtentManager.getInstance().createTest(testName);
+        test.set(extentTest);
+        log.info("Starting test: " + testName);
+       safeExtentLog("Starting test: " + testName);
+    }
+
+    @AfterMethod
+    public void afterMethod(ITestResult result) {
+        
+        try {
+            // Log test status
+            if (extentTest != null) {
+                if (result.getStatus() == ITestResult.FAILURE) {
+                    String errorMsg = "Test failed: " + result.getThrowable().getMessage();
+                    extentTest.fail(errorMsg);
+                    log.error(errorMsg);
+                    
+                    // Take screenshot on failure
+                    try {
+                        String screenshotPath = takeScreenshot(result.getName());
+                        extentTest.addScreenCaptureFromPath(screenshotPath);
+                        log.info("Screenshot captured: " + screenshotPath);
+                    } catch (Exception e) {
+                        log.error("Failed to capture screenshot", e);
+                    }
+                } else if (result.getStatus() == ITestResult.SUCCESS) {
+                    extentTest.pass("Test passed");
+                }
+            }
+            
+            
+            
+        } catch (Exception e) {
+            log.error("Error during test cleanup: " + e.getMessage(), e);
+        } finally {
+            // Don't close the page and context here, let them be managed by @AfterSuite
+            // Just clean up the ThreadLocal variables
+            test.remove();
+            threadPage.remove();
+        }
+    }
     @AfterSuite
     public void tearDownSuite() {
-        if (page != null) page.close();
-        if (browser != null) browser.close();
-        if (playwright != null) playwright.close();
-    
+        // Close browser and Playwright
+        if (browser != null) {
+            browser.close();
+        }
+        if (playwright != null) {
+            playwright.close();
+        }
+        
+        // Flush Extent Reports
+        if (ExtentManager.getInstance() != null) {
+            ExtentManager.getInstance().flush();
+            log.info("Extent report has been generated");
+        }
         log.info("Browser and Playwright closed after suite");
     }
+
+    // Helper methods
+    public static Page getPage() {
+        return threadPage.get();
+    }
+
+    protected void logInfo(String message) {
+        log.info(message);
+        ExtentTest extentTest = test.get();
+        if (extentTest != null) {
+            extentTest.info(message);
+        }
+    }
+
+    protected void logError(String message, Throwable throwable) {
+        log.error(message, throwable);
+        ExtentTest extentTest = test.get();
+        if (extentTest != null) {
+            extentTest.fail(message + ": " + throwable.getMessage());
+        }
+    }
+
+    private String takeScreenshot(String testName) throws Exception {
+        String screenshotPath = "screenshots/" + testName + "_" + System.currentTimeMillis() + ".png";
+        page.screenshot(new Page.ScreenshotOptions()
+            .setPath(Paths.get(screenshotPath))
+            .setFullPage(true));
+        return screenshotPath;
+    }
+
     
     public void click(String locatorKey){
         try {
@@ -197,6 +286,8 @@ public class BaseTest {
         }
         String viewportWidth = props.getProperty("viewport.width");
         String viewportHeight = props.getProperty("viewport.height");
+        safeExtentLog("Navigating to URL: " + url);
+        log.info("Navigating to URL: " + url);
         int width, height;
         if (viewportWidth != null && !viewportWidth.isEmpty() &&
             viewportHeight != null && !viewportHeight.isEmpty()) {
@@ -211,6 +302,7 @@ public class BaseTest {
         setPage(page); // Set the ThreadLocal for listener access
         page.navigate(url);
         log.info("Navigated to the URL: " + url);
+        safeExtentLog("Navigated to the URL: " + url);
     }
     
 
@@ -220,64 +312,101 @@ public class BaseTest {
     }
 
     public void login() {
+       
+       try {
         String baseUrl = ConfigReader.get("baseUrl");
+        log.info("Navigating to base URL: " + baseUrl);
+        safeExtentLog("Navigating to base URL: " + baseUrl);
+    
+        // Go to login page
         page.navigate(baseUrl, new Page.NavigateOptions()
-                .setWaitUntil(com.microsoft.playwright.options.WaitUntilState.DOMCONTENTLOADED)
-                .setTimeout(60000));
-        page.waitForSelector(OR.getProperty("login.username"));
+            .setWaitUntil(com.microsoft.playwright.options.WaitUntilState.DOMCONTENTLOADED)
+            .setTimeout(60000));
+            log.info("Page title: " + page.title());
+            safeExtentLog("Page title: " + page.title());
+        // Wait for username field to be visible
+        try{
+        page.waitForSelector(OR.getProperty("login.username"),
+            new Page.WaitForSelectorOptions().setTimeout(10000));
+        log.info("Login page loaded: username field visible.");
+        safeExtentLog("Login page loaded: username field visible.");
+        }catch (Exception e) {
+            log.error("Error while waiting for username field to be visible: " + e.getMessage());
+            safeExtentFail("Error while waiting for username field to be visible: " + e.getMessage());
+            Assert.fail(e.getMessage());
+        }
+        // Fill credentials
         page.fill(OR.getProperty("login.username"), ConfigReader.get("username"));
         page.fill(OR.getProperty("login.password"), ConfigReader.get("password"));
-        page.waitForSelector(OR.getProperty("login.button"), new Page.WaitForSelectorOptions().setTimeout(60000).setState(com.microsoft.playwright.options.WaitForSelectorState.VISIBLE));
-        page.click(OR.getProperty("login.button"), new Page.ClickOptions().setForce(true));
-        page.waitForLoadState();
-        page.waitForTimeout(5000);
-        page.waitForSelector(OR.getProperty("login.success.selector"), new Page.WaitForSelectorOptions().setTimeout(10000));
-        page.waitForTimeout(2000);
-        log.info("Login successful");
-    }
-
-    /**
-     * Safely get the ExtentTest instance, with fallback to ExtentListeners
-     */
-    /**
-     * Gets the ExtentTest instance, initializing it if necessary
-     */
-    public ExtentTest getExtentTest() {
-        // First check if we already have a test instance
-        if (test != null) {
-            return test;
+        log.info("Filled username and password.");
+        safeExtentLog("Filled username and password.");
+    
+        // Wait for login button to be visible and enabled
+        try{
+        page.waitForSelector(OR.getProperty("login.button"),
+            new Page.WaitForSelectorOptions().setTimeout(10000)
+                   .setState(com.microsoft.playwright.options.WaitForSelectorState.VISIBLE));
+        log.info("Login button is visible.");
+        safeExtentLog("Login button is visible.");
+                }catch (Exception e) {
+            log.error("Error while waiting for login button to be visible: " + e.getMessage());
+            safeExtentFail("Error while waiting for login button to be visible: " + e.getMessage());
+            Assert.fail(e.getMessage());
         }
-        
-        // Try to get from ThreadLocal in ExtentListeners
-        test = extentlisteners.ExtentListeners.getExtent();
-        
-        // If still null, create a new ExtentTest directly
-        if (test == null) {
-            log.warn("ExtentTest is null in both BaseTest and ExtentListeners - creating new instance");
-            ExtentReports extent = extentlisteners.ExtentManager.getInstance();
+    
+        // Perform the click and wait for navigation triggered by login
+        page.waitForNavigation(
+            new Page.WaitForNavigationOptions()
+                .setTimeout(30000)
+                .setWaitUntil(com.microsoft.playwright.options.WaitUntilState.DOMCONTENTLOADED),
+            () -> {
+                page.click(OR.getProperty("login.button"));
+                log.info("Clicked login button.");
+                safeExtentLog("Clicked login button.");
+            }
+        );
+    
+        log.info("Navigation after login completed.");
+        safeExtentLog("Navigation after login completed.");
+    
+        // Wait for a selector that is ONLY available after login succeeds
+        String postLoginSelector = OR.getProperty("login.success.selector");
+        page.waitForSelector(postLoginSelector,
+            new Page.WaitForSelectorOptions().setTimeout(20000)
+                   .setState(com.microsoft.playwright.options.WaitForSelectorState.VISIBLE));
+        log.info("Successfully logged in; found post-login selector: " + postLoginSelector);
+        safeExtentLog("Successfully logged in; found post-login selector: " + postLoginSelector);   
+           }catch (Exception e) {
+            log.error("Error while logging in: " + e.getMessage());
+            safeExtentFail("Error while logging in: " + e.getMessage());
+            Assert.fail(e.getMessage());
+        }   
+    }
+    
+    
+    public ExtentTest getExtentTest() {
+        // Get the ExtentTest from ThreadLocal
+        ExtentTest extentTest = test.get();
+        if (extentTest == null) {
+            log.warn("ExtentTest is null in ThreadLocal - creating new instance");
+            ExtentReports extent = ExtentManager.getInstance();
             if (extent != null) {
                 String testName = this.getClass().getSimpleName() + "_" + Thread.currentThread().getId();
-                test = extent.createTest(testName);
-                extentlisteners.ExtentListeners.testReport.set(test);
+                extentTest = extent.createTest(testName);
+                test.set(extentTest);  // Store in ThreadLocal
                 log.info("Created new ExtentTest instance: " + testName);
             } else {
                 log.error("Cannot create ExtentTest - ExtentReports is not initialized");
             }
-        } else {
-            log.info("Retrieved ExtentTest from ExtentListeners ThreadLocal");
         }
-        
-        return test;
-    }
+        return extentTest;
 
-    /**
-     * Safe logging method that handles null ExtentTest
-     */
+    }
     public void safeExtentLog(String message) {
         ExtentTest extentTest = getExtentTest();
         if (extentTest != null) {
             extentTest.info(message);
-            log.debug("Successfully logged to ExtentTest: " + message);
+            log.info("Successfully logged to ExtentTest: " + message);
         } else {
             log.warn("Cannot log to ExtentTest (null): " + message);
         }
@@ -290,7 +419,7 @@ public class BaseTest {
         ExtentTest extentTest = getExtentTest();
         if (extentTest != null) {
             extentTest.pass(message);
-            log.debug("Successfully logged PASS to ExtentTest: " + message);
+            log.info("Successfully logged PASS to ExtentTest: " + message);
         } else {
             log.warn("Cannot log pass to ExtentTest (null): " + message);
         }
@@ -303,9 +432,18 @@ public class BaseTest {
         ExtentTest extentTest = getExtentTest();
         if (extentTest != null) {
             extentTest.fail(message);
-            log.debug("Successfully logged FAIL to ExtentTest: " + message);
+            log.info("Successfully logged FAIL to ExtentTest: " + message);
         } else {
             log.error("Cannot log fail to ExtentTest (null): " + message);
         }
     }
+
+    public static void setExtentTest(ExtentTest extentTest) {
+        test.set(extentTest);
+
+    }
+
+
+   
+   
 }

@@ -5,8 +5,11 @@ import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.LoadState;
 import com.microsoft.playwright.options.WaitForSelectorState;
+import utils.WaitHelper; // Added for centralized waits
+import org.apache.log4j.Logger;
 
 public class CompleteLoginPage {
+    private static final Logger log = Logger.getLogger(CompleteLoginPage.class);
     private final Page page;
     public CompleteLoginPage(Page page) { this.page = page; }
 
@@ -21,59 +24,78 @@ public class CompleteLoginPage {
    
 
     public void selectDomain(String domain, ExtentTest test) {
-        Locator domainDropdown = page.locator(DOMAIN_DROPDOWN_XPATH);
-        domainDropdown.waitFor(new Locator.WaitForOptions().setTimeout(15000).setState(WaitForSelectorState.VISIBLE));
+        Locator domainDropdown = WaitHelper.waitForVisibleAndEnabled(page, DOMAIN_DROPDOWN_XPATH, 15000);
         domainDropdown.click();
         test.info("Clicked 'Domain:' dropdown");
 
         String domainOptionXpath = "//span[@class='rtbText' and text()='" + domain + "']";
-        Locator domainOption = page.locator(domainOptionXpath);
-        domainOption.waitFor(new Locator.WaitForOptions().setTimeout(15000).setState(WaitForSelectorState.VISIBLE));
+        Locator domainOption = WaitHelper.waitForVisibleAndEnabled(page, domainOptionXpath, 15000);
         domainOption.click();
         test.info("Selected '" + domain + "' from domain dropdown");
     }
 
     public void selectProject(String project, ExtentTest test) {
-        // Try clicking the input first
         try {
-            page.click(PROJECT_DROPDOWN_INPUT);
+            String projectTrimmed = project.trim();
             page.click(PROJECT_DROPDOWN_INPUT);
             test.info("Clicked project dropdown input");
+            page.fill(PROJECT_DROPDOWN_INPUT, projectTrimmed);
+            test.info("Typed project name into dropdown: '" + projectTrimmed + "'");
+    
+            // Wait until at least one dropdown item appears (remove static waits)
+            Locator dropdownListItems = page.locator(PROJECT_LIST_ITEM);
+            dropdownListItems.first().waitFor(new Locator.WaitForOptions().setTimeout(10000));
+            int itemCount = dropdownListItems.count();
+            log.info("Dropdown item count after typing: " + itemCount);
+            test.info("Dropdown item count after typing: " + itemCount);
+    
+            if (itemCount == 0) {
+                test.fail("No project items found in dropdown for: " + projectTrimmed);
+                throw new RuntimeException("No project items found for: " + projectTrimmed);
+            }
+    
+            // Find best match: exact or fallback to partial match
+            Locator exactItem = page.locator(PROJECT_LIST_ITEM + ":text-is('" + projectTrimmed + "')");
+            Locator toClick = (exactItem.count() > 0) ? exactItem.first() : dropdownListItems.first();
+    
+            // Logging all items for debug
+            for (int i = 0; i < itemCount; i++) {
+                String itemText = dropdownListItems.nth(i).innerText().trim();
+                log.info("Dropdown item " + i + ": " + itemText);
+                test.info("Dropdown item " + i + ": " + itemText);
+            }
+    
+            if (!toClick.isEnabled()) {
+                test.fail("Project item is not enabled: " + projectTrimmed);
+                throw new RuntimeException("Project item is not enabled: " + projectTrimmed);
+            }
+    
+            toClick.hover();
+            test.info("Hovered over project item: " + projectTrimmed);
+            log.info("Hovered over project item: " + projectTrimmed);
+            toClick.click();
+            test.info("Clicked project item: " + projectTrimmed);
+            log.info("Clicked project item: " + projectTrimmed);
+    
         } catch (Exception e) {
-            test.warning("Failed to click input, trying arrow: " + e.getMessage());
-            page.click(PROJECT_DROPDOWN_INPUT);
-            test.info("Clicked project dropdown arrow");
+            test.fail("Failed to select project: " + e.getMessage());
+            throw new RuntimeException("Failed to select project: " + e.getMessage());
         }
-        
-        // Wait for the dropdown items to be visible
-        page.waitForSelector(PROJECT_LIST_ITEM, new Page.WaitForSelectorOptions().setTimeout(60000).setState(WaitForSelectorState.VISIBLE));
-        Locator item = page.locator(PROJECT_LIST_ITEM, new Page.LocatorOptions().setHasText(project));
-        int count = item.count();
-        if (count == 0) {
-            test.fail("No project found with name: " + project);
-            throw new RuntimeException("No project found with name: " + project);
-        } else if (count > 1) {
-            test.warning("Multiple projects found with name: " + project + ". Clicking the first one.");
-        }
-        item.waitFor(new Locator.WaitForOptions().setTimeout(5000).setState(WaitForSelectorState.VISIBLE));
-        page.waitForTimeout(500);
-        item.first().click();
-        test.info("Selected project: " + project);
-        page.waitForTimeout(5000);
     }
+    
+
     public void goToProjectDetails(ExtentTest test) {
-        Locator goToDetails = page.locator(GO_TO_PROJECT_DETAILS_XPATH);
-        goToDetails.waitFor(new Locator.WaitForOptions().setTimeout(10000).setState(WaitForSelectorState.VISIBLE));
+        Locator goToDetails = WaitHelper.waitForVisibleAndEnabled(page, GO_TO_PROJECT_DETAILS_XPATH, 10000);
         goToDetails.click();
         test.info("Clicked 'Go to Project Details' button");
-        page.waitForLoadState(LoadState.NETWORKIDLE);
+        WaitHelper.waitForNetworkIdle(page, 20000);
     }
 
     public void clickTab(String tabName, ExtentTest test) {
         String tabXPath = String.format(TAB_XPATH_TEMPLATE, tabName);
-        page.waitForSelector(tabXPath);
-        page.click(tabXPath);
+        Locator tab = WaitHelper.waitForVisibleAndEnabled(page, tabXPath, 15000);
+        tab.click();
         test.info("Clicked '" + tabName + "' tab");
-        page.waitForTimeout(5000);
+        WaitHelper.waitForNetworkIdle(page, 10000);
     }
 } 

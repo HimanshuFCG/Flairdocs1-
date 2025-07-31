@@ -5,6 +5,7 @@ pages\CompleteLoginPage.class
 pages\ExpandPanelPage.class
 base\BasePage.class
 config\ConfigReader.class
+utils\WaitHelper.class
 pages\FileTabsExpand_Collapse.class
 pages\PanelExpandCollapsePage.class
 pages\ExpandAllPanelsInAllTabsPage.class

@@ -28,34 +28,35 @@ public class ExtentManager {
     public static ExtentReports createInstance(String fileNameParam) {
         fileName = fileNameParam;
         Path reportsDir = Paths.get(System.getProperty("user.dir"), "reports");
-
+    
         try {
             if (!Files.exists(reportsDir)) {
                 Files.createDirectories(reportsDir);
             }
         } catch (IOException e) {
-            e.printStackTrace(); // Replace with logger if available
+            e.printStackTrace();
         }
-
+    
         String reportPath = reportsDir.resolve(fileName).toString();
         ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
-
+    
+        // Enhanced configuration
         sparkReporter.config().setTheme(Theme.STANDARD);
         sparkReporter.config().setDocumentTitle("Automation Report");
         sparkReporter.config().setEncoding("utf-8");
-        sparkReporter.config().setReportName("Automation Results");
-
+        sparkReporter.config().setReportName("FlairDocs Automation Results");
+        sparkReporter.config().setTimelineEnabled(true);
+        
         extent = new ExtentReports();
         extent.attachReporter(sparkReporter);
-        extent.setSystemInfo("Automation Tester", "Himanshu Batham");
+        extent.setSystemInfo("Tester", "Himanshu Batham");
         extent.setSystemInfo("Project", "CADOTV2");
-
+        extent.setSystemInfo("Environment", "Demo");
+        extent.setSystemInfo("OS", System.getProperty("os.name"));
+        extent.setSystemInfo("Java Version", System.getProperty("java.version"));
+    
         return extent;
     }
 
-    public static void captureScreenshot() throws IOException {
-        String screenshotName = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(new Date()) + ".png";
-        Path screenshotPath = Paths.get("reports", screenshotName);
-        BaseTest.getPage().screenshot(new Page.ScreenshotOptions().setPath(screenshotPath));
-    }
+  
 }

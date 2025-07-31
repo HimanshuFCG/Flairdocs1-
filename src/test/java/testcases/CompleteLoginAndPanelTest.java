@@ -16,24 +16,25 @@ public class CompleteLoginAndPanelTest extends BaseTest {
     public void loginAndOpenClosePanels() {
         try {
             login();
-            test.info("Logged in using BaseTest.login()");
+            ExtentTest extentTest = getExtentTest();  // Get the ExtentTest instance
+            extentTest.info("Logged in using BaseTest.login()");
             log.info("Logged in using BaseTest.login()");
 
             String domain = ConfigReader.get("domain");
             String project = ConfigReader.get("project");
 
             CompleteLoginAndPanelPage completePage = new CompleteLoginAndPanelPage(page);
-            test.info("Page object created");
+            extentTest.info("Page object created");
             log.info("Page object created");
 
-            completePage.selectDomain(domain, test);
-            test.info("Domain selected");
+            completePage.selectDomain(domain, extentTest);
+            extentTest.info("Domain selected");
             log.info("Domain selected");
-            completePage.selectProject(project, test);
-            test.info("Project selected");
+            completePage.selectProject(project, extentTest);
+            extentTest.info("Project selected");
             log.info("Project selected");
-            completePage.goToProjectDetails(test);
-            test.info("Navigated to project details");
+            completePage.goToProjectDetails(extentTest);
+            extentTest.info("Navigated to project details");
             log.info("Navigated to project details");
 
             String[] panelTitles = {
@@ -42,23 +43,23 @@ public class CompleteLoginAndPanelTest extends BaseTest {
             PanelActions panelActions = new PanelActions(page);
             for (String panelTitle : panelTitles) {
                 try {
-                    test.info("Opening panel: " + panelTitle);
+                    extentTest.info("Opening panel: " + panelTitle);
                     log.info("Opening panel: " + panelTitle);
                     panelActions.openPanel(panelTitle);
-                    test.info("Opened panel: " + panelTitle);
+                    extentTest.info("Opened panel: " + panelTitle);
                     log.info("Opened panel: " + panelTitle);
                     panelActions.closePanel(panelTitle);
-                    test.info("Closed panel: " + panelTitle);
+                    extentTest.info("Closed panel: " + panelTitle);
                     log.info("Closed panel: " + panelTitle);
                 } catch (Exception e) {
-                    test.fail("Error handling panel: " + panelTitle + " - " + e.getMessage());
+                    extentTest.fail("Error handling panel: " + panelTitle + " - " + e.getMessage());
                     log.error("Error handling panel: " + panelTitle + " - " + e.getMessage());
                 }
             }
-            test.pass("Panels opened and closed successfully.");
+            extentTest.pass("Panels opened and closed successfully.");
             log.info("Panels opened and closed successfully.");
         } catch (Exception e) {
-            test.fail("Test failed: " + e.getMessage());
+            safeExtentFail("Test failed: " + e.getMessage());
             log.error("Test failed: " + e.getMessage());
             e.printStackTrace();
         }

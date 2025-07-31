@@ -19,9 +19,23 @@ public class CreateNewFilePage {
     private static final String EROW_ID_INPUT = "#txtErowId";
     private static final String SAVE_AND_CLOSE_BUTTON = "#btnCreateProperty";
     private static final String TABLE_SELECTOR = "#ctl00_Main_FileSnapShot1_GridSnapShotTracts_ctl00";
+    private static final String PROJECT_DROPDOWN_INPUT = "#ctl00_Main_ProjectSnapShotDetails_ddlProjSnapShotSearchNum_Input";
 
     public CreateNewFilePage(Page page) {
         this.page = page;
+    }
+
+    public boolean fillCreateFileForminfo(Frame frame, String rowId, ExtentTest test) {
+        try {
+            frame.fill(ROW_ID_INPUT, rowId);
+            test.info("Filled ROW ID: " + rowId);
+            frame.click(SAVE_AND_CLOSE_BUTTON);
+            test.info("Clicked 'Save & Close' button");
+            return true;
+        } catch (Exception e) {
+            test.fail("Failed to fill create file form: " + e.getMessage());
+            return false;
+        }
     }
 
     public void selectDomain(String domain, ExtentTest test) {
@@ -38,7 +52,17 @@ public class CreateNewFilePage {
     }
 
     public void selectProject(String project, ExtentTest test) {
-        page.click(PROJECT_DROPDOWN_ARROW);
+        // Try clicking the input first, fallback to arrow if needed
+        try {
+            page.click(PROJECT_DROPDOWN_INPUT);
+            page.click(PROJECT_DROPDOWN_INPUT);
+            test.info("Clicked project dropdown input");
+        } catch (Exception e) {
+            test.warning("Failed to click input, trying arrow: " + e.getMessage());
+            page.click(PROJECT_DROPDOWN_INPUT);
+            test.info("Clicked project dropdown arrow");
+        }
+
         // Wait for the dropdown items to be visible
         page.waitForSelector(PROJECT_LIST_ITEM, new Page.WaitForSelectorOptions().setTimeout(60000).setState(WaitForSelectorState.VISIBLE));
         Locator item = page.locator(PROJECT_LIST_ITEM, new Page.LocatorOptions().setHasText(project));
@@ -73,14 +97,6 @@ public class CreateNewFilePage {
         return frame;
     }
 
-    public void fillCreateFileForm(Frame frame, String rowId, String erowId, ExtentTest test) {
-        frame.fill(ROW_ID_INPUT, rowId);
-        test.info("Filled ROW ID: " + rowId);
-        frame.fill(EROW_ID_INPUT, erowId);
-        test.info("Filled EROW ID: " + erowId);
-        frame.click(SAVE_AND_CLOSE_BUTTON);
-        test.info("Clicked 'Save & Close' button");
-    }
 
     public boolean isRowPresent(String expectedRowId, ExtentTest test) {
         page.waitForSelector(TABLE_SELECTOR, new Page.WaitForSelectorOptions().setTimeout(10000).setState(WaitForSelectorState.VISIBLE));
@@ -98,4 +114,5 @@ public class CreateNewFilePage {
         test.info("Could not find row with ROW ID: " + expectedRowId);
         return false;
     }
-} 
+    
+}

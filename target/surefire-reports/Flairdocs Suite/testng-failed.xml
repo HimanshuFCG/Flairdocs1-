@@ -10,16 +10,18 @@
         <methods>
           <include name="setup"/>
           <include name="clickTopMenuItems"/>
-          <include name="completeLoginAndTabSelection"/>
           <include name="openAndCloseCreateNewFilePopup"/>
-          <include name="expandAndCollapsePanelsInAllTabsAfterFileSelection"/>
           <include name="switchToDomain2AndSelectFirstFile"/>
+          <include name="beforeMethod"/>
           <include name="tearDownSuite"/>
+          <include name="createNewFileAndCheckRow"/>
+          <include name="adminMenuNavigation"/>
+          <include name="afterMethod"/>
+          <include name="completeLoginAndTabSelection"/>
+          <include name="expandAndCollapsePanelsInAllTabsAfterFileSelection"/>
           <include name="panelExpansion"/>
           <include name="expandAndCollapseAllPanelsInAllTabs"/>
-          <include name="createNewFileAndCheckRow"/>
           <include name="openAndCloseCreateNewProjectPopup"/>
-          <include name="adminMenuNavigation"/>
         </methods>
       </class> <!-- testcases.FullUserJourneyTest -->
     </classes>
