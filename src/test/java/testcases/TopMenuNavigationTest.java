@@ -1,7 +1,6 @@
 package testcases;
 
 import base.BaseTest;
-import com.aventstack.extentreports.ExtentTest;
 import org.testng.annotations.Test;
 import org.apache.log4j.Logger;
 import pages.TopMenuPage;

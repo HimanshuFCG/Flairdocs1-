@@ -2,61 +2,72 @@ package extentlisteners;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import com.microsoft.playwright.Page;
-
-import base.BaseTest;
-
 import java.io.IOException;
-import java.nio.file.*;
-import java.text.SimpleDateFormat;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Date;
 
 public class ExtentManager {
 
-    private static ExtentReports extent;
-    private static String fileName;
+    private static volatile ExtentReports extent;
 
-    // Singleton access
+    // Private constructor to prevent anyone else from instantiating
+    private ExtentManager() {}
+
+    /**
+     * Gets the thread-safe, singleton instance of ExtentReports.
+     * Initializes it if it's null.
+     */
     public static ExtentReports getInstance() {
         if (extent == null) {
-            String defaultFileName = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(new Date()) + "_ExtentReport.html";
-            createInstance(defaultFileName);
-        }
-        return extent;
-    }
+            synchronized (ExtentManager.class) {
+                if (extent == null) {
+                    // Create the file name and directory for the report
+                    Date d = new Date();
+                    String fileName = "Extent_" + d.toString().replace(":", "_").replace(" ", "_") + ".html";
+                    Path reportsDir = Paths.get(System.getProperty("user.dir"), "reports");
 
-    public static ExtentReports createInstance(String fileNameParam) {
-        fileName = fileNameParam;
-        Path reportsDir = Paths.get(System.getProperty("user.dir"), "reports");
-    
-        try {
-            if (!Files.exists(reportsDir)) {
-                Files.createDirectories(reportsDir);
+                    try {
+                        if (!Files.exists(reportsDir)) {
+                            Files.createDirectories(reportsDir);
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace(); // Consider using a logger here
+                    }
+
+                    String reportPath = reportsDir.resolve(fileName).toString();
+                    ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
+
+                    // Configure the report
+                    sparkReporter.config().setTheme(Theme.STANDARD);
+                    sparkReporter.config().setDocumentTitle("Automation Test Report");
+                    sparkReporter.config().setEncoding("utf-8");
+                    sparkReporter.config().setReportName("FlairDocs Automation Results");
+                    sparkReporter.config().setTimelineEnabled(true);
+
+                    // Create the ExtentReports instance
+                    extent = new ExtentReports();
+                    extent.attachReporter(sparkReporter);
+
+                    // Add system information
+                    extent.setSystemInfo("Tester", "Himanshu Batham");
+                    extent.setSystemInfo("Project", "CADOTV2");
+                    extent.setSystemInfo("Test Type", "Smoke Test");
+                    extent.setSystemInfo("OS", System.getProperty("os.name"));
+                    extent.setSystemInfo("Java Version", System.getProperty("java.version"));
+                }
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
-    
-        String reportPath = reportsDir.resolve(fileName).toString();
-        ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
-    
-        // Enhanced configuration
-        sparkReporter.config().setTheme(Theme.STANDARD);
-        sparkReporter.config().setDocumentTitle("Automation Report");
-        sparkReporter.config().setEncoding("utf-8");
-        sparkReporter.config().setReportName("FlairDocs Automation Results");
-        sparkReporter.config().setTimelineEnabled(true);
-        
-        extent = new ExtentReports();
-        extent.attachReporter(sparkReporter);
-        extent.setSystemInfo("Tester", "Himanshu Batham");
-        extent.setSystemInfo("Project", "CADOTV2");
-        extent.setSystemInfo("Environment", "Demo");
-        extent.setSystemInfo("OS", System.getProperty("os.name"));
-        extent.setSystemInfo("Java Version", System.getProperty("java.version"));
-    
         return extent;
     }
 
-  
+    /**
+     * Flushes the report to write all logs to the HTML file.
+     */
+    public static void flushReport() {
+        if (extent != null) {
+            extent.flush();
+        }
+    }
 }

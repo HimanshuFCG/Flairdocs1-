@@ -55,7 +55,6 @@ public class ExpandPanelPage {
         // Try clicking the input first, fallback to arrow if needed
         try {
             page.click(PROJECT_DROPDOWN_INPUT);
-            page.click(PROJECT_DROPDOWN_INPUT);
             test.info("Clicked project dropdown input");
         } catch (Exception e) {
             test.warning("Failed to click input, trying arrow: " + e.getMessage());
