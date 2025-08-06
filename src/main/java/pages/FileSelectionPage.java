@@ -1,11 +1,13 @@
 package pages;
 
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.assertions.LocatorAssertions;
 import com.aventstack.extentreports.ExtentTest;
 import org.apache.log4j.Logger;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.options.WaitForSelectorState;
 import com.microsoft.playwright.options.LoadState;
+import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
 
 public class FileSelectionPage {
@@ -40,34 +42,31 @@ public class FileSelectionPage {
         test.info("Selected '" + domain + "' from domain dropdown");
     }
 
+   
     public void selectProject(String project, ExtentTest test) {
-        // 1. Open the dropdown using a locator, which auto-waits for the element to be ready.
-        // This is more robust than a simple page.click() and avoids the need for a try-catch.
-        page.locator(PROJECT_DROPDOWN_INPUT).click();
-        test.info("Clicked project dropdown input");
     
-        // 2. Locate the specific project item in the list.
-        // Using hasText is a reliable way to find the element.
-        Locator projectListItem = page.locator(PROJECT_LIST_ITEM, new Page.LocatorOptions().setHasText(project));
-        
+    // --- Step 1: Trigger the Action ---
+    page.locator(PROJECT_DROPDOWN_INPUT).click();
+    test.info("Clicked project dropdown to open the list.");
 
-        
-        // It will wait up to the default timeout for the item to appear.
-        //assertThat(projectListItem).isVisible(new Locator.IsVisibleOptions().setTimeout(30000));
-        test.info("Project '" + project + "' is visible in the dropdown list.");
+    // --- Step 2: Wait for the Result of the Trigger ---
+    test.info("Waiting for project '" + project + "' to be visible in the dropdown...");
+    Locator projectListItem = page.locator(PROJECT_LIST_ITEM, new Page.LocatorOptions().setHasText(project));
     
-        // 4. Click the item. We use .first() in case the name appears in multiple items.
-        projectListItem.first().click();
-        test.info("Selected project: " + project);
-    
-        // 5. THIS IS THE MOST IMPORTANT STEP to avoid timeouts.
-        // Instead of waiting for a fixed time or a spinner, we wait for the network activity
-        // caused by the selection to complete. This means the test proceeds the moment the
-        // project data has actually loaded.
-        test.info("Waiting for project data to load...");
-        page.waitForLoadState(LoadState.NETWORKIDLE, new Page.WaitForLoadStateOptions().setTimeout(60000));
-        test.info("Project data finished loading.");
-    }
+    // THIS IS THE CORRECTED LINE:
+    // We now use `LocatorAssertions.IsVisibleOptions` to create the options object.
+    assertThat(projectListItem).isVisible(new LocatorAssertions.IsVisibleOptions().setTimeout(30000));
+    test.info("Project '" + project + "' is now visible in the list.");
+
+    // --- Step 3: Perform the Click Action ---
+    projectListItem.first().click();
+    test.info("Selected project: " + project);
+
+    // --- Step 4: Wait for the Post-Click Action to Complete ---
+    test.info("Waiting for page data to load after project selection...");
+    page.waitForLoadState(LoadState.NETWORKIDLE, new Page.WaitForLoadStateOptions().setTimeout(60000));
+    test.info("Project data has finished loading. Page is ready.");
+}
     
 
         

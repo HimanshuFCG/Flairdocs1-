@@ -20,8 +20,36 @@ public class CompleteLoginPage {
     private static final String PROJECT_LIST_ITEM = "#ctl00_Main_ProjectSnapShotDetails_ddlProjSnapShotSearchNum_listbox li.rcbItem";
     private static final String GO_TO_PROJECT_DETAILS_XPATH = "//input[@id='ctl00_Main_ProjectSnapShotDetails_btnProjeSnapShotOpen']";
     private static final String TAB_XPATH_TEMPLATE = "//span[@class='rtsTxt' and text()='%s']";
+    
+    // Tab names as constants
+    public static final String TAB_ASSIGNMENTS = "Assignments";
+    public static final String TAB_LIAISON_FILES = "Liaison Files";
+    public static final String TAB_ESTIMATES = "Estimates";
+    public static final String TAB_CONTRACTING = "Contracting";
+    public static final String TAB_AUTHORIZATION_MANAGEMENT = "Authorization Management";
+    public static final String TAB_ISSUE_MANAGEMENT = "Issue Management";
+    public static final String TAB_FINANCIALS = "Financials";
+    public static final String TAB_EXPROPRIATION = "Expropriation";
+    public static final String TAB_CHECKLIST = "Checklist";
+    public static final String TAB_UTILITY_COORDINATION = "Utility Coordination";
+    public static final String TAB_RAILROAD_COORDINATION = "Railroad Coordination";
+    
+    // Array of all tab names for iteration
+    public static final String[] ALL_TAB_NAMES = {
+        TAB_ASSIGNMENTS,
+        TAB_LIAISON_FILES,
+        TAB_ESTIMATES,
+        TAB_CONTRACTING,
+        TAB_AUTHORIZATION_MANAGEMENT,
+        TAB_ISSUE_MANAGEMENT,
+        TAB_FINANCIALS,
+        TAB_EXPROPRIATION,
+        TAB_CHECKLIST,
+        TAB_UTILITY_COORDINATION,
+        TAB_RAILROAD_COORDINATION
+    };
 
-   
+
 
     public void selectDomain(String domain, ExtentTest test) {
         Locator domainDropdown = page.locator(DOMAIN_DROPDOWN_XPATH);
