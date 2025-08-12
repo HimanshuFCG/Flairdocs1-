@@ -45,10 +45,10 @@ public class CompleteLoginAndPanelTest extends BaseTest {
                 try {
                     extentTest.info("Opening panel: " + panelTitle);
                     log.info("Opening panel: " + panelTitle);
-                    panelActions.openPanel(panelTitle);
+                    panelActions.openPanel(panelTitle, getExtentTest());
                     extentTest.info("Opened panel: " + panelTitle);
                     log.info("Opened panel: " + panelTitle);
-                    panelActions.closePanel(panelTitle);
+                    panelActions.closePanel(panelTitle, getExtentTest());
                     extentTest.info("Closed panel: " + panelTitle);
                     log.info("Closed panel: " + panelTitle);
                 } catch (Exception e) {

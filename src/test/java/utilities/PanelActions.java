@@ -1,6 +1,7 @@
     package utilities;
 
     import com.microsoft.playwright.Page;
+    import com.aventstack.extentreports.ExtentTest;
     import com.microsoft.playwright.Locator;
     import org.apache.log4j.Logger;
     import com.microsoft.playwright.options.WaitForSelectorState;
@@ -14,7 +15,7 @@
                 this.page = page;
             }
         
-            public void openPanel(String panelTitle) {
+            public void openPanel(String panelTitle, ExtentTest extentTest) {
                 try {
                     if ("Project Information".equals(panelTitle)) {
                         // Click the unique expand image icon for Project Information
@@ -61,7 +62,7 @@
                 }
             }
             
-            public void closePanel(String panelTitle) {
+            public void closePanel(String panelTitle, ExtentTest extentTest) {
                 try {
                     if ("Project Information".equals(panelTitle)) {
                         Locator collapseBtn = page.locator("#ctl00_Main_DynamicContent1_projinfo_AcqProjectProfile_ColProjectprofile____img");
@@ -94,6 +95,49 @@
                     }
                 } catch (Exception e) {
                     log.warn("Could not close panel '" + panelTitle + "' - " + e.getMessage());
+                }
+            }
+
+            public boolean isPanelOpen(String panelTitle, ExtentTest extentTest) {
+                try {
+                    boolean isOpen = false;
+                    
+                    if ("Project Information".equals(panelTitle)) {
+                        isOpen = page.locator("#ctl00_Main_DynamicContent1_projinfo_AcqProjectProfile_ColProjectprofile____img")
+                                     .isVisible();
+                    } else if ("Project Status Log".equals(panelTitle)) {
+                        isOpen = page.locator("#ctl00_Main_DynamicContent1_ProjectStatusLog_ColProjectStatusLog____img")
+                                     .isVisible();
+                    }
+                    // Add more panel title conditions as needed
+                    
+                    String logMessage = "Panel '" + panelTitle + "' is " + (isOpen ? "open" : "closed");
+                    if (extentTest != null) {
+                        extentTest.info(logMessage);
+                    }
+                    log.info(logMessage);
+                    
+                    return isOpen;
+                } catch (Exception e) {
+                    String errorMsg = "Error checking if panel '" + panelTitle + "' is open: " + e.getMessage();
+                    log.error(errorMsg, e);
+                    if (extentTest != null) {
+                        extentTest.fail(errorMsg);
+                    }
+                    return false;
+                }
+            }
+            
+            public boolean isPanelClosed(String panelTitle, ExtentTest extentTest) {
+                try {
+                    return !isPanelOpen(panelTitle, extentTest);
+                } catch (Exception e) {
+                    String errorMsg = "Error checking if panel '" + panelTitle + "' is closed: " + e.getMessage();
+                    log.error(errorMsg, e);
+                    if (extentTest != null) {
+                        extentTest.fail(errorMsg);
+                    }
+                    return false;
                 }
             }
         }

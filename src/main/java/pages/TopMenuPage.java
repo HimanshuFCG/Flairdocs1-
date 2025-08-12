@@ -40,7 +40,8 @@ public class TopMenuPage {
     }
     public void clickPMInquiry() {
         page.click(PM_INQUIRY_MENU);
-        page.waitForTimeout(500);
+        page.waitForLoadState();
+        page.waitForTimeout(1000);
     }
 
     public void clickNotifications() {
@@ -51,12 +52,14 @@ public class TopMenuPage {
 
     public void clickDocMgmt() {
         page.click(DOC_MGMT_MENU);
-        page.waitForTimeout(500);
+        page.waitForLoadState();
+        page.waitForTimeout(1000);
     }
 
      public void clickGIS() {
         page.click(GIS_MENU);
-        page.waitForTimeout(500);
+        page.waitForLoadState();
+        page.waitForTimeout(1000);
     }
 
     public void clickDashboard() {

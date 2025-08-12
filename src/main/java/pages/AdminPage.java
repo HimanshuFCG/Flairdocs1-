@@ -14,9 +14,6 @@ public class AdminPage {
     public AdminPage(Page page) {
          this.page = page; }
 
-    /**
-     * Returns true if the Admin menu button is visible on the page.
-     */
     public boolean isAdminMenuVisible() {
         return page.isVisible(ADMIN_BUTTON);
     }
@@ -34,13 +31,17 @@ public class AdminPage {
     public void clickAdminMenu(ExtentTest test) {
         page.waitForSelector(ADMIN_BUTTON);
         page.click(ADMIN_BUTTON);
-        test.info("Clicked Admin button");
+        if (test != null) {
+            test.info("Clicked Admin button");
+        }
     }
 
     public void clickAdminItem(String itemSelector, ExtentTest test) {
         page.waitForSelector(itemSelector, new Page.WaitForSelectorOptions().setTimeout(20000).setState(WaitForSelectorState.VISIBLE));
         page.click(itemSelector);
-        test.info("Clicked admin menu item: " + itemSelector);
+        if (test != null) {
+            test.info("Clicked admin menu item: " + itemSelector);
+        }
     }
 
     public void closePopup(ExtentTest test) {
@@ -49,14 +50,18 @@ public class AdminPage {
         page.click(CLOSE_ICON);
         page.waitForTimeout(1000);
         page.waitForSelector(CLOSE_ICON, new Page.WaitForSelectorOptions().setTimeout(10000).setState(WaitForSelectorState.HIDDEN));
-        test.info("Closed popup");
+        if (test != null) {
+            test.info("Closed popup");
+        }
     }
 
     public void clickAdminAgain(ExtentTest test) {
         page.waitForTimeout(2000);
         page.waitForSelector(ADMIN_BUTTON, new Page.WaitForSelectorOptions().setTimeout(10000).setState(WaitForSelectorState.VISIBLE));
         page.click(ADMIN_BUTTON);
-        test.info("Clicked Admin button again to return to menu");
+        if (test != null) {
+            test.info("Clicked Admin button again to return to menu");
+        }
     }
 
     public void handleAdminItem(String itemSelector, String itemType, ExtentTest test) {

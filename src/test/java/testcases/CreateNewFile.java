@@ -16,33 +16,31 @@ public class CreateNewFile extends BaseTest {
             // Use BaseTest's login and page
             login();
             ExtentTest extentTest = getExtentTest();
-            log.info("Logged in using BaseTest.login()");
-            extentTest.info("Logged in using BaseTest.login()");
-
-            // --- Use POM for Create New File flow ---
-            CreateNewFilePage createNewFilePage = new CreateNewFilePage(page);
-            String domain = ConfigReader.get("domain");
-            String project = ConfigReader.get("project");
-            String rowId = ConfigReader.get("rowId");
-            String erowId = ConfigReader.get("erowId");
-
-            createNewFilePage.selectDomain(domain, extentTest);
-            createNewFilePage.selectProject(project, extentTest);
-            createNewFilePage.clickCreateNewFile(extentTest);
-            Frame frame = createNewFilePage.switchToCreateFileIframe(extentTest);
-            createNewFilePage.fillCreateFileForminfo(frame, rowId, extentTest);
-            page.waitForTimeout(10000);
-
-            boolean found = createNewFilePage.isRowPresent(rowId, extentTest);
-            if (!found) {
-                log.info("Could not find row with ROW ID: " + rowId);
-                safeExtentFail("Could not find row with ROW ID: " + rowId);
+            
+                log.info("Starting create new file test");
+                safeExtentLog("Starting create new file test");
+                
+                // Get configuration and test data
+                String domain = ConfigReader.get("domain2");
+                String project = ConfigReader.get("project2");
+                String newRowId = "TEST_ID_" + System.currentTimeMillis(); // Generate a unique ID for the test run
+                
+                // Initialize page object
+                CreateNewFilePage createNewFilePage = new CreateNewFilePage(page);
+                
+                // --- Test Steps ---
+                // 1. Navigate to the correct context
+                createNewFilePage.selectDomain(domain, getExtentTest());
+                createNewFilePage.selectProject(project, getExtentTest());
+                
+                // 2. Perform the entire create-and-verify workflow with a single call
+                createNewFilePage.createNewFileAndVerifyInTable(newRowId, getExtentTest());
+        
+                // 3. Mark test as passed
+                safeExtentPass("Successfully created a new file and verified its presence in the table.");
+                
+            } finally {
+                log.info("Create new file test completed");
             }
-        } catch (Exception e) {
-            log.error("Test failed: " + e.getMessage());
-            safeExtentFail("Test failed: " + e.getMessage());
-            System.out.println("Test failed: " + e.getMessage());
-            e.printStackTrace();
         }
-    }
 }

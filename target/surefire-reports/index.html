@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Flairdocs_Suite" class="navigator-link">
-              <span class="suite-name border-skipped">Flairdocs Suite</span>
+              <span class="suite-name border-failed">Flairdocs Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -59,7 +59,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Flairdocs_Suite" class="navigator-link ">
-                    <span>0 groups</span>
+                    <span>2 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,66 +91,85 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">10 methods,  10 skipped,  </span>
+                    <span class="method-stats">12 methods, 3 failed,   9 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Flairdocs_Suite" class="hide-methods skipped suite-Flairdocs_Suite"> (hide)</a> <!-- hide-methods skipped suite-Flairdocs_Suite -->
-                      <a href="#" panel-name="suite-Flairdocs_Suite" class="show-methods skipped suite-Flairdocs_Suite"> (show)</a> <!-- show-methods skipped suite-Flairdocs_Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Flairdocs_Suite" class="hide-methods failed suite-Flairdocs_Suite"> (hide)</a> <!-- hide-methods failed suite-Flairdocs_Suite -->
+                      <a href="#" panel-name="suite-Flairdocs_Suite" class="show-methods failed suite-Flairdocs_Suite"> (show)</a> <!-- show-methods failed suite-Flairdocs_Suite -->
                     </span>
-                    <div class="method-list-content skipped suite-Flairdocs_Suite">
+                    <div class="method-list-content failed suite-Flairdocs_Suite">
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Flairdocs_Suite" title="testcases.FullUserJourneyTest" class="method navigator-link" hash-for-method="adminMenuNavigation">adminMenuNavigation</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Flairdocs_Suite" title="testcases.FullUserJourneyTest" class="method navigator-link" hash-for-method="clickTopMenuItems">clickTopMenuItems</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Flairdocs_Suite" title="testcases.FullUserJourneyTest" class="method navigator-link" hash-for-method="completeLoginAndTabSelection">completeLoginAndTabSelection</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Flairdocs_Suite" title="testcases.FullUserJourneyTest" class="method navigator-link" hash-for-method="createNewFileAndCheckRow">createNewFileAndCheckRow</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Flairdocs_Suite" title="testcases.FullUserJourneyTest" class="method navigator-link" hash-for-method="expandAndCollapseAllPanelsInAllTabs">expandAndCollapseAllPanelsInAllTabs</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Flairdocs_Suite" title="testcases.FullUserJourneyTest" class="method navigator-link" hash-for-method="expandAndCollapsePanelsInAllTabsAfterFileSelection">expandAndCollapsePanelsInAllTabsAfterFileSelection</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Flairdocs_Suite" title="testcases.FullUserJourneyTest" class="method navigator-link" hash-for-method="testPinnedPopup">testPinnedPopup</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Flairdocs_Suite" title="testcases.FullUserJourneyTest" class="method navigator-link" hash-for-method="testRecentlyVisitedPopup">testRecentlyVisitedPopup</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Flairdocs_Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Flairdocs_Suite" class="hide-methods passed suite-Flairdocs_Suite"> (hide)</a> <!-- hide-methods passed suite-Flairdocs_Suite -->
+                      <a href="#" panel-name="suite-Flairdocs_Suite" class="show-methods passed suite-Flairdocs_Suite"> (show)</a> <!-- show-methods passed suite-Flairdocs_Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Flairdocs_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Flairdocs_Suite" title="testcases.FullUserJourneyTest" class="method navigator-link" hash-for-method="adminMenuNavigation">adminMenuNavigation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Flairdocs_Suite" title="testcases.FullUserJourneyTest" class="method navigator-link" hash-for-method="clickTopMenuItems">clickTopMenuItems</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Flairdocs_Suite" title="testcases.FullUserJourneyTest" class="method navigator-link" hash-for-method="completeLoginAndTabSelection">completeLoginAndTabSelection</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Flairdocs_Suite" title="testcases.FullUserJourneyTest" class="method navigator-link" hash-for-method="createNewFileAndCheckRow">createNewFileAndCheckRow</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Flairdocs_Suite" title="testcases.FullUserJourneyTest" class="method navigator-link" hash-for-method="expandAndCollapseAllPanelsInAllTabs">expandAndCollapseAllPanelsInAllTabs</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Flairdocs_Suite" title="testcases.FullUserJourneyTest" class="method navigator-link" hash-for-method="openAndCloseCreateNewFilePopup">openAndCloseCreateNewFilePopup</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Flairdocs_Suite" title="testcases.FullUserJourneyTest" class="method navigator-link" hash-for-method="openAndCloseCreateNewProjectPopup">openAndCloseCreateNewProjectPopup</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Flairdocs_Suite" title="testcases.FullUserJourneyTest" class="method navigator-link" hash-for-method="panelExpansion">panelExpansion</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Flairdocs_Suite" title="testcases.FullUserJourneyTest" class="method navigator-link" hash-for-method="switchToDomain2AndSelectFirstFile">switchToDomain2AndSelectFirstFile</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-Flairdocs_Suite -->
+                    </div> <!-- method-list-content passed suite-Flairdocs_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -162,9 +181,1928 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Flairdocs_Suite" class="panel Flairdocs_Suite">
-          <div class="suite-Flairdocs_Suite-class-skipped">
+          <div class="suite-Flairdocs_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="failed.png"/>
+              <span class="class-name">testcases.FullUserJourneyTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="expandAndCollapsePanelsInAllTabsAfterFileSelection">
+                  </a> <!-- expandAndCollapsePanelsInAllTabsAfterFileSelection -->
+                  <span class="method-name">expandAndCollapsePanelsInAllTabsAfterFileSelection</span>
+                  <div class="stack-trace">java.lang.RuntimeException: Expand and collapse panels test failed: Error {
+  message=&apos;Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;//span[@class=&apos;rtbText&apos; and text()=&apos;Property Management&apos;]&quot; to be visible
+  selector resolved to hidden &lt;span class=&quot;rtbText&quot;&gt;Property Management&lt;/span&gt;
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;//span[@class=&apos;rtbText&apos; and text()=&apos;Property Management&apos;]&quot; to be visible
+  selector resolved to hidden &lt;span class=&quot;rtbText&quot;&gt;Property Management&lt;/span&gt;
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-10247613160407580068\package\lib\server\progress.js:96:26)
+    at Frame.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-10247613160407580068\package\lib\server\frames.js:843:23)
+    at FrameDispatcher.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-10247613160407580068\package\lib\server\dispatchers\frameDispatcher.js:111:110)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-10247613160407580068\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at testcases.FullUserJourneyTest.expandAndCollapsePanelsInAllTabsAfterFileSelection(FullUserJourneyTest.java:775)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;//span[@class=&apos;rtbText&apos; and text()=&apos;Property Management&apos;]&quot; to be visible
+  selector resolved to hidden &lt;span class=&quot;rtbText&quot;&gt;Property Management&lt;/span&gt;
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;//span[@class=&apos;rtbText&apos; and text()=&apos;Property Management&apos;]&quot; to be visible
+  selector resolved to hidden &lt;span class=&quot;rtbText&quot;&gt;Property Management&lt;/span&gt;
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-10247613160407580068\package\lib\server\progress.js:96:26)
+    at Frame.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-10247613160407580068\package\lib\server\frames.js:843:23)
+    at FrameDispatcher.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-10247613160407580068\package\lib\server\dispatchers\frameDispatcher.js:111:110)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-10247613160407580068\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:982)
+	at com.microsoft.playwright.impl.LocatorImpl.lambda$waitForImpl$6(LocatorImpl.java:500)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LocatorImpl.waitForImpl(LocatorImpl.java:500)
+	at com.microsoft.playwright.impl.LocatorImpl.waitFor(LocatorImpl.java:496)
+	at pages.PanelExpandCollapsePage.selectDomain(PanelExpandCollapsePage.java:57)
+	at testcases.FullUserJourneyTest.expandAndCollapsePanelsInAllTabsAfterFileSelection(FullUserJourneyTest.java:741)
+	... 29 more
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;//span[@class=&apos;rtbText&apos; and text()=&apos;Property Management&apos;]&quot; to be visible
+  selector resolved to hidden &lt;span class=&quot;rtbText&quot;&gt;Property Management&lt;/span&gt;
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;//span[@class=&apos;rtbText&apos; and text()=&apos;Property Management&apos;]&quot; to be visible
+  selector resolved to hidden &lt;span class=&quot;rtbText&quot;&gt;Property Management&lt;/span&gt;
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-10247613160407580068\package\lib\server\progress.js:96:26)
+    at Frame.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-10247613160407580068\package\lib\server\frames.js:843:23)
+    at FrameDispatcher.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-10247613160407580068\package\lib\server\dispatchers\frameDispatcher.js:111:110)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-10247613160407580068\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	... 39 more
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPinnedPopup">
+                  </a> <!-- testPinnedPopup -->
+                  <span class="method-name">testPinnedPopup</span>
+                  <div class="stack-trace">com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;span:has-text(&apos;Pinned&apos;) &gt;&gt; nth=0&quot;
+  selector resolved to visible &lt;span class=&quot;counterBootstrap&quot; onclick=&quot;PinUnpinApplic…&gt;…&lt;/span&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #1
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #2
+  waiting 20ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #3
+  waiting 100ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #4
+  waiting 100ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #5
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #6
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #7
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #8
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #9
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #10
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #11
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #12
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #13
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #14
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #15
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #16
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #17
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #18
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #19
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #20
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #21
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #22
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #23
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #24
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #25
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #26
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #27
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #28
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #29
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #30
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #31
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #32
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #33
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #34
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #35
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #36
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #37
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #38
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #39
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #40
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #41
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #42
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #43
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #44
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #45
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #46
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #47
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #48
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #49
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #50
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #51
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #52
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #53
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #54
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #55
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #56
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #57
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #58
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #59
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #60
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #61
+  waiting 500ms
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;span:has-text(&apos;Pinned&apos;) &gt;&gt; nth=0&quot;
+  selector resolved to visible &lt;span class=&quot;counterBootstrap&quot; onclick=&quot;PinUnpinApplic…&gt;…&lt;/span&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #1
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #2
+  waiting 20ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #3
+  waiting 100ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #4
+  waiting 100ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #5
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #6
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #7
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #8
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #9
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #10
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #11
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #12
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #13
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #14
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #15
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #16
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #17
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #18
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #19
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #20
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #21
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #22
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #23
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #24
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #25
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #26
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #27
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #28
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #29
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #30
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #31
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #32
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #33
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #34
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #35
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #36
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #37
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #38
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #39
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #40
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #41
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #42
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #43
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #44
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #45
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #46
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #47
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #48
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #49
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #50
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #51
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #52
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #53
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #54
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #55
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #56
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #57
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #58
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #59
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #60
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #61
+  waiting 500ms
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-10247613160407580068\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-10247613160407580068\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-10247613160407580068\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-10247613160407580068\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$9(FrameImpl.java:246)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:246)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:133)
+	at com.microsoft.playwright.Locator.click(Locator.java:1731)
+	at pages.PinnedPopupPage.clickPinned(PinnedPopupPage.java:29)
+	at testcases.FullUserJourneyTest.testPinnedPopup(FullUserJourneyTest.java:915)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;span:has-text(&apos;Pinned&apos;) &gt;&gt; nth=0&quot;
+  selector resolved to visible &lt;span class=&quot;counterBootstrap&quot; onclick=&quot;PinUnpinApplic…&gt;…&lt;/span&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #1
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #2
+  waiting 20ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #3
+  waiting 100ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #4
+  waiting 100ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #5
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #6
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #7
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #8
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #9
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #10
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #11
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #12
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #13
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #14
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #15
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #16
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #17
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #18
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #19
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #20
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #21
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #22
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #23
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #24
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #25
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #26
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #27
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #28
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #29
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #30
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #31
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #32
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #33
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #34
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #35
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #36
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #37
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #38
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #39
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #40
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #41
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #42
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #43
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #44
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #45
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #46
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #47
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #48
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #49
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #50
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #51
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #52
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #53
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #54
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #55
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #56
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #57
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #58
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #59
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #60
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #61
+  waiting 500ms
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;span:has-text(&apos;Pinned&apos;) &gt;&gt; nth=0&quot;
+  selector resolved to visible &lt;span class=&quot;counterBootstrap&quot; onclick=&quot;PinUnpinApplic…&gt;…&lt;/span&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #1
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #2
+  waiting 20ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #3
+  waiting 100ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #4
+  waiting 100ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #5
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #6
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #7
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #8
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #9
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #10
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #11
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #12
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #13
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #14
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #15
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #16
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #17
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #18
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #19
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #20
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #21
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #22
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #23
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #24
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #25
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #26
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #27
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #28
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #29
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #30
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #31
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #32
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #33
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #34
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #35
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #36
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #37
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #38
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #39
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #40
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #41
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #42
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #43
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #44
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #45
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #46
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #47
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #48
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #49
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #50
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #51
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #52
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #53
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #54
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #55
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #56
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #57
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #58
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #59
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #60
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt; intercepts pointer events
+retrying click action, attempt #61
+  waiting 500ms
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-10247613160407580068\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-10247613160407580068\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\Dell\AppData\Local\Temp\playwright-java-10247613160407580068\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-10247613160407580068\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	... 42 more
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify Pinned popup functionality)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRecentlyVisitedPopup">
+                  </a> <!-- testRecentlyVisitedPopup -->
+                  <span class="method-name">testRecentlyVisitedPopup</span>
+                  <div class="stack-trace">com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 5000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;div.TelerikModalOverlay:not([style*=&apos;display: none&apos;])&quot; to be hidden
+  selector resolved to visible &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt;
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 5000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;div.TelerikModalOverlay:not([style*=&apos;display: none&apos;])&quot; to be hidden
+  selector resolved to visible &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt;
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-10247613160407580068\package\lib\server\progress.js:96:26)
+    at Frame.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-10247613160407580068\package\lib\server\frames.js:843:23)
+    at FrameDispatcher.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-10247613160407580068\package\lib\server\dispatchers\frameDispatcher.js:111:110)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-10247613160407580068\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:982)
+	at com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:972)
+	at com.microsoft.playwright.impl.PageImpl.lambda$waitForSelector$78(PageImpl.java:1406)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.PageImpl.waitForSelector(PageImpl.java:1405)
+	at pages.RecentlyVisitedPopupPage.clickRecentlyVisited(RecentlyVisitedPopupPage.java:29)
+	at testcases.FullUserJourneyTest.testRecentlyVisitedPopup(FullUserJourneyTest.java:863)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 5000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;div.TelerikModalOverlay:not([style*=&apos;display: none&apos;])&quot; to be hidden
+  selector resolved to visible &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt;
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 5000ms exceeded.
+=========================== logs ===========================
+waiting for selector &quot;div.TelerikModalOverlay:not([style*=&apos;display: none&apos;])&quot; to be hidden
+  selector resolved to visible &lt;div unselectable=&quot;on&quot; class=&quot;TelerikModalOverlay&quot;&gt;&lt;/div&gt;
+============================================================
+    at ProgressController.run (C:\Users\Dell\AppData\Local\Temp\playwright-java-10247613160407580068\package\lib\server\progress.js:96:26)
+    at Frame.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-10247613160407580068\package\lib\server\frames.js:843:23)
+    at FrameDispatcher.waitForSelector (C:\Users\Dell\AppData\Local\Temp\playwright-java-10247613160407580068\package\lib\server\dispatchers\frameDispatcher.js:111:110)
+    at DispatcherConnection.dispatch (C:\Users\Dell\AppData\Local\Temp\playwright-java-10247613160407580068\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	... 39 more
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify Recently Visited popup functionality)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Flairdocs_Suite-class-failed -->
+          <div class="suite-Flairdocs_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">testcases.FullUserJourneyTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -173,11 +2111,6 @@
                   <a name="adminMenuNavigation">
                   </a> <!-- adminMenuNavigation -->
                   <span class="method-name">adminMenuNavigation</span>
-                  <div class="stack-trace">java.lang.AssertionError: Timeout 30000ms exceeded
-	at base.BaseTest.login(BaseTest.java:381)
-	at base.BaseTest.setup(BaseTest.java:130)
-... Removed 25 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -185,11 +2118,6 @@
                   <a name="clickTopMenuItems">
                   </a> <!-- clickTopMenuItems -->
                   <span class="method-name">clickTopMenuItems</span>
-                  <div class="stack-trace">java.lang.AssertionError: Timeout 30000ms exceeded
-	at base.BaseTest.login(BaseTest.java:381)
-	at base.BaseTest.setup(BaseTest.java:130)
-... Removed 25 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -197,11 +2125,6 @@
                   <a name="completeLoginAndTabSelection">
                   </a> <!-- completeLoginAndTabSelection -->
                   <span class="method-name">completeLoginAndTabSelection</span>
-                  <div class="stack-trace">java.lang.AssertionError: Timeout 30000ms exceeded
-	at base.BaseTest.login(BaseTest.java:381)
-	at base.BaseTest.setup(BaseTest.java:130)
-... Removed 25 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -209,11 +2132,6 @@
                   <a name="createNewFileAndCheckRow">
                   </a> <!-- createNewFileAndCheckRow -->
                   <span class="method-name">createNewFileAndCheckRow</span>
-                  <div class="stack-trace">java.lang.AssertionError: Timeout 30000ms exceeded
-	at base.BaseTest.login(BaseTest.java:381)
-	at base.BaseTest.setup(BaseTest.java:130)
-... Removed 25 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -221,23 +2139,6 @@
                   <a name="expandAndCollapseAllPanelsInAllTabs">
                   </a> <!-- expandAndCollapseAllPanelsInAllTabs -->
                   <span class="method-name">expandAndCollapseAllPanelsInAllTabs</span>
-                  <div class="stack-trace">java.lang.AssertionError: Timeout 30000ms exceeded
-	at base.BaseTest.login(BaseTest.java:381)
-	at base.BaseTest.setup(BaseTest.java:130)
-... Removed 25 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="expandAndCollapsePanelsInAllTabsAfterFileSelection">
-                  </a> <!-- expandAndCollapsePanelsInAllTabsAfterFileSelection -->
-                  <span class="method-name">expandAndCollapsePanelsInAllTabsAfterFileSelection</span>
-                  <div class="stack-trace">java.lang.AssertionError: Timeout 30000ms exceeded
-	at base.BaseTest.login(BaseTest.java:381)
-	at base.BaseTest.setup(BaseTest.java:130)
-... Removed 25 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -245,11 +2146,6 @@
                   <a name="openAndCloseCreateNewFilePopup">
                   </a> <!-- openAndCloseCreateNewFilePopup -->
                   <span class="method-name">openAndCloseCreateNewFilePopup</span>
-                  <div class="stack-trace">java.lang.AssertionError: Timeout 30000ms exceeded
-	at base.BaseTest.login(BaseTest.java:381)
-	at base.BaseTest.setup(BaseTest.java:130)
-... Removed 25 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -257,11 +2153,6 @@
                   <a name="openAndCloseCreateNewProjectPopup">
                   </a> <!-- openAndCloseCreateNewProjectPopup -->
                   <span class="method-name">openAndCloseCreateNewProjectPopup</span>
-                  <div class="stack-trace">java.lang.AssertionError: Timeout 30000ms exceeded
-	at base.BaseTest.login(BaseTest.java:381)
-	at base.BaseTest.setup(BaseTest.java:130)
-... Removed 25 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -269,11 +2160,6 @@
                   <a name="panelExpansion">
                   </a> <!-- panelExpansion -->
                   <span class="method-name">panelExpansion</span>
-                  <div class="stack-trace">java.lang.AssertionError: Timeout 30000ms exceeded
-	at base.BaseTest.login(BaseTest.java:381)
-	at base.BaseTest.setup(BaseTest.java:130)
-... Removed 25 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -281,15 +2167,10 @@
                   <a name="switchToDomain2AndSelectFirstFile">
                   </a> <!-- switchToDomain2AndSelectFirstFile -->
                   <span class="method-name">switchToDomain2AndSelectFirstFile</span>
-                  <div class="stack-trace">java.lang.AssertionError: Timeout 30000ms exceeded
-	at base.BaseTest.login(BaseTest.java:381)
-	at base.BaseTest.setup(BaseTest.java:130)
-... Removed 25 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Flairdocs_Suite-class-skipped -->
+          </div> <!-- suite-Flairdocs_Suite-class-passed -->
         </div> <!-- panel Flairdocs_Suite -->
         <div panel-name="test-xml-Flairdocs_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -299,11 +2180,11 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;1&quot; parallel=&quot;classes&quot; name=&quot;Flairdocs Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+&lt;suite thread-count=&quot;1&quot; name=&quot;Flairdocs Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;extentlisteners.ExtentListeners&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;1&quot; parallel=&quot;classes&quot; name=&quot;All Tests&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;1&quot; name=&quot;All Tests&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testcases.FullUserJourneyTest&quot;/&gt;
     &lt;/classes&gt;
@@ -329,6 +2210,30 @@
             <span class="header-content">Groups for Flairdocs Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">regression</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">testPinnedPopup</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testRecentlyVisitedPopup</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">smoke</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">testPinnedPopup</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testRecentlyVisitedPopup</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Flairdocs_Suite" class="panel">
@@ -345,52 +2250,60 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(10);
+data.addRows(12);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'expandAndCollapsePanelsInAllTabsAfterFileSelection')
+data.setCell(0, 1, 'expandAndCollapseAllPanelsInAllTabs')
 data.setCell(0, 2, 'testcases.FullUserJourneyTest')
-data.setCell(0, 3, 0);
+data.setCell(0, 3, 163821);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'openAndCloseCreateNewFilePopup')
+data.setCell(1, 1, 'adminMenuNavigation')
 data.setCell(1, 2, 'testcases.FullUserJourneyTest')
-data.setCell(1, 3, 0);
+data.setCell(1, 3, 121831);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'switchToDomain2AndSelectFirstFile')
+data.setCell(2, 1, 'clickTopMenuItems')
 data.setCell(2, 2, 'testcases.FullUserJourneyTest')
-data.setCell(2, 3, 0);
+data.setCell(2, 3, 112352);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'adminMenuNavigation')
+data.setCell(3, 1, 'completeLoginAndTabSelection')
 data.setCell(3, 2, 'testcases.FullUserJourneyTest')
-data.setCell(3, 3, 0);
+data.setCell(3, 3, 78164);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'expandAndCollapseAllPanelsInAllTabs')
+data.setCell(4, 1, 'switchToDomain2AndSelectFirstFile')
 data.setCell(4, 2, 'testcases.FullUserJourneyTest')
-data.setCell(4, 3, 0);
+data.setCell(4, 3, 48082);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'createNewFileAndCheckRow')
+data.setCell(5, 1, 'openAndCloseCreateNewFilePopup')
 data.setCell(5, 2, 'testcases.FullUserJourneyTest')
-data.setCell(5, 3, 0);
+data.setCell(5, 3, 36085);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'clickTopMenuItems')
+data.setCell(6, 1, 'testPinnedPopup')
 data.setCell(6, 2, 'testcases.FullUserJourneyTest')
-data.setCell(6, 3, 0);
+data.setCell(6, 3, 30178);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'panelExpansion')
+data.setCell(7, 1, 'openAndCloseCreateNewProjectPopup')
 data.setCell(7, 2, 'testcases.FullUserJourneyTest')
-data.setCell(7, 3, 0);
+data.setCell(7, 3, 30026);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'openAndCloseCreateNewProjectPopup')
+data.setCell(8, 1, 'panelExpansion')
 data.setCell(8, 2, 'testcases.FullUserJourneyTest')
-data.setCell(8, 3, 0);
+data.setCell(8, 3, 22688);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'completeLoginAndTabSelection')
+data.setCell(9, 1, 'createNewFileAndCheckRow')
 data.setCell(9, 2, 'testcases.FullUserJourneyTest')
-data.setCell(9, 3, 0);
+data.setCell(9, 3, 21719);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'testRecentlyVisitedPopup')
+data.setCell(10, 2, 'testcases.FullUserJourneyTest')
+data.setCell(10, 3, 17064);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'expandAndCollapsePanelsInAllTabsAfterFileSelection')
+data.setCell(11, 2, 'testcases.FullUserJourneyTest')
+data.setCell(11, 3, 16827);
 window.suiteTableData['Flairdocs_Suite']= { tableData: data, tableDiv: 'times-div-Flairdocs_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 11 minutes</span>
               <div id="times-div-Flairdocs_Suite">
               </div> <!-- times-div-Flairdocs_Suite -->
             </div> <!-- times-div -->
@@ -424,52 +2337,164 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.FullUserJourneyTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">openAndCloseCreateNewProjectPopup</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">openAndCloseCreateNewFilePopup</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">panelExpansion</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">createNewFileAndCheckRow</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">completeLoginAndTabSelection</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">clickTopMenuItems</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">expandAndCollapseAllPanelsInAllTabs</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">switchToDomain2AndSelectFirstFile</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">expandAndCollapsePanelsInAllTabsAfterFileSelection</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">adminMenuNavigation</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-suite before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
+              <div class="configuration-method before">
+                <span class="method-name">setupTest(public void testcases.FullUserJourneyTest.adminMenuNavigation())</span>
+                <span class="method-start">31040 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">adminMenuNavigation</span>
+                <span class="method-start">31051 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=adminMenuNavigation status=SUCCESS method=FullUserJourneyTest.adminMenuNavigation()...)</span>
+                <span class="method-start">152889 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setupTest(public void testcases.FullUserJourneyTest.panelExpansion())</span>
+                <span class="method-start">152889 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">panelExpansion</span>
+                <span class="method-start">152893 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=panelExpansion status=SUCCESS method=FullUserJourneyTest.panelExpansion()[pri:2, in...)</span>
+                <span class="method-start">175584 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setupTest(public void testcases.FullUserJourneyTest.createNewFileAndCheckRow())</span>
+                <span class="method-start">175590 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">createNewFileAndCheckRow</span>
+                <span class="method-start">175590 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=createNewFileAndCheckRow status=SUCCESS method=FullUserJourneyTest.createNewFileAnd...)</span>
+                <span class="method-start">197310 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setupTest(public void testcases.FullUserJourneyTest.completeLoginAndTabSelection())</span>
+                <span class="method-start">197312 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">completeLoginAndTabSelection</span>
+                <span class="method-start">197313 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=completeLoginAndTabSelection status=SUCCESS method=FullUserJourneyTest.completeLogi...)</span>
+                <span class="method-start">275482 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setupTest(public void testcases.FullUserJourneyTest.clickTopMenuItems())</span>
+                <span class="method-start">275482 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">clickTopMenuItems</span>
+                <span class="method-start">275495 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=clickTopMenuItems status=SUCCESS method=FullUserJourneyTest.clickTopMenuItems()[pri...)</span>
+                <span class="method-start">387849 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setupTest(public void testcases.FullUserJourneyTest.expandAndCollapseAllPanelsInAllTabs())</span>
+                <span class="method-start">387851 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">expandAndCollapseAllPanelsInAllTabs</span>
+                <span class="method-start">387853 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=expandAndCollapseAllPanelsInAllTabs status=SUCCESS method=FullUserJourneyTest.expan...)</span>
+                <span class="method-start">551684 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setupTest(public void testcases.FullUserJourneyTest.switchToDomain2AndSelectFirstFile())</span>
+                <span class="method-start">551685 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">switchToDomain2AndSelectFirstFile</span>
+                <span class="method-start">551688 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=switchToDomain2AndSelectFirstFile status=SUCCESS method=FullUserJourneyTest.switchT...)</span>
+                <span class="method-start">599770 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setupTest(public void testcases.FullUserJourneyTest.expandAndCollapsePanelsInAllTabsAfterFileSelection())</span>
+                <span class="method-start">599770 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">expandAndCollapsePanelsInAllTabsAfterFileSelection</span>
+                <span class="method-start">599772 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=expandAndCollapsePanelsInAllTabsAfterFileSelection status=FAILURE method=FullUserJo...)</span>
+                <span class="method-start">616631 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setupTest(public void testcases.FullUserJourneyTest.openAndCloseCreateNewFilePopup())</span>
+                <span class="method-start">616910 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">openAndCloseCreateNewFilePopup</span>
+                <span class="method-start">616910 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=openAndCloseCreateNewFilePopup status=SUCCESS method=FullUserJourneyTest.openAndClo...)</span>
+                <span class="method-start">652996 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setupTest(public void testcases.FullUserJourneyTest.openAndCloseCreateNewProjectPopup())</span>
+                <span class="method-start">652997 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">openAndCloseCreateNewProjectPopup</span>
+                <span class="method-start">652998 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=openAndCloseCreateNewProjectPopup status=SUCCESS method=FullUserJourneyTest.openAnd...)</span>
+                <span class="method-start">683024 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setupTest(public void testcases.FullUserJourneyTest.testRecentlyVisitedPopup())</span>
+                <span class="method-start">683024 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testRecentlyVisitedPopup</span>
+                <span class="method-start">683025 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=testRecentlyVisitedPopup status=FAILURE method=FullUserJourneyTest.testRecentlyVisi...)</span>
+                <span class="method-start">700092 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setupTest(public void testcases.FullUserJourneyTest.testPinnedPopup())</span>
+                <span class="method-start">700455 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testPinnedPopup</span>
+                <span class="method-start">700456 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=testPinnedPopup status=FAILURE method=FullUserJourneyTest.testPinnedPopup()[pri:13,...)</span>
+                <span class="method-start">730673 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-suite after">
+                <span class="method-name">tearDownSuite</span>
+                <span class="method-start">731678 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

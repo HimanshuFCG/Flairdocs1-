@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" parallel="classes" name="Failed suite [Flairdocs Suite]" guice-stage="DEVELOPMENT" verbose="0">
+<suite thread-count="1" name="Failed suite [Flairdocs Suite]" guice-stage="DEVELOPMENT" verbose="0">
   <listeners>
     <listener class-name="extentlisteners.ExtentListeners"/>
   </listeners>
-  <test thread-count="1" parallel="classes" name="All Tests(failed)" verbose="0">
+  <test thread-count="1" name="All Tests(failed)" verbose="0">
     <classes>
       <class name="testcases.FullUserJourneyTest">
         <methods>
           <include name="setup"/>
-          <include name="clickTopMenuItems"/>
-          <include name="openAndCloseCreateNewFilePopup"/>
-          <include name="switchToDomain2AndSelectFirstFile"/>
-          <include name="beforeMethod"/>
-          <include name="tearDownSuite"/>
-          <include name="createNewFileAndCheckRow"/>
-          <include name="adminMenuNavigation"/>
           <include name="afterMethod"/>
-          <include name="completeLoginAndTabSelection"/>
           <include name="expandAndCollapsePanelsInAllTabsAfterFileSelection"/>
-          <include name="panelExpansion"/>
-          <include name="expandAndCollapseAllPanelsInAllTabs"/>
-          <include name="openAndCloseCreateNewProjectPopup"/>
+          <include name="testPinnedPopup"/>
+          <include name="setupTest"/>
+          <include name="tearDownSuite"/>
+          <include name="testRecentlyVisitedPopup"/>
         </methods>
       </class> <!-- testcases.FullUserJourneyTest -->
     </classes>

@@ -9,34 +9,31 @@ import com.microsoft.playwright.options.WaitForSelectorState;
 public class CreateNewFilePage {
     private final Page page;
 
-    // Centralized locators
+    // --- Centralized Locators ---
     private static final String DOMAIN_DROPDOWN_XPATH = "//span[@class='rtbText' and text()='Domain:']";
-    private static final String PROJECT_DROPDOWN_ARROW = "#ctl00_Main_ProjectSnapShotDetails_ddlProjSnapShotSearchNum_Arrow";
+    private static final String PROJECT_DROPDOWN_INPUT = "#ctl00_Main_ProjectSnapShotDetails_ddlProjSnapShotSearchNum_Input";
     private static final String PROJECT_LIST_ITEM = "#ctl00_Main_ProjectSnapShotDetails_ddlProjSnapShotSearchNum_listbox li.rcbItem";
     private static final String CREATE_NEW_FILE_BUTTON = "#ctl00_Main_FileSnapShot1_BtnCreateProperty";
-    private static final String IFRAME_LOCATOR = "iframe[name='CreateFilewindow']";
-    private static final String ROW_ID_INPUT = "#txtPropertyNumber";
-    private static final String EROW_ID_INPUT = "#txtErowId";
-    private static final String SAVE_AND_CLOSE_BUTTON = "#btnCreateProperty";
     private static final String TABLE_SELECTOR = "#ctl00_Main_FileSnapShot1_GridSnapShotTracts_ctl00";
-    private static final String PROJECT_DROPDOWN_INPUT = "#ctl00_Main_ProjectSnapShotDetails_ddlProjSnapShotSearchNum_Input";
+    
+    // iframe Popup Locators
+    private static final String IFRAME_SELECTOR = "iframe[name='CreateFilewindow']";
+    private static final String ROW_ID_INPUT = "#txtPropertyNumber";
+    private static final String SAVE_AND_CLOSE_BUTTON = "#btnCreateProperty";
 
     public CreateNewFilePage(Page page) {
         this.page = page;
     }
 
-    public boolean fillCreateFileForminfo(Frame frame, String rowId, ExtentTest test) {
-        try {
-            frame.fill(ROW_ID_INPUT, rowId);
-            test.info("Filled ROW ID: " + rowId);
-            frame.click(SAVE_AND_CLOSE_BUTTON);
-            test.info("Clicked 'Save & Close' button");
-            return true;
-        } catch (Exception e) {
-            test.fail("Failed to fill create file form: " + e.getMessage());
-            return false;
-        }
+    public void createNewFileAndVerifyInTable(String rowId, ExtentTest test) {
+        clickCreateNewFile(test);
+        Frame popupFrame = switchToCreateFileIframe(test);
+        fillCreateFileForm(popupFrame, rowId, test);
+        // After clicking save, the iframe should close and the table should update.
+        // The verification step confirms this entire sequence was successful.
+        verifyRowIsPresentInTable(rowId, test);
     }
+    
 
     public void selectDomain(String domain, ExtentTest test) {
         Locator domainDropdown = page.locator(DOMAIN_DROPDOWN_XPATH);
@@ -44,7 +41,7 @@ public class CreateNewFilePage {
         domainDropdown.click();
         test.info("Clicked 'Domain:' dropdown");
 
-        String domainOptionXpath = "//span[@class='rtbText' and text()='" + domain + "']";
+        String domainOptionXpath = String.format("//span[@class='rtbText' and text()='%s']", domain);
         Locator domainOption = page.locator(domainOptionXpath);
         domainOption.waitFor(new Locator.WaitForOptions().setTimeout(15000).setState(WaitForSelectorState.VISIBLE));
         domainOption.click();
@@ -52,67 +49,62 @@ public class CreateNewFilePage {
     }
 
     public void selectProject(String project, ExtentTest test) {
-        // Try clicking the input first, fallback to arrow if needed
-        try {
-            page.click(PROJECT_DROPDOWN_INPUT);
-            page.click(PROJECT_DROPDOWN_INPUT);
-            test.info("Clicked project dropdown input");
-        } catch (Exception e) {
-            test.warning("Failed to click input, trying arrow: " + e.getMessage());
-            page.click(PROJECT_DROPDOWN_INPUT);
-            test.info("Clicked project dropdown arrow");
-        }
+        page.click(PROJECT_DROPDOWN_INPUT);
+        test.info("Clicked project dropdown input");
 
-        // Wait for the dropdown items to be visible
         page.waitForSelector(PROJECT_LIST_ITEM, new Page.WaitForSelectorOptions().setTimeout(60000).setState(WaitForSelectorState.VISIBLE));
         Locator item = page.locator(PROJECT_LIST_ITEM, new Page.LocatorOptions().setHasText(project));
-        int count = item.count();
-        if (count == 0) {
-            test.fail("No project found with name: " + project);
-            throw new RuntimeException("No project found with name: " + project);
-        } else if (count > 1) {
-            test.warning("Multiple projects found with name: " + project + ". Clicking the first one.");
+        
+        if (item.count() == 0) {
+            String errorMsg = "No project found with name: " + project;
+            test.fail(errorMsg);
+            throw new RuntimeException(errorMsg);
         }
-        item.waitFor(new Locator.WaitForOptions().setTimeout(5000).setState(WaitForSelectorState.VISIBLE));
-        page.waitForTimeout(500);
+        
         item.first().click();
         test.info("Selected project: " + project);
-        page.waitForTimeout(5000);
+        
+        page.waitForSelector(".loading-spinner", new Page.WaitForSelectorOptions().setState(WaitForSelectorState.HIDDEN));
     }
 
-    public void clickCreateNewFile(ExtentTest test) {
-        page.waitForSelector(CREATE_NEW_FILE_BUTTON);
-        page.click(CREATE_NEW_FILE_BUTTON);
-        test.info("Clicked Create New File button");
+    protected void clickCreateNewFile(ExtentTest test) {
+        page.locator(CREATE_NEW_FILE_BUTTON).click();
+        test.info("Clicked 'Create New File' button");
     }
 
-    public Frame switchToCreateFileIframe(ExtentTest test) {
-        Locator iframeLocator = page.locator(IFRAME_LOCATOR);
-        iframeLocator.waitFor(new Locator.WaitForOptions().setTimeout(30000));
+    protected Frame switchToCreateFileIframe(ExtentTest test) {
+        Locator iframeLocator = page.locator(IFRAME_SELECTOR);
+        // Wait for the iframe to be present and visible in the DOM
+        iframeLocator.waitFor(new Locator.WaitForOptions().setTimeout(30000).setState(WaitForSelectorState.VISIBLE));
+        
         Frame frame = iframeLocator.elementHandle().contentFrame();
         if (frame == null) {
-            throw new RuntimeException("Iframe 'CreateFilewindow' not found or not loaded!");
+            test.fail("Iframe 'CreateFilewindow' could not be found or failed to load.");
+            throw new RuntimeException("Iframe 'CreateFilewindow' not found or failed to load.");
         }
-        test.info("Iframe found and accessed");
+        test.info("Successfully switched to 'Create New File' iframe.");
         return frame;
     }
 
-
-    public boolean isRowPresent(String expectedRowId, ExtentTest test) {
-        page.waitForSelector(TABLE_SELECTOR, new Page.WaitForSelectorOptions().setTimeout(10000).setState(WaitForSelectorState.VISIBLE));
-        page.waitForTimeout(2000);
-        Locator rows = page.locator(TABLE_SELECTOR + " > tbody > tr");
-        for (int i = 0; i < rows.count(); i++) {
-            Locator row = rows.nth(i);
-            String rowId = row.locator("td").nth(2).innerText().trim();
-            test.info("Row " + i + " ROW ID: " + rowId);
-            if (rowId.equals(expectedRowId)) {
-                test.info("Found row with ROW ID: " + rowId);
-                return true;
-            }
-        }
-        test.info("Could not find row with ROW ID: " + expectedRowId);
-        return false;
+    private void fillCreateFileForm(Frame frame, String rowId, ExtentTest test) {
+        // This method now lets exceptions propagate up to the main test's try-catch block.
+        frame.fill(ROW_ID_INPUT, rowId);
+        test.info("Filled ROW ID: " + rowId);
+        frame.click(SAVE_AND_CLOSE_BUTTON);
+        test.info("Clicked 'Save & Close' button inside the popup.");
     }
-    
+
+    private void verifyRowIsPresentInTable(String expectedRowId, ExtentTest test) {
+        test.info("Verifying that row with ID '" + expectedRowId + "' is present in the table...");
+        
+        // This locator finds a table row 'tr' that contains an element (like a 'td') with the exact text.
+        // It's more resilient than relying on column index.
+        Locator expectedRow = page.locator(TABLE_SELECTOR + " tr").filter(new Locator.FilterOptions().setHasText(expectedRowId));
+
+        // Use Playwright's built-in assertion. It will automatically wait and retry for up to 15 seconds.
+        // This replaces the need for a manual loop and hard sleeps.
+        expectedRow.isVisible(new Locator.IsVisibleOptions().setTimeout(15000));
+        
+        test.info("Successfully found and verified row with ID: " + expectedRowId);
+    }
 }
